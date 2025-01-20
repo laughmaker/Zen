@@ -1,95 +1,57 @@
-This is a sample theme for Obsidian ([https://obsidian.md](https://obsidian.md/)).
+![](./cover.png)
 
-## First Time publishing a theme?
+Zen 是一个专注于写作而优化的 Obsidian 主题，支持桌面端和手机。去除了影响写作和阅读的冗余元素，具有简洁现代化的风格。同时针对中文用户做了专门的优化。
 
-### Quick start
+**为了确保序号和引导线对齐，以及有更好的中文体验，请安装附件里的字体**：`LXGWWenKaiMono-Regular.ttf`
+![alt text](font-image.png)
+- 当前使用字体：https://github.com/lxgw/LxgwWenKai/releases/download/v1.510/LXGWWenKaiMono-Regular.ttf
+- 其他字体参考： https://github.com/lxgw/LxgwWenKai
 
-<img width="244" alt="Pasted image 20220822135601" src="https://user-images.githubusercontent.com/693981/186000386-4f4da987-fcaf-4aa5-aed4-e34b5901255d.png">
+**Support development:** [follow me](https://github.com/laughtmaker)
 
-First, choose **Use this template**. That will create a copy of this repository (repo) under your Github profile. Then, you will want to _clone_ your new repository to your computer.
+## About Zen
 
-Once you have the repo locally on your computer, there are a couple of placeholder fields you will need to fill in.
+- [Screenshots](#screenshots)
+- [Installation](#installation)
 
-1. Inside the `manifest.json` file, change the "name" field to whatever you want the name of your theme to be. For example:
+## Screenshots
 
-  ```json
-  {
-    "name": "Moonstone",
-    "version": "0.0.0",
-    "minAppVersion": "1.0.0"
-  }
-  ```
+![](https://i0.hdslb.com/bfs/new_dyn/27c8c2dde3ea03465bfea9e83d79c80a252667233.png@1192w.webp)
+1. 对整体页面做了优化，去除了很多分隔线，整体更遍平化，也更透气；
+2. 两侧边栏，做了高斯模糊处理；同时中间编辑器也做了透明度更低的模糊处理，整体布局看起来更舒服；
+3. 目录采用实心三角形，文件前面增加圆心，看起来区分度会更清晰；且目录字体和间距做了调整，也会更方便阅读。
+4. 标签页也做了调整，类似目录；
 
-2. Also inside the manifest.json file, you can include your name under next to the "author" field.
+![](https://i0.hdslb.com/bfs/new_dyn/797ab16392865b06d3a9d3e6e5d3066b252667233.png@1192w.webp)
 
-After you have those fields configured, all that's left to do is add your styles! All of your CSS needs to be inside the file `theme.css` which is located at root of your repository.
+![](https://i0.hdslb.com/bfs/new_dyn/3d063a7d298da6247fc8e8e7676e11d3252667233.png@1192w.webp)
 
-## Adding your theme to the Theme Gallery
+![](https://i0.hdslb.com/bfs/new_dyn/6fdf098100795799ea15518315808b60252667233.png@1192w.webp)
 
-### Add a screenshot thumbnail
+1. 在笔记里，大量的有序列表和无序列表混排，这里既保持对齐，也调整了字间距和行间距，更方便阅读；
+2. 使阅读模式和实时预览模式，基本保持统一的样式。
 
-Inside the repository, include a screenshot thumbnail of your theme. You can name the file anything, for example `screenshot.png`. This image will be used for the small preview in the theme list.
+![](https://i0.hdslb.com/bfs/new_dyn/f23b9d25984034b15552a55e4270ab5d252667233.png@1192w.webp)
 
-Your screenshot file should be `16:9` aspect ratio.
-The recommended size is 512x288.
+在纯文本编辑里，调整字体行间距和段间距，在有大量文本时，阅读会更舒服。
 
-### Submit your theme for review
+![](https://i0.hdslb.com/bfs/new_dyn/bb7f932126bb835239f78e9155f5bb41252667233.png@1192w.webp)
 
-To have your theme included in the Theme Gallery, you will need to submit a Pull Request to [`obsidianmd/obsidian-releases`](https://github.com/obsidianmd/obsidian-releases#community-theme).
+![](https://i0.hdslb.com/bfs/new_dyn/0f2314845c568aab16aefc883dc65a59252667233.png@1192w.webp)
 
-## Releasing Versions _(Optional)_
 
-If your theme is getting more and more complex, you might want to start thinking about how your theme will stay compatible with different versions of Obsidian. Introduced in v0.16 of Obsidian, themes support [Github Releases](https://docs.github.com/en/repositories/releasing-projects-on-github/managing-releases-in-a-repository). This means that you can specify which versions of your theme are compatible with which versions of Obsidian.
 
-### Steps for releasing the initial version of your theme (1.0.0)
+## Installation
 
-1. From your theme's repository, click on "Releases".
-   
-<img width="235" alt="Pasted image 20220822145001" src="https://user-images.githubusercontent.com/693981/186000441-287a1a97-65f6-4b5f-ba66-810ceae91cd3.png">
+To install the theme
 
-2. On the Releases page, there should be a button to **Draft a new Release**. Press it.
+- Open Obsidian Settings
+- Go to `Appearance` and click `Manage`
+- Under community themes search for "Zen" and click `Use`
 
-<img width="202" alt="Pasted image 20220822145048" src="https://user-images.githubusercontent.com/693981/186000664-6c63ae14-f685-4d39-bfe6-324f95cd9669.png">
 
-3. Fill out the Release information form.
-	- **Choose a Tag**: Type in the name of the version number here. At the bottom of the dropdown should be a button to create a new tag with your latest theme changes. Choose this option.
-		<img width="340" alt="Pasted image 20220822145648" src="https://user-images.githubusercontent.com/693981/186000848-bd1c2619-ea09-4e70-a886-40769cda6921.png">
-	- **Release Title**: This can be the version number.
-	- **Description** _Optional_: Anything that changed
-	- **Files:** The most important part of this form is uploading the files. You can do this by dragging 'n dropping the `manifest.json` file and the `theme.css` file your for theme inside the file upload field.
+## Disclaimer
 
-<img width="946" alt="Pasted image 20220822145356" src="https://user-images.githubusercontent.com/693981/186000772-e689ecea-c3b7-4e9d-9204-7ad62c0123aa.png">
+This theme is provided as is, and is designed for my personal use of Obsidian on macOS. As such it is not thoroughly tested across all operating systems and use cases. 
 
-4. Click "Publish Release."
-5. Make sure that `versions.json` is set up correctly. This file is a map.
-  ```json
-  {
-    "1.0.0": "0.16.0"
-  }
-  ```
-  
-  This means that version 1.0.0 of your theme is compatible with version 0.16.0 of Obsidian. For the initial release of your theme, you shouldn't need to make any changes to this file.
- 
-### Steps for releasing new versions
-
-Releasing a new version of your theme is the same as releasing the initial version.
-
-1. From your theme's repository, click on "Releases."
-2. On the Releases page, there should be a button to **Draft a new Release**. Press it.
-3. Fill out the Release information form.
-	- **Choose a Tag**: Type in the name of the version number here. At the bottom of the dropdown should be a button to create a new tag with your latest theme changes. Choose this option.
-		<img width="333" alt="Pasted image 20220822145812" src="https://user-images.githubusercontent.com/693981/186000912-f494def9-0f67-4662-92bf-bd278082455f.png">
-	- **Release Title**: This can be the version number.
-	- **Description** _Optional_: Anything that changed
-	- **Files:** The most important part of this form is uploading the files. You can do this by dragging 'n dropping the `manifest.json` file and the `theme.css` file your for theme inside the file upload field.
-
-4. Click "Publish Release."
-5. Update the `versions.json` file in your repository. For the initial release of your theme, you probably didn't need to make any changes to the `versions.json` file. When you release subsequent versions of your theme; however, it's best practice to include the new version as entry in the versions.json file. So this might look like:
-  ```json
-  {  
-		"1.0.0": "0.16.0",
-		"1.0.1": "0.16.0"
-  }
-  ```
-
-  What's important to note here is: the new version is included as the "key" and the "value" is the minimum version of Obsidian that your theme compatible with. So if the new version of your theme is only compatible with an Insider version of Obsidian, it's important to set this value accordingly. This will prevent users on older versions of Obsidian from updating to the newer version of your theme.
+This theme modifies significant parts of the Obsidian interface, so it may break with future updates. It may also be incompatible with other bits of custom CSS you have.
