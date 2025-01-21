@@ -250,10 +250,6 @@ body:not(.is-grabbing):not(.is-fullscreen).is-hidden-frameless .mod-top .workspa
 	margin-top: 0 !important;
 }
 
-/* 左侧目录去除左边的空白 */
-body:is(.show-ribbon) .nav-files-container {
-	padding-left: 0;
-}
 
 /* 调整目录折叠按钮与标题对齐 */
 .fn-whitespace-stop-collapsing .nav-files-container .collapse-icon {
@@ -772,6 +768,11 @@ li {
 * 适配PC端样式 
 */
 @media screen and (min-device-width:400px) {
+
+	/* 左侧目录去除左边的空白 */
+	body:is(.show-ribbon) .nav-files-container {
+		padding-left: 0;
+	}
 
 	/* 将tab活动指示器修改为下划线*/
 	.view-header-title-container:not(.mod-at-end):after {
