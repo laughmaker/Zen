@@ -697,7 +697,7 @@ span.cm-formatting.cm-formatting-list.cm-formatting-list-ol {
 }
 
 .markdown-rendered.show-indentation-guide ul::before {
-	margin-left: -3px;
+	margin-left: -4px;
 }
 
 .markdown-rendered.show-indentation-guide ul>li>ol::before {
@@ -725,8 +725,8 @@ span.cm-formatting.cm-formatting-list.cm-formatting-list-ol {
 .markdown-rendered .cm-line,
 ol,
 li {
-	padding-bottom: 0.2em !important;
-	padding-top: 0.2em !important;
+	padding-bottom: 0.15em !important;
+	padding-top: 0.15em !important;
 }
 
 .markdown-rendered p {
