@@ -140,7 +140,7 @@ hr.workspace-leaf-resize-handle {
 }
 
 .workspace .mod-root .workspace-tabs.mod-stacked .workspace-tab-container {
-	/* backdrop-filter: blur(10px); */
+	/* backdrop-filter: blur(25px); */
 	background-color: var(--background-primary) !important;
 }
 /* .mod-stacked .workspace-tab-container .workspace-leaf.mod-active,
@@ -783,6 +783,10 @@ li {
 		background: none;
 	}
 
+	.workspace-tab-header-container {
+		background-color: var(--editor-bg-color) !important;
+	}
+
 	.workspace-tab-header.is-active {
 		box-shadow: none;
 		border-bottom-width: 1.5px;
@@ -1030,6 +1034,9 @@ a.tag {
 	/* margin-left: 3px; */
 }
 
+.internal-embed img:not([width]), .internal-embed audio, .internal-embed video {
+	padding-top: 8px;
+}
 
 
 .markdown-source-view.mod-cm6 .edit-block-button {
