@@ -1585,3 +1585,14 @@ input.document-search-input {
 g.markmap-node[data-depth='0'] .markmap-foreign {
 	font-weight: bolder;
 }
+
+/* 移除白板背景 */
+.canvas,
+.canvas-wrapper,
+.canvas-background {
+	background-color: transparent;
+}
+
+.canvas-background {
+	display: none;
+}
