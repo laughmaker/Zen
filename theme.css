@@ -143,6 +143,7 @@ hr.workspace-leaf-resize-handle {
 	/* backdrop-filter: blur(25px); */
 	background-color: var(--background-primary) !important;
 }
+
 /* .mod-stacked .workspace-tab-container .workspace-leaf.mod-active,
 .mod-stacked .workspace-tab-container .workspace-tab-header.mod-active {
 	filter: blur(0px);
@@ -393,6 +394,19 @@ hr {
 	margin-bottom: 15px !important;
 }
 
+
+/* 调整内部嵌入块的对齐 */
+.markdown-source-view.mod-cm6 .internal-embed,
+.markdown-source-view.mod-cm6 .cm-content>[contenteditable=false] {
+	margin-left: 3px !important;
+	padding-left: 14px;
+}
+
+.embed-title {
+	border-bottom: solid 0.5px var(--text-accent);
+	color: var(--text-accent);
+	font-weight: bold;
+}
 
 /* 
 * 大纲栏样式 
@@ -1034,7 +1048,9 @@ a.tag {
 	/* margin-left: 3px; */
 }
 
-.internal-embed img:not([width]), .internal-embed audio, .internal-embed video {
+.internal-embed img:not([width]),
+.internal-embed audio,
+.internal-embed video {
 	padding-top: 8px;
 }
 
@@ -1176,14 +1192,17 @@ input.document-search-input {
 }
 
 .search-result-file-matches {
-	font-size: 14px;
+	/* font-size: 14px; */
+	margin-left: 0;
 }
 
 .search-result-file-match-destination-file-icon {
 	color: unset;
 }
 
-
+.outgoing-link-pane .tree-item-inner {
+	/* font-size: 0.9em; */
+}
 
 
 
@@ -1283,11 +1302,11 @@ input.document-search-input {
 	background-color: var(--editor-bg-color) !important;
 }
 
-.is-translucent .workspace-split.mod-root  .workspace-tabs .view-content {
+.is-translucent .workspace-split.mod-root .workspace-tabs .view-content {
 	background-color: var(--editor-bg-color);
 }
 
-.is-translucent .workspace-split.mod-root  .workspace-tabs.mod-stacked .view-content {
+.is-translucent .workspace-split.mod-root .workspace-tabs.mod-stacked .view-content {
 	background-color: transparent;
 }
 
