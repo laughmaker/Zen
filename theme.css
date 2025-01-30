@@ -799,7 +799,7 @@ li {
 		background: none;
 	}
 
-	.workspace-tab-header-container {
+	.is-translucent .workspace-tab-header-container {
 		background-color: var(--editor-bg-color) !important;
 	}
 
