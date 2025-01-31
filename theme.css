@@ -398,7 +398,7 @@ hr {
 
 /* 调整内部嵌入块的对齐 */
 .markdown-source-view.mod-cm6 .internal-embed,
-.markdown-source-view.mod-cm6 .cm-content>[contenteditable=false],
+/* .markdown-source-view.mod-cm6 .cm-content>[contenteditable=false], */
 .markdown-preview-view .markdown-embed {
 	margin-left: 3px !important;
 	padding-left: 14px;
