@@ -94,6 +94,7 @@ body.is-mobile {
 	--app-model-bg-color: rgba(28, 28, 28, 0.8);
 	--editor-bg-color: rgba(28, 28, 28, .8);
 	--suggestion-bg-color: rgba(28, 28, 28, 0.1);
+	--code-background: rgba(0, 0, 0, 0.2);
 }
 
 .theme-light {
@@ -124,6 +125,23 @@ body.is-mobile {
 	--editor-bg-color: rgba(255, 255, 255, 0.5);
 	--suggestion-bg-color: rgba(248, 248, 248, 0.1);
 	--divider-color: rgba(0, 0, 0, 0.01);
+	--code-background: rgba(200, 200, 200, 0.2);
+}
+
+.mod-windows {}
+
+.mod-macos .app-container {
+	/* content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background: url('https://s1.vika.cn/space/2021/04/11/5ba91ce3feb0427fae7f070d68030bfd') no-repeat center center; */
+	/* background-size: cover; */
+	/* background-color: aqua !important; */
+	/* backdrop-filter: blur(10px); */
+	/* z-index: -1; */
 }
 
 
@@ -415,11 +433,6 @@ hr {
 */
 .workspace-leaf-content[data-type='out-line'] .node-insert-event .tree-item .tree-item-self>.tree-item-inner::before {
 	content: "&";
-}
-
-/* codeblock */
-.HyperMD-codeblock.HyperMD-codeblock-bg.cm-line {
-	background-color: rgba(0, 0, 0, .2);
 }
 
 /* callout style */
@@ -875,6 +888,13 @@ li {
 
 	.mobile-toolbar-options-list {
 		background-color: transparent;
+		box-shadow: none !important;
+	}
+
+	.mobile-toolbar-options-container {
+		box-shadow: none !important;
+		/* background-color: red !important; */
+		box-shadow: 10px 0 15px -5px rgba(0, 255, 0, 1.0);
 	}
 
 	.mobile-toolbar-floating-options {
