@@ -1166,7 +1166,7 @@ input:not(.prompt-input):focus {
 	padding-left: 0;
 }
 
-.search-result-file-matches {
+.mod-global-search .search-result-file-matches {
 	margin-left: 24px;
 }
 
@@ -1195,7 +1195,7 @@ input.document-search-input {
 
 .search-result-file-matches {
 	/* font-size: 14px; */
-	margin-left: 0;
+	/* margin-left: 0; */
 }
 
 .search-result-file-match-destination-file-icon {
