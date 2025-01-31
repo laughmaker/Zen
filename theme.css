@@ -826,6 +826,10 @@ li {
 		padding: 4px 6px !important;
 	}
 
+	.float-search-modal-container.modal-container.mod-dim .modal {
+		margin-top: -41px !important;
+	}
+
 }
 
 /* 适配手机端，以13Pro Max分辨率为限制 */
