@@ -313,6 +313,25 @@ body:not(.is-grabbing):not(.is-fullscreen).is-hidden-frameless .mod-top .workspa
 	color: var(--nav-collapse-icon-color);
 }
 
+/* 设置大纲样式 */
+.workspace-leaf-content[data-type='outline'] .tree-item-self:not(.mod-collapsible) .tree-item-inner {
+	/* background-color: red; */
+	margin-left: -15px;
+}
+
+.workspace-leaf-content[data-type='outline'] .tree-item-self.mod-collapsible .tree-item-inner {
+	margin-left: -5px;
+}
+
+.workspace-leaf-content[data-type='outline'] .tree-item-self:not(.mod-collapsible) .tree-item-inner::before {
+	/* background-color: aqua; */
+	content: "•";
+	font-weight: bolder;
+	padding-right: 3px;
+	color: var(--nav-collapse-icon-color);
+}
+
+
 /* 目录折叠按钮填充为实体按钮 */
 .collapse-icon svg.svg-icon {
 	width: 12px;
