@@ -698,7 +698,7 @@ span.cm-formatting.cm-formatting-list.cm-formatting-list-ol {
 .HyperMD-quote {
 	border-left: var(--blockquote-border-color) solid 2px !important;
 	padding-inline-start: var(--size-4-6);
-	transform: translateX(5px);
+	transform: translateX(3px);
 }
 
 /* 光标所在行的颜色 */
