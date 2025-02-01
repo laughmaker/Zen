@@ -421,8 +421,8 @@ hr {
 .markdown-source-view.mod-cm6 .internal-embed,
 /* .markdown-source-view.mod-cm6 .cm-content>[contenteditable=false], */
 .markdown-preview-view .markdown-embed {
-	margin-left: 3px !important;
-	padding-left: 14px;
+	/* margin-left: 3px !important; */
+	/* padding-left: 14px; */
 }
 
 .embed-title {
