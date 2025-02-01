@@ -56,6 +56,7 @@ body {
 	--table-header-background: rgba(0, 0, 0, 0.1);
 	--list-bullet-end-padding: 1.4rem;
 	--file-line-width: 800px;
+	--nav-item-children-padding-start: 1px;
 }
 
 body.is-mobile {
@@ -270,14 +271,16 @@ body:not(.is-grabbing):not(.is-fullscreen).is-hidden-frameless .mod-top .workspa
 	font-size: 1.1em;
 }
 
-.nav-folder.tree-item-self.has-folder-note .tree-item-icon.collapse-icon {
-	margin-top: 0 !important;
+/* 调整目录折叠按钮与标题对齐
+ * 受 foldernote影响，需要做调整，否则对不齐
+ */
+
+.fn-whitespace-stop-collapsing .collapse-icon {
+	padding-top: 0 !important;
 }
 
-
-/* 调整目录折叠按钮与标题对齐 */
 .fn-whitespace-stop-collapsing .nav-files-container .collapse-icon {
-	/* margin-top: -4px; */
+	margin-top: 3.5px;
 }
 
 .folder-note-underline .has-folder-note .nav-folder-title-content {
@@ -288,19 +291,18 @@ body:not(.is-grabbing):not(.is-fullscreen).is-hidden-frameless .mod-top .workspa
 .tree-item-inner.nav-file-title-content::before {
 	content: "•";
 	font-weight: bolder;
-	padding-right: 7px;
-	color: var(--nav-collapse-icon-color);
-	margin-left: -1.5px;
-}
-
-.tree-item-children .tree-item .tree-item-inner:not(.tag-pane-tag):before {
-	/* content: "•";
-	font-weight: bolder;
 	padding-right: 5px;
-	margin-left: -15px;
-	color: var(--nav-collapse-icon-color); */
+	color: var(--nav-collapse-icon-color);
+	margin-left: -0.5px;
 }
 
+.tree-item-inner.nav-folder-title-content {
+	margin-left: -4px;
+}
+
+.tree-item-inner:has(.tag-pane-tag-parent) {
+	margin-left: -3px;
+}
 
 .tree-item-children .tree-item .tag-pane-tag:not(.mod-collapsible):before {
 	content: "•";
@@ -581,7 +583,7 @@ h6:before,
 
 /* 设置左侧目录折叠箭头,往下移，与标题对齐 */
 .tree-item-self .tree-item-icon {
-	/* margin-top: 3px; */
+	/* margin-top: -4px; */
 }
 
 
@@ -699,6 +701,11 @@ span.cm-formatting.cm-formatting-list.cm-formatting-list-ol {
 	border-left: var(--blockquote-border-color) solid 2px !important;
 	padding-inline-start: var(--size-4-6);
 	transform: translateX(3px);
+}
+
+/* 调整字数统计右对齐 */
+.novel-word-count--note-right .nav-files-container .nav-file-title::after {
+	margin-right: -8px;
 }
 
 /* 光标所在行的颜色 */
@@ -893,7 +900,6 @@ li {
 
 	.mobile-toolbar-options-container {
 		box-shadow: none !important;
-		/* background-color: red !important; */
 		box-shadow: 10px 0 15px -5px rgba(0, 255, 0, 1.0);
 	}
 
