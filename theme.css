@@ -198,7 +198,7 @@ hr.workspace-leaf-resize-handle {
 
 /* 移除目录栏的筛选按钮 */
 .clickable-icon.nav-action-button {
-	display: none;
+	/* display: none; */
 }
 
 /* 移除设置的分界线 */
@@ -262,13 +262,14 @@ body:not(.is-grabbing):not(.is-fullscreen).is-hidden-frameless .mod-top .workspa
 
 /* 调整目录字体 */
 .nav-folder-title {
-	font-size: 0.94em;
+	/* font-size: 0.94em; */
+	/* font-size: 16; */
 }
-
 
 /* 左侧目标标题文字字体 */
 .nav-file-title-content {
-	font-size: 1.1em;
+	/* font-size: 1.1em; */
+	/* font-size: 16; */
 }
 
 /* 调整目录折叠按钮与标题对齐
