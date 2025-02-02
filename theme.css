@@ -298,7 +298,7 @@ body:not(.is-grabbing):not(.is-fullscreen).is-hidden-frameless .mod-top .workspa
 }
 
 .tree-item-inner.nav-folder-title-content {
-	margin-left: -4px;
+	margin-left: -3px;
 }
 
 .tree-item-inner:has(.tag-pane-tag-parent) {
@@ -320,7 +320,7 @@ body:not(.is-grabbing):not(.is-fullscreen).is-hidden-frameless .mod-top .workspa
 }
 
 .workspace-leaf-content[data-type='outline'] .tree-item-self.mod-collapsible .tree-item-inner {
-	margin-left: -5px;
+	margin-left: -4px;
 }
 
 .workspace-leaf-content[data-type='outline'] .tree-item-self:not(.mod-collapsible) .tree-item-inner::before {
