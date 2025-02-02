@@ -462,7 +462,11 @@ hr {
 	padding-left: 8px;
 }
 
-
+/* 移除关系图中关闭按钮背景色 */
+.workspace-split:not(.mod-root) .graph-controls.is-close,
+.graph-controls.is-close {
+	background-color: transparent;
+}
 
 /* 
 * 调整标题的上下间距，以及颜色字体等样式
