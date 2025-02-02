@@ -93,7 +93,7 @@ body.is-mobile {
 	--statusbar-bg-color: rgba(28, 28, 28, 0.7);
 	--model-bg-color: rgba(28, 28, 28, 0.5);
 	--app-model-bg-color: rgba(28, 28, 28, 0.8);
-	--editor-bg-color: rgba(28, 28, 28, .8);
+	--editor-bg-color: rgba(28, 28, 28, .65);
 	--suggestion-bg-color: rgba(28, 28, 28, 0.1);
 	--code-background: rgba(0, 0, 0, 0.2);
 	--background-modifier-form-field: rgba(245, 245, 245, 0.04);
