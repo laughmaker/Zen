@@ -96,6 +96,7 @@ body.is-mobile {
 	--editor-bg-color: rgba(28, 28, 28, .8);
 	--suggestion-bg-color: rgba(28, 28, 28, 0.1);
 	--code-background: rgba(0, 0, 0, 0.2);
+	--background-modifier-form-field: rgba(245, 245, 245, 0.04);
 }
 
 .theme-light {
@@ -127,6 +128,7 @@ body.is-mobile {
 	--suggestion-bg-color: rgba(248, 248, 248, 0.1);
 	--divider-color: rgba(0, 0, 0, 0.01);
 	--code-background: rgba(200, 200, 200, 0.2);
+	--background-modifier-form-field: rgba(230, 230, 230, 0.5);
 }
 
 .mod-windows {}
