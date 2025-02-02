@@ -437,11 +437,11 @@ hr {
 
 
 /* 调整内部嵌入块的对齐 */
-.markdown-source-view.mod-cm6 .internal-embed,
+.markdown-source-view.mod-cm6 .internal-embed:not(.image-embed),
 /* .markdown-source-view.mod-cm6 .cm-content>[contenteditable=false], */
-.markdown-preview-view .markdown-embed {
-	/* margin-left: 3px !important; */
-	/* padding-left: 14px; */
+.markdown-preview-view .markdown-embed:not(.image-embed) {
+	margin-left: 3px !important;
+	padding-left: 14px;
 }
 
 .embed-title {
