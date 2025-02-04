@@ -342,7 +342,7 @@ body:not(.is-grabbing):not(.is-fullscreen).is-hidden-frameless .mod-top .workspa
 	margin-left: -3px;
 }
 
-.tree-item-children .tree-item .tag-pane-tag:not(.mod-collapsible):before {
+.tree-item .tag-pane-tag:not(.mod-collapsible):before {
 	content: "•";
 	font-weight: bolder;
 	padding-right: 5px;
