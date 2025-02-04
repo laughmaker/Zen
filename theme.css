@@ -1703,7 +1703,7 @@ g.markmap-node[data-depth='0'] .markmap-foreign {
 	font-weight: bolder;
 }
 
-/* 移除白板背景 */
+/* 调整白板样式 */
 .canvas,
 .canvas-wrapper,
 .canvas-background {
@@ -1712,4 +1712,25 @@ g.markmap-node[data-depth='0'] .markmap-foreign {
 
 .canvas-background {
 	display: none;
+}
+
+.canvas-card-menu .canvas-card-menu-button {
+	--icon-size: var(--icon-l);
+}
+
+.canvas-card-menu {
+	background-color: var(--model-bg-color) !important;
+	border-radius: 20px;
+	margin-bottom: 25px;
+	backdrop-filter: blur(10px);
+}
+
+.canvas-control-group {
+	background-color: var(--model-bg-color) !important;
+	border-radius: 18px;
+	backdrop-filter: blur(10px);
+}
+
+.canvas-control-item {
+	background-color: unset;
 }
