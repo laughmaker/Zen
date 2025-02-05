@@ -60,6 +60,10 @@ body {
 	--window-font-size: 14px;
 }
 
+body.is-mobile {
+	--window-font-size: 15px;
+}
+
 .theme-dark {
 	--base-d: 0%;
 	/* 顶部导航栏背景色 */
@@ -526,6 +530,7 @@ hr {
 
 .cm-s-obsidian .cm-line.HyperMD-header {
 	margin-bottom: 10px !important;
+	padding-bottom: 0;
 }
 
 h1,
