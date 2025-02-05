@@ -5,6 +5,7 @@ Zen 是一个专注于写作而生的现代化主题。去除了影响写作和�
 备注：
 - 在 mac 平台，背景高斯模糊效果需要开启半透明选项。路径：设置 -> 外观 -> 半透明效果。
 - Windows 平台由于新版除除了开启半透明选项，故采用折衷的办法，在代码里内置图片来实现，如需定义，请到最后查看教程。
+- 部分参数，已可通过 Style Settings 插件进行配置。
 
 Zen is a modern theme designed specifically for writing. It removes redundant elements that can affect writing and reading, extensively uses Gaussian blur effects, and features a modern minimalist style. It has also been specifically optimized for Chinese users.
 
