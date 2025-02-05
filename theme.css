@@ -134,9 +134,9 @@ body.is-mobile {
 	--code-background: rgba(200, 200, 200, 0.2);
 	--background-modifier-form-field: rgba(230, 230, 230, 0.5);
 	--win-blur: 40px;
-	--win-brightness: 0.8;
+	--win-brightness: 0.6;
 	--win-editor-bg-color: rgba(240, 240, 240, .65);
-	--win-opacity: 0.1;
+	--win-opacity: 0.2;
 }
 
 .mod-windows .app-container::before {
