@@ -133,10 +133,10 @@ body.is-mobile {
 	--divider-color: rgba(0, 0, 0, 0.01);
 	--code-background: rgba(200, 200, 200, 0.2);
 	--background-modifier-form-field: rgba(230, 230, 230, 0.5);
-	--win-blur: 50px;
-	--win-brightness: 2;
+	--win-blur: 40px;
+	--win-brightness: 0.8;
 	--win-editor-bg-color: rgba(240, 240, 240, .65);
-	--win-opacity: 0.25;
+	--win-opacity: 0.1;
 }
 
 .mod-windows .app-container::before {
@@ -388,6 +388,19 @@ body:not(.is-grabbing):not(.is-fullscreen).is-hidden-frameless .mod-top .workspa
 	gap: 15px;
 	backdrop-filter: blur(20px);
 	background-color: var(--statusbar-bg-color) !important;
+}
+
+.status-bar::before {
+	content: '';
+	z-index: -1;
+	filter: blur(20px);
+	background-color: var(--app-model-bg-color) !important;
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	/* backdrop-filter: blur(10px); */
 }
 
 /* 隐藏库名 */
@@ -1508,10 +1521,18 @@ input.document-search-input {
 #cMenuToolbarModalBar.top {
 	border-bottom: solid 1px var(--background-modifier-border);
 	top: 0px !important;
-	backdrop-filter: blur(20px);
-	background-color: var(--app-model-bg-color);
+	backdrop-filter: none;
+	background-color: transparent !important;
 	border: none;
 	border-radius: 0 !important;
+}
+
+#cMenuToolbarModalBar.cMenuToolbarDefaultAesthetic.top {
+	backdrop-filter: unset;
+}
+
+#cMenuToolbarModalBar.top button.cMenuToolbar-Divider-Line {
+	background-color: transparent !important;
 }
 
 #cMenuToolbarModalBar.cMenuToolbarDefaultAesthetic {
@@ -1521,7 +1542,6 @@ input.document-search-input {
 }
 
 #cMenuToolbarModalBar .cMenuToolbarCommandItem {
-	/* background-color: var(--app-model-bg-color) !important; */
 	backdrop-filter: unset;
 	padding: 7px;
 }
@@ -1529,7 +1549,6 @@ input.document-search-input {
 #cMenuToolbarModalBar.cMenuToolbarGlassAesthetic,
 #cMenuToolbarModalBar.cMenuToolbarGlassAesthetic~#cMenuToolbarPopoverBar {
 	backdrop-filter: blur(15px);
-	/* background-color: var(--app-model-bg-color) !important; */
 }
 
 :is(#cMenuToolbarModalBar, #cMenuToolbarPopoverBar) button.cMenuToolbar-Divider-Line {
@@ -1546,7 +1565,6 @@ input.document-search-input {
 #cMenuToolbarModalBar .subitem {
 	border-radius: 18px !important;
 	backdrop-filter: blur(15px) !important;
-	/* background-color: var(--app-model-bg-color) !important; */
 	margin-top: 10px;
 }
 
