@@ -57,7 +57,7 @@ body {
 	--list-bullet-end-padding: 1.4rem;
 	--file-line-width: 800px;
 	--nav-item-children-padding-start: 1px;
-	--window-font-size: 14px;
+	--window-font-size: 16px;
 }
 
 body.is-mobile {
@@ -303,6 +303,7 @@ body:not(.is-grabbing):not(.is-fullscreen).is-hidden-frameless .mod-top .workspa
 .nav-folder-title,
 .nav-file-title-content,
 .tree-item-inner,
+.view-header-title-container,
 .tree-item-inner.nav-file-title-content,
 .workspace .mod-root .workspace-tab-header-inner-title,
 .tree-item-inner-text {
