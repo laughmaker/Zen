@@ -57,11 +57,7 @@ body {
 	--list-bullet-end-padding: 1.4rem;
 	--file-line-width: 800px;
 	--nav-item-children-padding-start: 1px;
-}
-
-body.is-mobile {
-	/* --safe-area-inset-top: 35px !important; */
-
+	--window-font-size: 14px;
 }
 
 .theme-dark {
@@ -297,16 +293,16 @@ body:not(.is-grabbing):not(.is-fullscreen).is-hidden-frameless .mod-top .workspa
 	margin-left: -14px;
 }
 
-/* 调整目录字体 */
-.nav-folder-title {
-	/* font-size: 0.94em; */
-	/* font-size: 16; */
-}
-
-/* 左侧目标标题文字字体 */
-.nav-file-title-content {
-	/* font-size: 1.1em; */
-	/* font-size: 16; */
+/* 调整目录字体 
+ * 左侧目标标题文字字体
+*/
+.nav-folder-title,
+.nav-file-title-content,
+.tree-item-inner,
+.tree-item-inner.nav-file-title-content,
+.workspace .mod-root .workspace-tab-header-inner-title,
+.tree-item-inner-text {
+	font-size: var(--window-font-size);
 }
 
 /* 调整目录折叠按钮与标题对齐
