@@ -54,9 +54,14 @@ settings:
         description: 是否显示导航栏顶部的控制按钮
         type: class-toggle
     -
+        id: windows-translucent-off
+        title: 关闭Windows窗体半透明
+        description: 关闭Windows的窗口半透明，仅对Windows有用
+        type: class-toggle
+    -
         id: workspace-opacity
-        title: 调整窗体背景的透明度
-        description: 调整窗体背景的透明度。
+        title: 调整 mac 平台窗体背景的透明度
+        description: 调整 mac 平台的窗体背景的透明度。
         type: variable-number-slider
         default: 0.2
         min: 0
@@ -180,7 +185,7 @@ body.is-mobile {
 	--win-opacity: 0.2;
 }
 
-
+/* 设置 mac 平台背景透明度 */
 .is-translucent:not(.is-fullscreen) .titlebar,
 .is-translucent:not(.is-fullscreen) .app-container {
 	background-color: rgb(from var(--workspace-background-translucent) r g b / calc(var(--workspace-opacity))) !important;
@@ -1758,8 +1763,10 @@ g.markmap-node[data-depth='0'] .markmap-foreign {
 	background-color: unset;
 }
 
+
+
 /* Windows style */
-body:not(.active-line-off) .mod-windows .app-container::before {
+body:not(.windows-translucent-off).mod-windows .app-container::before {
 	content: '';
 	position: absolute;
 	top: 0;
@@ -1772,32 +1779,32 @@ body:not(.active-line-off) .mod-windows .app-container::before {
 	z-index: -1;
 }
 
-.mod-windows .workspace-split.mod-vertical.mod-root {
+body:not(.windows-translucent-off).mod-windows .workspace-split.mod-vertical.mod-root {
 	background: var(--win-editor-bg-color) !important;
 }
 
-.mod-windows .workspace-ribbon.mod-left:before {
+body:not(.windows-translucent-off).mod-windows .workspace-ribbon.mod-left:before {
 	background-color: transparent;
 }
 
-.mod-windows .workspace,
-.mod-windows .workspace-split.mod-horizontal,
-.mod-windows .workspace-leaf,
-.mod-windows .workspace-ribbon,
-.mod-windows .sidebar-toggle-button.mod-left,
-.mod-windows .workspace-split.mod-left-split .workspace-sidedock-vault-profile,
-.mod-windows .mod-root .mod-top .workspace-tab-header-container,
-.mod-windows .titlebar-button-container.mod-right,
-.mod-windows .workspace-tab-header-container {
+body:not(.windows-translucent-off).mod-windows .workspace,
+body:not(.windows-translucent-off).mod-windows .workspace-split.mod-horizontal,
+body:not(.windows-translucent-off).mod-windows .workspace-leaf,
+body:not(.windows-translucent-off).mod-windows .workspace-ribbon,
+body:not(.windows-translucent-off).mod-windows .sidebar-toggle-button.mod-left,
+body:not(.windows-translucent-off).mod-windows .workspace-split.mod-left-split .workspace-sidedock-vault-profile,
+body:not(.windows-translucent-off).mod-windows .mod-root .mod-top .workspace-tab-header-container,
+body:not(.windows-translucent-off).mod-windows .titlebar-button-container.mod-right,
+body:not(.windows-translucent-off).mod-windows .workspace-tab-header-container {
 	background-color: transparent !important;
 }
 
-.mod-windows .workspace-split.mod-root,
-.mod-windows .workspace-split.mod-root .view-content,
-.mod-windows .workspace-split.mod-root .view-header {
+body:not(.windows-translucent-off).mod-windows .workspace-split.mod-root,
+body:not(.windows-translucent-off).mod-windows .workspace-split.mod-root .view-content,
+body:not(.windows-translucent-off).mod-windows .workspace-split.mod-root .view-header {
 	background: transparent !important;
 }
 
-.mod-windows .view-header-title-container:after {
+body:not(.windows-translucent-off).mod-windows .view-header-title-container:after {
 	background: transparent !important;
 }
