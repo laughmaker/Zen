@@ -2,7 +2,8 @@
 
 [中文](#Chinese) ｜ [English](#English)
 
-# 中文 {#Chinese}
+
+# <a id="Chinese">中文</a>
 Zen 是一个专注于写作而生的现代化主题。去除了影响写作和阅读的冗余元素，大量的运用了高斯模糊效果，具有现代化的简约风格。同时针对中文用户做了专门的优化。
 
 备注：
@@ -22,7 +23,6 @@ Zen 是一个专注于写作而生的现代化主题。去除了影响写作和�
 
 - 当前使用字体：https://github.com/lxgw/LxgwWenKai/releases/download/v1.510/LXGWWenKaiMono-Regular.ttf
 - 其他家族字体参考： https://github.com/lxgw/LxgwWenKai
-
 
 ## 二、特性
 1. 窗体：背景现化化的背景高斯模糊效果；
@@ -64,7 +64,7 @@ Zen 是一个专注于写作而生的现代化主题。去除了影响写作和�
 3. 从网络上找到一张你心仪的照片，将`background: url...`这一行删除，替换为：`background: url('图片地址') repeat;`
 
 
-# English {#English}
+# <a id="English">English</a>
 Zen is a modern theme designed specifically for writing. It removes redundant elements that can affect writing and reading, extensively uses Gaussian blur effects, and features a modern minimalist style. It has also been specifically optimized for Chinese users.
 
 Notes:
