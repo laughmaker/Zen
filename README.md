@@ -2,6 +2,8 @@
 
 [中文](#Chinese) ｜ [English](#English)
 
+[Screenshots](#Screenshots)
+
 
 # <a id="Chinese">中文</a>
 Zen 是一个专注于写作而生的现代化主题。去除了影响写作和阅读的冗余元素，大量的运用了高斯模糊效果，具有现代化的简约风格。同时针对中文用户做了专门的优化。
@@ -36,23 +38,7 @@ Zen 是一个专注于写作而生的现代化主题。去除了影响写作和�
 9. 移动端：体验基本保持与 PC 端尽可能一致；
 10. Windows端：增加高斯模糊背景效果。
 
-## 三、Screenshots
-### Mac 
-![](./screenshots/cover-dark-1.png)
-![](./screenshots/cover-dark-2.png)
-![](./screenshots/cover-dark-3.png)
-![](./screenshots/cover-light-1.png)
-
-### Win 
-![](./screenshots/win-dark.png)
-![](./screenshots/win-light.png)
-
-
-### Mobile
-![](./screenshots/mobile-1.png)
-![](./screenshots/mobile-2.png)
-
-## 四、Win如何替换背景？
+## 三、Win如何替换背景？
 由于 Windows 平台的限制，obsidian 官方从 1.6.7 版本，移除了背景半透明效果，所以针对 Windows 平台的实现，采用了图片的方式，不能穿透桌面壁纸。
 
 如果需要更换背景图，可按如下操作：
@@ -113,6 +99,22 @@ If you need to change the background image, follow these steps:
 ![](./screenshots/win-replace-bg.png)
 3. Find a photo you like from the internet, delete the line background: url..., and replace it with: background: url('image address') repeat;
 
+
+# <a id="Screenshots">Screenshots</a>
+## Mac 
+![](./screenshots/cover-dark-1.png)
+![](./screenshots/cover-dark-2.png)
+![](./screenshots/cover-dark-3.png)
+![](./screenshots/cover-light-1.png)
+
+## Win 
+![](./screenshots/win-dark.png)
+![](./screenshots/win-light.png)
+
+
+## Mobile
+![](./screenshots/mobile-1.png)
+![](./screenshots/mobile-2.png)
 
 # **Support development:** [follow me](https://github.com/laughtmaker)
 
