@@ -81,7 +81,18 @@ settings:
         title: 关闭文本两端对齐
         description: 默认文本两端对齐，关闭则左对齐。
         type: class-toggle
-				*/
+    -
+        id: editor-width
+        title: 调整编辑器宽度
+        description: 调整编辑器宽度，默认为 800，最小 500，最大 2000。
+        type: variable-number-slider
+        default: 800
+        min: 500
+        max: 2000
+        step: 10
+
+
+*/
 
 
 /*
@@ -105,7 +116,7 @@ body {
 	--blockquote-border-thickness: 0.5px;
 	--table-header-background: rgba(0, 0, 0, 0.1);
 	--list-bullet-end-padding: 1.4rem;
-	--file-line-width: 800px;
+	--file-line-width: calc(var(--editor-width) * 1px);
 	--nav-item-children-padding-start: 1px;
 	--window-font-size: 15;
 	--workspace-opacity: 0.2;
