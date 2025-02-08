@@ -55,13 +55,13 @@ settings:
         type: class-toggle
     -
         id: windows-translucent-off
-        title: 关闭Windows窗体半透明
+        title: Windows：窗体半透明开关
         description: 关闭Windows的窗口半透明，仅对Windows有用
         type: class-toggle
     -
         id: workspace-opacity
-        title: 调整 mac 平台窗体背景的透明度
-        description: 调整 mac 平台的窗体背景的透明度。
+        title: MacOS：窗体背景的透明度
+        description: 调整 mac 平台的窗体背景的透明度。仅对 macOS 有效
         type: variable-number-slider
         default: 0.2
         min: 0
