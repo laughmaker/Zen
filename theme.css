@@ -1071,6 +1071,10 @@ li {
 		overflow: hidden;
 	}
 
+	.markdown-source-view.mod-cm6 .document-search-container {
+		background-color: transparent !important;
+	}
+
 	.global-search-input-container.search-input-container input,
 	.global-search-input-container.search-input-container input:focus {
 		border: none !important;
