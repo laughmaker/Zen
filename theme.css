@@ -70,13 +70,18 @@ settings:
     -
         id: window-font-size
         title: 调整窗体的字体
-        description: 包含左侧目录、顶部标签、右侧文档目录、标签等；
+        description: 包含左侧目录、顶部标签、右侧文档目录、标签等。
         type: variable-number-slider
         default: 15
         min: 8
         max: 30
         step: 1
-*/
+    -
+        id: text-justify
+        title: 关闭文本两端对齐
+        description: 默认文本两端对齐，关闭则左对齐。
+        type: class-toggle
+				*/
 
 
 /*
@@ -455,6 +460,14 @@ ol {
 	line-height: 1.5em;
 	padding-top: 3px;
 	padding-bottom: 3px;
+	text-align: left;
+}
+
+body:not(.text-justify) .mod-cm6 .cm-editor .cm-line,
+body:not(.text-justify) p,
+body:not(.text-justify) li,
+body:not(.text-justify) ol {
+	text-align: justify;
 }
 
 body:not(.is-phone) .workspace-leaf.mod-active .tree-item-self.has-focus {
