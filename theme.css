@@ -321,6 +321,10 @@ body:not(.is-grabbing):not(.is-fullscreen).is-hidden-frameless .mod-top .workspa
 	margin-left: -14px;
 }
 
+.workspace-drawer-header-name-chevron {
+	display: none;
+}
+
 /* 调整目录字体 
  * 左侧目标标题文字字体
 */
