@@ -1629,6 +1629,10 @@ input.document-search-input {
 	padding: 17px 20px !important;
 }
 
+.theme-dark :is(#cMenuToolbarModalBar, #cMenuToolbarPopoverBar) button.cMenuToolbar-Divider-Line
+{
+	background-color: transparent !important;
+}
 
 
 /* dataview */
