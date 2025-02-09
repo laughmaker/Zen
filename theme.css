@@ -1814,6 +1814,12 @@ g.markmap-node[data-depth='0'] .markmap-foreign {
 	background-color: unset;
 }
 
+/* 调整关系图谱样式 */
+.workspace-split:not(.mod-root) .graph-controls.is-close, .graph-controls.is-close {
+	background-color: transparent;
+	margin-top: -20px;
+	margin-right: -10px;
+}
 
 
 /* Windows style */
