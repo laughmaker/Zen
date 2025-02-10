@@ -791,7 +791,7 @@ span.cm-formatting.cm-formatting-list.cm-formatting-list-ol {
 }
 
 .list-bullet {
-	margin-left: -1.1px;
+	margin-left: 0.9px;
 }
 
 /* 有序列表后面的文字左移 */
@@ -806,7 +806,7 @@ span.cm-formatting.cm-formatting-list.cm-formatting-list-ol {
 .markdown-source-view.mod-cm6 .cm-formatting-list-ul {
 	margin-left: -10.5px;
 	margin-right: 7px;
-	font-size: 17px;
+	font-size: 14px;
 	display: inline-block;
 	width: 26px;
 	text-align: center;
