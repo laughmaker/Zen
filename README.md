@@ -14,6 +14,11 @@ Zen 是一个专注于写作而生的现代化主题。去除了影响写作和�
 -   Windows 平台由于新版除除了开启半透明选项，故采用折衷的办法，在代码里内置图片来实现，如需定义，请到最后查看教程。
 -   部分参数，已可通过 Style Settings 插件进行配置。
 
+如果您喜欢我的主题，可以请我喝杯咖啡。
+If you like my theme, you can buy me a cup of coffee.
+https://www.paypal.com/paypalme/laughmakering
+
+
 ## 一、安装
 
 安装主题的步骤如下：
