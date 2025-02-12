@@ -976,7 +976,7 @@ li {
 	}
 
 	.is-translucent .workspace-tab-header-container {
-		background-color: var(--editor-bg-color) !important;
+		/* background-color: var(--editor-bg-color) !important; */
 	}
 
 	.workspace-tab-header.is-active {
@@ -1409,7 +1409,7 @@ input.document-search-input {
 
 /* 顶部标签栏颜色与编辑器统一 */
 .is-translucent .mod-root .mod-top .workspace-tab-header-container {
-	background-color: var(--editor-bg-color) !important;
+	/* background-color: var(--editor-bg-color) !important; */
 }
 
 .workspace .mod-root .workspace-tabs.mod-stacked .workspace-tab-container .workspace-tab-header {
