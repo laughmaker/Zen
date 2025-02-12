@@ -1481,7 +1481,7 @@ input.document-search-input {
 
 
 /* 适配半透明背景 */
-.is-focused .workspace-leaf.mod-active .view-header,
+/* .is-focused .workspace-leaf.mod-active .view-header, */
 .is-translucent .view-header {
 	background-color: var(--editor-bg-color) !important;
 }
