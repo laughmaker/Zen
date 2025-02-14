@@ -45,84 +45,102 @@ settings:
 		description: Hide the h1...h2... and other small title prompts in front of headings at all levels.
 		description.zh: 隐藏各级标题前面的 h1...h2...等小标题提示
 		type: class-toggle
-    -
-        id: window-font-size
-        title: 调整窗体的字体
-        description: 调节部分字体大小，包含左侧文档目录、顶部文档标题、右侧大纲目录、标签列表等等。
-        type: variable-number-slider
-        default: 15
-        min: 8
-        max: 30
-        step: 1
-    -
-        id: text-justify
-        title: 关闭文本两端对齐
-        description: 默认文本两端对齐，关闭则左对齐。
-        type: class-toggle
-    -
-        id: editor-width
-        title: 调整编辑器宽度
-        description: 调整编辑器宽度，默认为 800，最小 500，最大 2000。
-        type: variable-number-slider
-        default: 800
-        min: 500
-        max: 2000
-        step: 10
 	-
-        id: action-button-on
-        title: 显示控制按钮
-        description: 是否显示导航栏顶部的控制按钮
-        type: class-toggle
+		id: window-font-size
+		title: Adjust the font of the Window.
+		title.zh: 调整窗体的字体
+		description: Adjust the font size of some parts, including the document directory on the left, the document title on the top, the outline directory on the right, the tag list, and so on.
+		description.zh: 调节部分字体大小，包含左侧文档目录、顶部文档标题、右侧大纲目录、标签列表等等。
+		type: variable-number-slider
+		default: 15
+		min: 8
+		max: 30
+		step: 1
 	-
-        id: windows-header
-        title: Windows
-        type: heading
-        level: 1
-        collapsed: true
-    -
-        id: win-translucent-off
-        title: Windows：关闭窗体半透明
-        description: 关闭Windows的窗口半透明，仅对Windows有效
-        type: class-toggle
-    -
-        id: win-window-opacity
-        title: Windows：窗体背景的透明度
-        description: 调整 Windows 平台的窗体背景的透明度。仅对 Windows 有效。推荐值：暗色：0.4 亮色：0.2
-        type: variable-number-slider
-        default: 0.2
-        min: 0
-        max: 1
-        step: 0.01
+		id: text-justify
+		title: Close text justification.
+		title.zh: 关闭文本两端对齐
+		description: Default text is justified on both sides. If it is turned off, it is left-aligned.
+		description.zh: 默认文本两端对齐，关闭则左对齐。
+		type: class-toggle
 	-
-        id: win-window-brightness
-        title: Windows：窗体背景的亮度
-        description: 调整 Windows 平台的窗体背景的亮度。仅对 Windows 有效。推荐值：暗色：0.3 亮色：0.6
-        type: variable-number-slider
-        default: 0.4
-        min: 0
-        max: 1
-        step: 0.01
+		id: editor-width
+		title: Adjust the width of the editor.
+		title.zh: 调整编辑器宽度
+		description: Adjust the editor width. The default is 800. The minimum is 500 and the maximum is 2000.
+		description.zh: 调整编辑器宽度，默认为 800，最小 500，最大 2000。
+		type: variable-number-slider
+		default: 800
+		min: 500
+		max: 2000
+		step: 10
 	-
-        id: win-bg-image-url
-        title: Windows：窗体背景图片
-        description: 设置窗体背景图片；
-        type: variable-text
+		id: action-button-on
+		title: Show control buttons.
+		title.zh: 显示控制按钮
+		description: Whether to display the control buttons at the top of the navigation bar, including sorting, creating a new note, creating a new folder, etc.
+		description.zh: 是否显示导航栏顶部的控制按钮，包含排序、新建笔记、新建文件夹等
+		type: class-toggle
+	-
+		id: windows-header
+		title: Windows
+		type: heading
+		level: 1
+		collapsed: true
+	-
+		id: win-translucent-off
+		title: Windows：Close the translucent window.
+		title.zh: Windows：关闭窗体半透明
+		description: Turn off the window translucency of Windows. It is only effective for Windows.
+		description.zh: 关闭Windows的窗口半透明，仅对Windows有效
+		type: class-toggle
+	-
+		id: win-window-opacity
+		title: Windows：Transparency of window background
+		title.zh: Windows：窗体背景的透明度
+		description: Adjust the transparency of the form background on the Windows platform. Only effective for Windows. Recommended values：For dark colors：0.4. For light colors：0.2.
+		description.zh: 调整 Windows 平台的窗体背景的透明度。仅对 Windows 有效。推荐值：暗色：0.4 亮色：0.2
+		type: variable-number-slider
+		default: 0.2
+		min: 0
+		max: 1
+		step: 0.01
+	-
+		id: win-window-brightness
+		title: Windows：Brightness of form background.
+		title.zh: Windows：窗体背景的亮度
+		description: Adjust the brightness of the form background on the Windows platform. Only effective for Windows. Recommended values：dark：0.3, light：0.6.
+		description.zh: 调整 Windows 平台的窗体背景的亮度。仅对 Windows 有效。推荐值：暗色：0.3 亮色：0.6
+		type: variable-number-slider
+		default: 0.4
+		min: 0
+		max: 1
+		step: 0.01
+	-
+		id: win-bg-image-url
+		title: Windows：the background picture of the window
+		title.zh: Windows：窗体背景图片
+		description: Set the background picture of the window.
+		description.zh: 设置窗体背景图片；
+		type: variable-text
 		default: url('https://images.pexels.com/photos/66997/pexels-photo-66997.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2')
 	-
-        id: macos-header
-        title: MacOS
-        type: heading
-        level: 1
-        collapsed: true
+		id: macos-header
+		title: MacOS
+		type: heading
+		level: 1
+		collapsed: true
 	-
-        id: mac-window-opacity
-        title: MacOS：窗体背景的透明度
-        description: 调整 mac 平台的窗体背景的透明度。仅对 macOS 有效，且在设置 -> 外观中打开了半透明效果开关
-        type: variable-number-slider
-        default: 0.4
-        min: 0
-        max: 1
-        step: 0.01
+		id: mac-window-opacity
+		title: MacOS：The transparency of the window background.
+		title.zh: MacOS：窗体背景的透明度
+		description: Adjust the transparency of the window background on the Mac platform. Only effective for macOS, and the translucent effect switch is turned on in Settings -> Appearance.
+		description.zh: 调整 mac 平台的窗体背景的透明度。仅对 macOS 有效，且在设置 -> 外观中打开了半透明效果开关
+		type: variable-number-slider
+		default: 0.4
+		min: 0
+		max: 1
+		step: 0.01
 
 
 */
