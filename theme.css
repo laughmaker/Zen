@@ -466,7 +466,7 @@ body:not(.is-grabbing):not(.is-fullscreen).is-hidden-frameless .mod-top .workspa
 	stroke: var(--nav-collapse-icon-color);
 	fill: var(--nav-collapse-icon-color);
 	stroke-width: 1px;
-	margin-top: -2px;
+	margin-top: -1px;
 }
 
 /* 底部状态栏样式 */
