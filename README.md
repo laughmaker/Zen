@@ -4,7 +4,7 @@
 
 [Screenshots](#Screenshots)
 
-# <a id="Chinese">中文</a>
+# `<a id="Chinese">`中文 `</a>`
 
 Zen 是一个专注于写作而生的现代化主题。去除了影响写作和阅读的冗余元素，大量的运用了高斯模糊效果，具有现代化的简约风格。同时针对中文用户做了专门的优化。
 
@@ -14,7 +14,6 @@ Zen 是一个专注于写作而生的现代化主题。去除了影响写作和�
 -   Windows 平台由于新版除除了开启半透明选项，故采用折衷的办法，在代码里内置图片来实现，如需定义，请到最后查看教程。
 -   部分参数，已可通过 Style Settings 插件进行配置。
 
-
 # Buy me a Coffee
 
 如果您喜欢我的主题，可以请我喝杯咖啡。
@@ -23,7 +22,7 @@ If you like my theme, you can buy me a cup of coffee.
 
 [![Buy me a Coffee](https://img.shields.io/badge/Buy%20me%20a%20Coffee-%E6%8C%87%E6%95%B0-%E6%8D%98%E6%8C%87%E5%8F%8D%E5%8F%8D.svg)](https://www.paypal.com/paypalme/laughmakering)
 
-
+<img src="./screenshots/zhifubao.jpg" width="200" height="200" alt="描述文字">
 
 ## 一、安装
 
@@ -59,13 +58,11 @@ If you like my theme, you can buy me a cup of coffee.
 
 如果需要更换背景图，可按如下操作：
 
-1. 打开设置 -> 外观 -> 打开主题目录；
-   ![](./screenshots/win-theme-folder.png)
-2. 然后用文本编辑器，打开`zen/theme.css`文件，找到以下代码：
-   ![](./screenshots/win-replace-bg.png)
-3. 从网络上找到一张你心仪的照片，将`background: url...`这一行删除，替换为：`background: url('图片地址') repeat;`
+1. 安装插件 Style Settings；
+2. 找到 Windows: 窗体背景图片 设置项，从网上找到一张图片，替换到里面的单引号部分
+   ![](./screenshots/stylesettings.png)
 
-# <a id="English">English</a>
+# `<a id="English">`English `</a>`
 
 Zen is a modern theme designed specifically for writing. It removes redundant elements that can affect writing and reading, extensively uses Gaussian blur effects, and features a modern minimalist style. It has also been specifically optimized for Chinese users.
 
@@ -109,13 +106,11 @@ Due to the limitations of the Windows platform, the official Obsidian removed th
 
 If you need to change the background image, follow these steps:
 
-1. Open Settings -> Appearance -> Open Theme Directory;
-   ![](./screenshots/win-theme-folder.png)
-2. Then, using a text editor, open the `zen/theme.css file` and locate the following code:)
-   ![](./screenshots/win-replace-bg.png)
-3. Find a photo you like from the internet, delete the line background: url..., and replace it with: background: url('image address') repeat;
+1. Install plugin Style Settings；
+2. Find the "Window: Form background picture" setting item. Find a picture from the Internet and replace the single quotation mark part.
+   ![](./screenshots/stylesettings.png)
 
-# <a id="Screenshots">Screenshots</a>
+# `<a id="Screenshots">`Screenshots `</a>`
 
 ## Mac
 
