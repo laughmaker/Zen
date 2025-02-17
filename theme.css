@@ -1917,3 +1917,9 @@ body:not(.win-translucent-off).mod-windows .workspace-split.mod-root .view-heade
 body:not(.win-translucent-off).mod-windows .view-header-title-container:after {
 	background: transparent !important;
 }
+
+
+/* web viewer */
+.webviewer-address input {
+	border-radius: 14px;
+}
