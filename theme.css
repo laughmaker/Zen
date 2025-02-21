@@ -627,8 +627,12 @@ hr {
 }
 
 .cm-s-obsidian .cm-line.HyperMD-header {
-	margin-bottom: 10px !important;
+	/* margin-bottom: 10px !important; */
 	padding-bottom: 0;
+}
+/* 标题下空一行 */
+.cm-s-obsidian .cm-line.HyperMD-header + .cm-line:not(.HyperMD-header):not(:has(>br:only-child)) {
+	padding-top: var(--p-spacing);
 }
 
 h1,
