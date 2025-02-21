@@ -1331,7 +1331,7 @@ thead:hover {
 thead>tr>th,
 tbody>tr>td,
 .table-cell-wrapper {
-	font-size: small !important;
+	/* font-size: small !important; */
 	line-height: 36px;
 }
 
@@ -1923,3 +1923,4 @@ body:not(.win-translucent-off):not(.mod-macos) .view-header-title-container:afte
 .webviewer-address input {
 	border-radius: 14px;
 }
+
