@@ -982,6 +982,29 @@ li {
 
 
 
+/* 将tab活动指示器修改为下划线*/
+.view-header-title-container:not(.mod-at-end):after {
+	background: none;
+}
+
+.is-translucent .workspace-tab-header-container {
+	/* background-color: var(--editor-bg-color) !important; */
+}
+
+.workspace-tab-header.is-active {
+	box-shadow: none;
+	border-bottom-width: 1.5px;
+	border-bottom-color: var(--text-accent) !important;
+	border-bottom-style: solid;
+	background-color: transparent;
+}
+
+.workspace-split.mod-root .workspace-tab-header.is-active::before,
+.workspace-split.mod-root .workspace-tab-header.is-active::after {
+	box-shadow: none !important;
+}
+
+
 /* 
 * 适配PC端样式 
 */
@@ -990,28 +1013,6 @@ li {
 	/* 左侧目录去除左边的空白 */
 	body:is(.show-ribbon) .nav-files-container {
 		padding-left: 0;
-	}
-
-	/* 将tab活动指示器修改为下划线*/
-	.view-header-title-container:not(.mod-at-end):after {
-		background: none;
-	}
-
-	.is-translucent .workspace-tab-header-container {
-		/* background-color: var(--editor-bg-color) !important; */
-	}
-
-	.workspace-tab-header.is-active {
-		box-shadow: none;
-		border-bottom-width: 1.5px;
-		border-bottom-color: var(--text-accent) !important;
-		border-bottom-style: solid;
-		background-color: transparent;
-	}
-
-	.workspace-split.mod-root .workspace-tab-header.is-active::before,
-	.workspace-split.mod-root .workspace-tab-header.is-active::after {
-		box-shadow: none !important;
 	}
 
 	.cm-s-obsidian span.cm-inline-code:not(.cm-formatting):not(.cm-hmd-indented-code):not(.obsidian-search-match-highlight) {
@@ -1874,8 +1875,7 @@ g.markmap-node[data-depth='0'] .markmap-foreign {
 }
 
 /* Windows style */
-body:not(.win-translucent-off).mod-windows .app-container::before {
-	--win-bg-img-url: url(var(--win-bg-image));
+body:not(.win-translucent-off):not(.mod-macos) .app-container::before {
 	content: '';
 	position: absolute;
 	top: 0;
@@ -1888,33 +1888,33 @@ body:not(.win-translucent-off).mod-windows .app-container::before {
 	z-index: -1;
 }
 
-body:not(.win-translucent-off).mod-windows .workspace-split.mod-vertical.mod-root {
+body:not(.win-translucent-off):not(.mod-macos) .workspace-split.mod-vertical.mod-root {
 	background: var(--win-editor-bg-color) !important;
 }
 
-body:not(.win-translucent-off).mod-windows .workspace-ribbon.mod-left:before {
+body:not(.win-translucent-off):not(.mod-macos) .workspace-ribbon.mod-left:before {
 	background-color: transparent;
 }
 
-body:not(.win-translucent-off).mod-windows .workspace,
-body:not(.win-translucent-off).mod-windows .workspace-split.mod-horizontal,
-body:not(.win-translucent-off).mod-windows .workspace-leaf,
-body:not(.win-translucent-off).mod-windows .workspace-ribbon,
-body:not(.win-translucent-off).mod-windows .sidebar-toggle-button.mod-left,
-body:not(.win-translucent-off).mod-windows .workspace-split.mod-left-split .workspace-sidedock-vault-profile,
-body:not(.win-translucent-off).mod-windows .mod-root .mod-top .workspace-tab-header-container,
-body:not(.win-translucent-off).mod-windows .titlebar-button-container.mod-right,
-body:not(.win-translucent-off).mod-windows .workspace-tab-header-container {
+body:not(.win-translucent-off):not(.mod-macos) .workspace,
+body:not(.win-translucent-off):not(.mod-macos) .workspace-split.mod-horizontal,
+body:not(.win-translucent-off):not(.mod-macos) .workspace-leaf,
+body:not(.win-translucent-off):not(.mod-macos) .workspace-ribbon,
+body:not(.win-translucent-off):not(.mod-macos) .sidebar-toggle-button.mod-left,
+body:not(.win-translucent-off):not(.mod-macos) .workspace-split.mod-left-split .workspace-sidedock-vault-profile,
+body:not(.win-translucent-off):not(.mod-macos) .mod-root .mod-top .workspace-tab-header-container,
+body:not(.win-translucent-off):not(.mod-macos) .titlebar-button-container.mod-right,
+body:not(.win-translucent-off):not(.mod-macos) .workspace-tab-header-container {
 	background-color: transparent !important;
 }
 
-body:not(.win-translucent-off).mod-windows .workspace-split.mod-root,
-body:not(.win-translucent-off).mod-windows .workspace-split.mod-root .view-content,
-body:not(.win-translucent-off).mod-windows .workspace-split.mod-root .view-header {
+body:not(.win-translucent-off):not(.mod-macos) .workspace-split.mod-root,
+body:not(.win-translucent-off):not(.mod-macos) .workspace-split.mod-root .view-content,
+body:not(.win-translucent-off):not(.mod-macos) .workspace-split.mod-root .view-header {
 	background: transparent !important;
 }
 
-body:not(.win-translucent-off).mod-windows .view-header-title-container:after {
+body:not(.win-translucent-off):not(.mod-macos) .view-header-title-container:after {
 	background: transparent !important;
 }
 
