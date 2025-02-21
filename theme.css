@@ -83,23 +83,23 @@ settings:
 		type: class-toggle
 	-
 		id: windows-header
-		title: Windows
+		title: Windows/Linux
 		type: heading
 		level: 1
 		collapsed: true
 	-
 		id: win-translucent-off
-		title: Windows：Close the translucent window.
-		title.zh: Windows：关闭窗体半透明
-		description: Turn off the window translucency of Windows. It is only effective for Windows.
-		description.zh: 关闭Windows的窗口半透明，仅对Windows有效
+		title: Close the translucent window.
+		title.zh: 关闭窗体半透明
+		description: Turn off the window translucency of Windows/Linux. It is only effective for Windows/Linux.
+		description.zh: 关闭Windows/Linux的窗口半透明，仅对Windows/Linux有效
 		type: class-toggle
 	-
 		id: win-window-opacity
-		title: Windows：Transparency of window background
-		title.zh: Windows：窗体背景的透明度
-		description: Adjust the transparency of the form background on the Windows platform. Only effective for Windows. Recommended values：For dark colors：0.4. For light colors：0.2.
-		description.zh: 调整 Windows 平台的窗体背景的透明度。仅对 Windows 有效。推荐值：暗色：0.4 亮色：0.2
+		title: Transparency of window background
+		title.zh: 窗体背景的透明度
+		description: Adjust the transparency of the form background on the Windows/Linux platform. Only effective for Windows/Linux. Recommended values：For dark colors：0.4. For light colors：0.2.
+		description.zh: 调整 Windows/Linux 平台的窗体背景的透明度。仅对 Windows/Linux 有效。推荐值：暗色：0.4 亮色：0.2
 		type: variable-number-slider
 		default: 0.2
 		min: 0
@@ -107,10 +107,10 @@ settings:
 		step: 0.01
 	-
 		id: win-window-brightness
-		title: Windows：Brightness of form background.
-		title.zh: Windows：窗体背景的亮度
-		description: Adjust the brightness of the form background on the Windows platform. Only effective for Windows. Recommended values：dark：0.3, light：0.6.
-		description.zh: 调整 Windows 平台的窗体背景的亮度。仅对 Windows 有效。推荐值：暗色：0.3 亮色：0.6
+		title: Brightness of form background.
+		title.zh: 窗体背景的亮度
+		description: Adjust the brightness of the form background on the Windows/Linux platform. Only effective for Windows/Linux. Recommended values：dark：0.3, light：0.6.
+		description.zh: 调整 Windows/Linux 平台的窗体背景的亮度。仅对 Windows/Linux 有效。推荐值：暗色：0.3 亮色：0.6
 		type: variable-number-slider
 		default: 0.4
 		min: 0
@@ -118,8 +118,8 @@ settings:
 		step: 0.01
 	-
 		id: win-bg-image-url
-		title: Windows：the background picture of the window
-		title.zh: Windows：窗体背景图片
+		title: the background picture of the window
+		title.zh: 窗体背景图片
 		description: Set the background picture of the window.
 		description.zh: 设置窗体背景图片；
 		type: variable-text
