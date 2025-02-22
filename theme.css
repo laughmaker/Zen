@@ -181,6 +181,7 @@ body {
 	--window-font-size: 15;
 	--mac-window-opacity: 0.2;
 	--win-bg-image-url: url('https://images.pexels.com/photos/66997/pexels-photo-66997.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2');
+	--input-radius: 15px;
 }
 
 body.is-mobile {
@@ -1150,8 +1151,13 @@ li {
 		background-color: transparent !important;
 	}
 
+	/* 移除输入框的背景色 */
 	.mod-active .document-search-container {
 		background-color: transparent !important;
+	}
+
+	textarea, input.metadata-input-text, input[type='date'], input[type='datetime-local'], input[type='text'], input[type='search'], input[type='email'], input[type='password'], input[type='number'] {
+		background-color: transparent;
 	}
 
 	.global-search-input-container.search-input-container input,
