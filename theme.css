@@ -181,7 +181,7 @@ body {
 	--window-font-size: 15;
 	--mac-window-opacity: 0.2;
 	--win-bg-image-url: url('https://images.pexels.com/photos/66997/pexels-photo-66997.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2');
-	--input-radius: 15px;
+	--input-radius: 14px;
 }
 
 body.is-mobile {
@@ -1663,6 +1663,7 @@ input.document-search-input {
 	border-radius: 20px;
 	backdrop-filter: blur(15px);
 	background-color: var(--app-model-bg-color);
+	box-shadow: var(--input-shadow);
 }
 
 #cMenuToolbarModalBar .cMenuToolbarCommandItem {
