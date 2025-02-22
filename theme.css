@@ -225,6 +225,7 @@ body.is-mobile {
 	--win-window-brightness: 0.3;
 	--win-editor-bg-color: rgba(18, 18, 18, .65);
 	--win-window-opacity: 0.4;
+	--background-secondary-alt: rgba(18, 18, 18, 0.1);
 }
 
 .theme-light {
@@ -261,6 +262,7 @@ body.is-mobile {
 	--win-window-brightness: 0.6;
 	--win-editor-bg-color: rgba(240, 240, 240, .65);
 	--win-window-opacity: 0.2;
+	--background-secondary-alt: rgba(240, 240, 240, 0.1);
 }
 
 /* 设置 mac 平台背景透明度 */
@@ -1939,3 +1941,11 @@ body:not(.win-translucent-off):not(.mod-macos) .view-header-title-container:afte
 	border-radius: 14px;
 }
 
+/* Tag folder */
+.tagfolder-tag.tag-tag.tf-tag span.tf-tag-each:first-child:not(:empty):before {
+	content: "";
+}
+
+.tagfolder-tag.tag-tag span.tf-tag-each::before {
+	content: "/";
+}
