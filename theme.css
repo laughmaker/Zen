@@ -1113,8 +1113,9 @@ li {
 	}
 
 	/* 调整导航栏图标大小 */
-	.clickable-icon {
-		width: 32px !important;
+	.is-mobile .view-header-nav-buttons, .is-mobile .view-header .view-action {
+		--icon-size:var(--icon-m);
+		--icon-l-stroke-width: 1.5px;
 	}
 
 	.view-header-title-container {
