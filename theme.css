@@ -1148,7 +1148,7 @@ li {
 
 	.search-input-container {
 		border-radius: 8px;
-		overflow: hidden;
+		/* overflow: hidden; */
 	}
 
 	.markdown-source-view.mod-cm6 .document-search-container {
@@ -1162,6 +1162,15 @@ li {
 
 	textarea, input.metadata-input-text, input[type='date'], input[type='datetime-local'], input[type='text'], input[type='search'], input[type='email'], input[type='password'], input[type='number'] {
 		background-color: transparent;
+	}
+
+
+	.is-mobile .document-search input,
+	.is-mobile .document-replace input,
+	.is-mobile .document-search input:focus, 
+	.is-mobile .document-replace input:focus {
+		margin: 1px;
+		box-shadow: 0 0 0 0.5px var(--background-modifier-border-focus) !important;
 	}
 
 	.global-search-input-container.search-input-container input,
