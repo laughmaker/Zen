@@ -186,6 +186,7 @@ body {
 
 body.is-mobile {
 	--window-font-size: calc(var(--window-font-size) * 0.9);
+	--input-radius: 20px;
 }
 
 .theme-dark {
