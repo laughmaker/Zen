@@ -911,7 +911,8 @@ span.cm-formatting.cm-formatting-list.cm-formatting-list-ol {
 */
 .markdown-rendered ol {
 	padding: 0;
-	margin: 0 0 0 3px !important;
+	margin: 0 0 0 -5px !important;
+	/* background-color: rgba(0, 255, 255, 0.219); */
 }
 
 .markdown-rendered ul {
@@ -920,15 +921,15 @@ span.cm-formatting.cm-formatting-list.cm-formatting-list-ol {
 }
 
 .markdown-rendered.show-indentation-guide ol::before {
-	margin-left: -10px;
+	margin-left: 7px;
 }
 
 .markdown-rendered.show-indentation-guide ul::before {
-	margin-left: -4px;
+	margin-left: 5px;
 }
 
 .markdown-rendered.show-indentation-guide ul>li>ol::before {
-	margin-left: -2px;
+	margin-left: 5px;
 }
 
 .markdown-rendered.show-indentation-guide ul>li>ul::before {
@@ -1127,12 +1128,18 @@ li {
 		font-weight: bold;
 	}
 
+	/* 调整有序列表的缩进线 */
+
 	.markdown-rendered ol {
 		transform: translateX(5px);
 	}
 
+	.markdown-rendered.show-indentation-guide ul>li>ol {
+		margin-left: 5px !important;
+	}
+	
 	.markdown-rendered.show-indentation-guide ol::before {
-		margin-left: -20px;
+		margin-left: -12px;
 	}
 
 	.markdown-rendered.show-indentation-guide ul::before {
@@ -1140,7 +1147,9 @@ li {
 	}
 
 	.markdown-rendered.show-indentation-guide ul>li>ol::before {
-		margin-left: -7px;
+		margin-left: -9.5px;
+		/* background-color: aqua; */
+
 	}
 
 	.markdown-rendered.show-indentation-guide ol>li>ul::before {
