@@ -1161,20 +1161,6 @@ li {
 		/* overflow: hidden; */
 	}
 
-	.markdown-source-view.mod-cm6 .document-search-container {
-		background-color: transparent !important;
-	}
-
-	/* 移除输入框的背景色 */
-	.mod-active .document-search-container {
-		background-color: transparent !important;
-	}
-
-	textarea, input.metadata-input-text, input[type='date'], input[type='datetime-local'], input[type='text'], input[type='search'], input[type='email'], input[type='password'], input[type='number'] {
-		background-color: transparent;
-	}
-
-
 	.is-mobile .document-search input,
 	.is-mobile .document-replace input,
 	.is-mobile .document-search input:focus, 
@@ -1410,6 +1396,19 @@ tbody>tr>td,
 input:not(.prompt-input):focus {
 	border: 0 !important;
 	box-shadow: 0 0 0 0.5px var(--background-modifier-border-focus) !important;
+}
+
+/* 移除输入框的背景色 */
+.markdown-source-view.mod-cm6 .document-search-container {
+	background-color: transparent !important;
+}
+
+.mod-active .document-search-container {
+	background-color: transparent !important;
+}
+
+textarea, input.metadata-input-text, input[type='date'], input[type='datetime-local'], input[type='text'], input[type='search'], input[type='email'], input[type='password'], input[type='number'] {
+	background-color: transparent;
 }
 
 .search-result-container {
