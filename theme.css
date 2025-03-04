@@ -813,7 +813,14 @@ h6 .heading-collapse-indicator.collapse-indicator svg.svg-icon,
 	color: var(--h6-color);
 }
 
+.horizontal-tab-nav-item, .vertical-tab-nav-item {
+	border-radius: var(--radius-l);
+}
 
+.setting-hotkey {
+	border-radius: var(--radius-l);
+	padding: 4px 4px 4px 8px;
+}
 /*
 * --------------------------------编辑模式页面样式调整------------------------------------
 */
