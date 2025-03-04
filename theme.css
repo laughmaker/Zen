@@ -75,13 +75,6 @@ settings:
 		max: 2000
 		step: 10
 	-
-		id: action-button-on
-		title: Show control buttons.
-		title.zh: 显示控制按钮
-		description: Whether to display the control buttons at the top of the navigation bar, including sorting, creating a new note, creating a new folder, etc.
-		description.zh: 是否显示导航栏顶部的控制按钮，包含排序、新建笔记、新建文件夹等
-		type: class-toggle
-	-
 		id: windows-header
 		title: Windows/Linux
 		type: heading
@@ -321,11 +314,6 @@ hr.workspace-leaf-resize-handle {
 .workspace-tab-header-container {
 	border-bottom: none;
 	border-top: solid 1px var(--indentation-guide-color);
-}
-
-/* 移除目录栏的筛选按钮 */
-body:not(.action-button-on) .clickable-icon.nav-action-button {
-	display: none;
 }
 
 /* 移除设置的分界线 */
