@@ -885,20 +885,32 @@ span.cm-formatting.cm-formatting-list.cm-formatting-list-ol {
 	transform: translateX(3px);
 }
 
-/* 调整字数统计右对齐 */
-.novel-word-count--note-right .nav-files-container .nav-file-title::after {
-	margin-right: -8px;
+/* 调整字数统计样式 */
+.nav-file-title, .nav-folder-title {
+	border-radius: var(--radius-l);
 }
 
+.novel-word-count--note-right .nav-files-container .nav-file-title::after {
+	/* margin-right: -8px; */
+}
+
+body:not(.mod-rtl).fn-whitespace-stop-collapsing .nav-folder-title  {
+	padding-right: 7px !important;
+}
 /* 光标所在行的颜色 */
 .cm-content .cm-line.cm-active {
 	/* border-bottom: dashed var(--active-border-color) 0.01px; */
+}
+
+.tree-item-self {
+	border-radius: var(--radius-l);
 }
 
 /* 修改光标宽度和颜色 */
 .cm-s-obsidian .cm-cursor {
 	border-left: solid 2px var(--text-accent) !important;
 }
+
 
 
 /*
