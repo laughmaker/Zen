@@ -826,6 +826,10 @@ body.is-mobile .setting-hotkey {
 	border-radius: var(--radius-xl);
 }
 
+body:not(.is-phone) .workspace-leaf.mod-active .tree-item-self.has-focus {
+	border-radius: var(--radius-l);
+}
+
 /*
 * --------------------------------编辑模式页面样式调整------------------------------------
 */
