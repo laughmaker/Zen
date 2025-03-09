@@ -390,7 +390,7 @@ body:not(.is-grabbing):not(.is-fullscreen).is-hidden-frameless .mod-top .workspa
 .workspace .mod-root .workspace-tab-header-inner-title,
 .tree-item-inner-text {
 	font-size: calc(var(--window-font-size) * 1px) !important;
-	font-family: 'number-font';
+	font-family: 'number-font' !important;
 }
 
 /* 调整目录折叠按钮与标题对齐
