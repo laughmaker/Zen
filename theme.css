@@ -2045,12 +2045,3 @@ body:not(.win-translucent-off):not(.mod-macos) .view-header-title-container:afte
 	border-radius: 14px;
 }
 
-
-/* Tag folder */
-.tagfolder-tag.tag-tag.tf-tag span.tf-tag-each:first-child:not(:empty):before {
-	content: "";
-}
-
-.tagfolder-tag.tag-tag span.tf-tag-each::before {
-	content: "/";
-}
