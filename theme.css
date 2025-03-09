@@ -379,6 +379,11 @@ body:not(.is-grabbing):not(.is-fullscreen).is-hidden-frameless .mod-top .workspa
 	display: none;
 }
 
+body.is-mobile .nav-file-title {
+	padding-top: 3px;
+	padding-bottom: 3px;
+}
+
 /* 调整目录字体 
  * 左侧目标标题文字字体
 */
