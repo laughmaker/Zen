@@ -905,8 +905,9 @@ span.cm-formatting.cm-formatting-list.cm-formatting-list-ol {
 	/* border-radius: var(--radius-l); */
 }
 
-.novel-word-count--note-right .nav-files-container .nav-file-title::after {
-	/* margin-right: -8px; */
+.novel-word-count--note-right .nav-files-container .nav-file-title::after,
+.novel-word-count--note-right .nav-files-container .nav-folder-title::after {
+	font-size: x-small;
 }
 
 body:not(.mod-rtl).fn-whitespace-stop-collapsing .nav-folder-title  {
