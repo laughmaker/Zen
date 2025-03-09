@@ -1991,8 +1991,8 @@ g.markmap-node[data-depth='0'] .markmap-foreign {
 	margin-right: -10px;
 }
 
-/* Windows style */
-body:not(.win-translucent-off):not(.mod-macos) .app-container::before {
+/* Windows | linux style */
+body:not(.win-translucent-off):not(.mod-macos):not(.is-mobile) .app-container::before {
 	content: '';
 	position: absolute;
 	top: 0;
@@ -2009,33 +2009,33 @@ body:not(.win-translucent-off):not(.mod-macos) .app-container::before {
 	background-color: var(--background-secondary);
 }
 
-body:not(.win-translucent-off):not(.mod-macos) .workspace-split.mod-vertical.mod-root {
+body:not(.win-translucent-off):not(.mod-macos):not(.is-mobile) .workspace-split.mod-vertical.mod-root {
 	background: var(--win-editor-bg-color) !important;
 }
 
-body:not(.win-translucent-off):not(.mod-macos) .workspace-ribbon.mod-left:before {
+body:not(.win-translucent-off):not(.mod-macos):not(.is-mobile) .workspace-ribbon.mod-left:before {
 	background-color: transparent;
 }
 
-body:not(.win-translucent-off):not(.mod-macos) .workspace,
-body:not(.win-translucent-off):not(.mod-macos) .workspace-split.mod-horizontal,
-body:not(.win-translucent-off):not(.mod-macos) .workspace-leaf,
-body:not(.win-translucent-off):not(.mod-macos) .workspace-ribbon,
-body:not(.win-translucent-off):not(.mod-macos) .sidebar-toggle-button.mod-left,
-body:not(.win-translucent-off):not(.mod-macos) .workspace-split.mod-left-split .workspace-sidedock-vault-profile,
-body:not(.win-translucent-off):not(.mod-macos) .mod-root .mod-top .workspace-tab-header-container,
-body:not(.win-translucent-off):not(.mod-macos) .titlebar-button-container.mod-right,
-body:not(.win-translucent-off):not(.mod-macos) .workspace-tab-header-container {
+body:not(.win-translucent-off):not(.mod-macos):not(.is-mobile) .workspace,
+body:not(.win-translucent-off):not(.mod-macos):not(.is-mobile) .workspace-split.mod-horizontal,
+body:not(.win-translucent-off):not(.mod-macos):not(.is-mobile) .workspace-leaf,
+body:not(.win-translucent-off):not(.mod-macos):not(.is-mobile) .workspace-ribbon,
+body:not(.win-translucent-off):not(.mod-macos):not(.is-mobile) .sidebar-toggle-button.mod-left,
+body:not(.win-translucent-off):not(.mod-macos):not(.is-mobile) .workspace-split.mod-left-split .workspace-sidedock-vault-profile,
+body:not(.win-translucent-off):not(.mod-macos):not(.is-mobile) .mod-root .mod-top .workspace-tab-header-container,
+body:not(.win-translucent-off):not(.mod-macos):not(.is-mobile) .titlebar-button-container.mod-right,
+body:not(.win-translucent-off):not(.mod-macos):not(.is-mobile) .workspace-tab-header-container {
 	background-color: transparent !important;
 }
 
-body:not(.win-translucent-off):not(.mod-macos) .workspace-split.mod-root,
-body:not(.win-translucent-off):not(.mod-macos) .workspace-split.mod-root .view-content,
-body:not(.win-translucent-off):not(.mod-macos) .workspace-split.mod-root .view-header {
+body:not(.win-translucent-off):not(.mod-macos):not(.is-mobile) .workspace-split.mod-root,
+body:not(.win-translucent-off):not(.mod-macos):not(.is-mobile) .workspace-split.mod-root .view-content,
+body:not(.win-translucent-off):not(.mod-macos):not(.is-mobile) .workspace-split.mod-root .view-header {
 	background: transparent !important;
 }
 
-body:not(.win-translucent-off):not(.mod-macos) .view-header-title-container:after {
+body:not(.win-translucent-off):not(.mod-macos):not(.is-mobile) .view-header-title-container:after {
 	background: transparent !important;
 }
 
