@@ -390,6 +390,7 @@ body:not(.is-grabbing):not(.is-fullscreen).is-hidden-frameless .mod-top .workspa
 .workspace .mod-root .workspace-tab-header-inner-title,
 .tree-item-inner-text {
 	font-size: calc(var(--window-font-size) * 1px) !important;
+	font-family: 'number-font';
 }
 
 /* 调整目录折叠按钮与标题对齐
@@ -459,7 +460,7 @@ body:not(.is-grabbing):not(.is-fullscreen).is-hidden-frameless .mod-top .workspa
 	stroke: var(--nav-collapse-icon-color);
 	fill: var(--nav-collapse-icon-color);
 	stroke-width: 1px;
-	margin-top: -1px;
+	margin-top: -4px;
 }
 
 /* 底部状态栏样式 */
@@ -2002,6 +2003,10 @@ body:not(.win-translucent-off):not(.mod-macos) .app-container::before {
 	background-size: cover;
 	filter: blur(var(--win-blur)) brightness(var(--win-window-brightness)) opacity(var(--win-window-opacity));
 	z-index: -1;
+}
+
+.workspace-ribbon.mod-left:before {
+	background-color: var(--background-secondary);
 }
 
 body:not(.win-translucent-off):not(.mod-macos) .workspace-split.mod-vertical.mod-root {
