@@ -395,7 +395,7 @@ body.is-mobile .nav-file-title {
 .workspace .mod-root .workspace-tab-header-inner-title,
 .tree-item-inner-text {
 	font-size: calc(var(--window-font-size) * 1px) !important;
-	font-family: 'number-font' !important;
+	/* font-family: 'number-font' !important; */
 }
 
 /* 调整目录折叠按钮与标题对齐
@@ -465,7 +465,7 @@ body.is-mobile .nav-file-title {
 	stroke: var(--nav-collapse-icon-color);
 	fill: var(--nav-collapse-icon-color);
 	stroke-width: 1px;
-	margin-top: -4px;
+	margin-top: -1px;
 }
 
 /* 底部状态栏样式 */
