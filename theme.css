@@ -1410,7 +1410,7 @@ tbody>tr>td,
 * Scrollbar 样式 
 */
 ::-webkit-scrollbar {
-	width: 8px !important;
+	width: 3px !important;
 	overflow: hidden !important;
 	background-color: transparent !important;
 }
