@@ -1080,11 +1080,6 @@ body.is-mobile .cm-s-obsidian span.cm-inline-code {
 	padding: 4px 6px !important;
 }
 
-body.is-mobile .float-search-modal-container.modal-container.mod-dim .modal {
-	margin-top: -41px !important;
-}
-
-
 
 /* 适配手机端，以13Pro Max分辨率为限制 */
 
@@ -1877,16 +1872,13 @@ body:not(.is-mobile):not(.composer--DisableNavHeaderAutoHide) .mod-sidedock .wor
 
 
 /* 适配手机端，以13Pro Max分辨率为限制 */
-@media screen and (orientation:portrait) and (max-device-width:400px) and (max-device-height:1000px) {
-	.modal-container.mod-dim .modal:has(.export-image-preview-root) {
-		width: 100% !important;
-		margin-top: 50px;
-	}
+.is-mobile .modal-container.mod-dim .modal:has(.export-image-preview-root) {
+	width: 100% !important;
+	margin-top: 50px;
+}
 
-	.export-image-preview-left {
-		padding: 0;
-	}
-
+.is-mobile	.export-image-preview-left {
+	padding: 0;
 }
 
 
@@ -1941,6 +1933,11 @@ body:not(.is-mobile):not(.composer--DisableNavHeaderAutoHide) .mod-sidedock .wor
 .float-search-modal-container.modal-container.mod-dim .modal {
 	margin-top: 60px;
 }
+
+.is-mobile .float-search-modal-container.modal-container.mod-dim .modal {
+	/* margin-top: 44px; */
+}
+
 
 .search-results-result-count {
 	width: 100px !important;
