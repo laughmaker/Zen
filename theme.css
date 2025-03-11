@@ -492,6 +492,23 @@ body.is-mobile .nav-file-title {
 	/* backdrop-filter: blur(10px); */
 }
 
+.popover {
+	background-color: transparent !important;
+}
+
+.popover::before{
+	content: '';
+	z-index: -1;
+	filter: blur(20px);
+	background-color: var(--app-model-bg-color) !important;
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+
+}
+
 /* 隐藏库名 */
 .nav-folder.mod-root>.nav-folder-title {
 	display: none;
@@ -1069,6 +1086,22 @@ li {
 }
 
 /* 适配手机端，以13Pro Max分辨率为限制 */
+
+.workspace-drawer .nav-buttons-container {
+	--icon-size: var(--icon-m);
+}
+
+/* 移动端底部tab样式 */
+.is-mobile.theme-light .mobile-navbar {
+	border-top: rgba(0, 0, 0, 0.05) solid 0.8px;
+	background-color: transparent;
+}
+
+.is-mobile.theme-dark .mobile-navbar {
+	border-top: rgba(255, 255, 255, 0.08) solid 0.5px;
+	background-color: transparent;
+}
+
 @media screen and (orientation:portrait) and (max-device-width:400px) and (max-device-height:1000px) {
 	.workspace-leaf-resize-handle {
 		border: transparent;
@@ -1093,16 +1126,6 @@ li {
 
 	.theme-dark .view-header {
 		border-bottom: rgba(255, 255, 255, 0.08) solid 0.5px;
-	}
-
-	/* 移动端底部tab样式 */
-	.theme-light .mobile-navbar {
-		border-top: rgba(0, 0, 0, 0.05) solid 0.8px;
-		background-color: transparent;
-	}
-
-	.theme-dark .mobile-navbar {
-		border-top: rgba(255, 255, 255, 0.08) solid 0.5px;
 	}
 
 	.mobile-toolbar {
@@ -1143,7 +1166,7 @@ li {
 	/* 调整导航栏图标大小 */
 	.is-mobile .view-header-nav-buttons, .is-mobile .view-header .view-action {
 		--icon-size:var(--icon-m);
-		--icon-l-stroke-width: 1.5px;
+		/* --icon-l-stroke-width: 1.5px; */
 	}
 
 	.view-header-title-container {
