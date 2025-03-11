@@ -175,6 +175,7 @@ body {
 	--mac-window-opacity: 0.2;
 	--win-bg-image-url: url('https://images.pexels.com/photos/66997/pexels-photo-66997.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2');
 	--input-radius: 14px;
+	--safe-area-inset-bottom: 28px;
 }
 
 body.is-mobile {
@@ -1062,13 +1063,13 @@ li {
 /* 
 * 适配PC端样式 
 */
+
+/* 左侧目录去除左边的空白 */
+body:is(.show-ribbon):not(.is-mobile) .nav-files-container {
+	padding-left: 0;
+}
+
 @media screen and (min-device-width:400px) {
-
-	/* 左侧目录去除左边的空白 */
-	body:is(.show-ribbon) .nav-files-container {
-		padding-left: 0;
-	}
-
 	.cm-s-obsidian span.cm-inline-code:not(.cm-formatting):not(.cm-hmd-indented-code):not(.obsidian-search-match-highlight) {
 		background-color: rgb(115 112 112 / 15%);
 		padding: 4px 6px;
