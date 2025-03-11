@@ -1111,7 +1111,7 @@ body.is-mobile .cm-s-obsidian span.cm-inline-code {
 /* 顶部导航栏样式 */
 .view-header {
 	height: 40px !important;
-	display: flex !important;
+	/* display: flex !important; */
 	align-items: center !important;
 	justify-content: center !important;
 	border-bottom: rgba(0, 0, 0, 0.05) solid 0.8px;
