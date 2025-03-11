@@ -1410,31 +1410,31 @@ tbody>tr>td,
 * Scrollbar 样式 
 */
 ::-webkit-scrollbar {
-	width: 3px;
-	overflow: hidden;
-	background-color: transparent;
+	width: 8px !important;
+	overflow: hidden !important;
+	background-color: transparent !important;
+}
+
+.is-mobile ::-webkit-scrollbar {
+	width: 8px !important;
 }
 
 ::-webkit-scrollbar-thumb {
-	border-radius: 5px;
+	border-radius: 5px !important;
 }
 
 ::-webkit-scrollbar-thumb:active {
-	border-radius: 5px;
+	border-radius: 5px !important;
 }
 
 .theme-light ::-webkit-scrollbar-thumb {
-	background-color: rgba(0, 0, 0, 0.2);
+	background-color: rgba(0, 0, 0, 0.2) !important;
 }
 
 .theme-dark ::-webkit-scrollbar-thumb {
-	background-color: rgba(255, 255, 255, 0.2);
+	background-color: rgba(255, 255, 255, 0.2) !important;
 }
 
-.suggestion-item {
-	padding-top: 10px;
-	padding-bottom: 10px;
-}
 
 
 /* 
@@ -1742,6 +1742,10 @@ body:not(.is-mobile):not(.composer--DisableNavHeaderAutoHide) .mod-sidedock .wor
 
 }
 
+.suggestion-item {
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
 
 
 
