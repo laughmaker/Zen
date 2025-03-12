@@ -900,6 +900,7 @@ span.cm-formatting.cm-formatting-list.cm-formatting-list-ol {
 	width: 26px;
 	text-align: center;
 	font-family: 'number-font' !important;
+	transform: translateY(-3px);
 }
 
 .markdown-source-view.mod-cm6 .task-list-label {
@@ -1057,6 +1058,10 @@ li {
 .workspace-split.mod-root .workspace-tab-header.is-active::before,
 .workspace-split.mod-root .workspace-tab-header.is-active::after {
 	box-shadow: none !important;
+}
+
+.workspace-drawer-active-tab-header {
+	border-radius: var(--radius-xl);
 }
 
 
