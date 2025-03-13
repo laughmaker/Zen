@@ -1061,7 +1061,7 @@ li {
 }
 
 .workspace-drawer-active-tab-header {
-	border-radius: var(--radius-xl);
+	border-radius: 20px;
 }
 
 
