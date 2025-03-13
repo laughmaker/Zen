@@ -1114,7 +1114,7 @@ body.is-mobile .cm-s-obsidian span.cm-inline-code {
 }
 
 /* 顶部导航栏样式 */
-.view-header {
+.is-mobile .view-header {
 	height: 40px !important;
 	/* display: flex !important; */
 	align-items: center !important;
@@ -1124,7 +1124,7 @@ body.is-mobile .cm-s-obsidian span.cm-inline-code {
 	/* backdrop-filter: blur(8px); */
 }
 
-.theme-dark .view-header {
+.is-mobile.theme-dark .view-header {
 	border-bottom: rgba(255, 255, 255, 0.08) solid 0.5px;
 } 
 
