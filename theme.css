@@ -332,6 +332,10 @@ body:not(.is-mobile) .workspace-split.mod-left-split .workspace-sidedock-vault-p
 	/* display: none; */
 }
 
+img {
+	max-width: 100%;
+}
+
 /* 隐藏顶部header 的底部分隔线 */
 body:not(.is-grabbing):not(.is-fullscreen).is-hidden-frameless .mod-top .workspace-tab-header-container {
 	border: none;
