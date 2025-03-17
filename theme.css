@@ -46,6 +46,13 @@ settings:
 		description.zh: 隐藏各级标题前面的 h1...h2...等小标题提示
 		type: class-toggle
 	-
+		id: heading-bottom-line-off
+		title: Hide the Heading bottom line in the editor.
+		title.zh: 隐藏编辑器中各级标题下的虚线
+		description: Hide the h1...h2... and other small title bottom line in headings at all levels.
+		description.zh: 隐藏各级标题前面的 h1...h2...等小标题下的线虚
+		type: class-toggle
+	-
 		id: window-font-size
 		title: Adjust the font of the Window.
 		title.zh: 调整窗体的字体
@@ -645,6 +652,9 @@ hr {
 	padding-inline-start: 0 !important;
 	padding-top: 5px !important;
 	/* padding-bottom: 5px !important; */
+}
+
+body:not(.heading-bottom-line-off) .cm-s-obsidian .HyperMD-header {
 	border-bottom: dashed 0.5px;
 }
 
@@ -1033,6 +1043,14 @@ li {
 .markdown-rendered h6 {
 	margin: 5px 0 !important;
 	padding: 5px 0;
+}
+
+body:not(.heading-bottom-line-off) .markdown-rendered h1,
+body:not(.heading-bottom-line-off) .markdown-rendered h2,
+body:not(.heading-bottom-line-off) .markdown-rendered h3,
+body:not(.heading-bottom-line-off) .markdown-rendered h4,
+body:not(.heading-bottom-line-off) .markdown-rendered h5,
+body:not(.heading-bottom-line-off) .markdown-rendered h6 {
 	border-bottom: dashed 0.5px;
 }
 
