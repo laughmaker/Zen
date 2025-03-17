@@ -175,6 +175,7 @@ body {
 	--mac-window-opacity: 0.2;
 	--win-bg-image-url: url('https://images.pexels.com/photos/66997/pexels-photo-66997.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2');
 	--input-radius: 14px;
+	--callout-content-padding: 4px;
 }
 
 body.is-mobile {
