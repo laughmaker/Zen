@@ -532,7 +532,7 @@ body.is-mobile .nav-file-title {
 
 .theme-dark .markdown-preview-view {
 	color: var(--text-color);
-	padding-bottom: 10px !important;
+	/* padding-bottom: 10px !important; */
 }
 
 /* 亮色主题时的字体颜色 */
@@ -543,7 +543,7 @@ body.is-mobile .nav-file-title {
 
 .theme-light .markdown-preview-view {
 	color: var(--text-color);
-	padding-bottom: 10px !important;
+	/* padding-bottom: 10px !important; */
 }
 
 .cm-s-obsidian,
