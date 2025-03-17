@@ -597,9 +597,12 @@ strong,
 .inline-title {
 	font-size: 1.3em;
 	color: var(--text-color);
-	border-bottom: dashed 0.5px;
 	padding-bottom: 5px;
 	margin-bottom: var(--inline-title-margin-bottom);
+}
+
+body:not(.heading-bottom-line-off) .inline-title {
+	border-bottom: dashed 0.5px;
 }
 
 /* 分割线样式 */
