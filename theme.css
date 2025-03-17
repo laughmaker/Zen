@@ -1419,9 +1419,13 @@ tbody>tr>td,
 * Scrollbar 样式 
 */
 ::-webkit-scrollbar {
-	width: 9px !important;
+	width: 4px !important;
 	overflow: hidden !important;
 	background-color: transparent !important;
+}
+
+.mod-windows ::-webkit-scrollbar { 
+	width: 9px !important;
 }
 
 .is-mobile ::-webkit-scrollbar {
