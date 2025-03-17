@@ -597,7 +597,7 @@ strong,
 /* 分割线样式 */
 hr {
 	border-width: 0.8px !important;
-	border-color: var(--indentation-guide-color);
+	/* border-color: var(--indentation-guide-color); */
 }
 
 .cm-line hr {
@@ -1075,7 +1075,7 @@ li {
 
 /* 左侧目录去除左边的空白 */
 body:is(.show-ribbon):not(.is-mobile) .nav-files-container {
-	padding-left: 0;
+	padding-left: 1px;
 }
 
 
@@ -1419,7 +1419,7 @@ tbody>tr>td,
 * Scrollbar 样式 
 */
 ::-webkit-scrollbar {
-	width: 3px !important;
+	width: 9px !important;
 	overflow: hidden !important;
 	background-color: transparent !important;
 }
@@ -1700,68 +1700,67 @@ body:not(.is-mobile):not(.composer--DisableNavHeaderAutoHide) .mod-sidedock .wor
 /* 
  * 适配PC端样式 
  */
-@media screen and (min-device-width:400px) {
-	.modal-container.mod-dim .prompt {
-		backdrop-filter: blur(15px);
-		background-color: var(--model-bg-color);
-	}
-
-	.modal-container.mod-dim .prompt .prompt-input-container {
-		background-color: transparent;
-	}
-
-	input.prompt-input {
-		background-color: transparent !important;
-	}
-
-	.modal.float-search-modal {
-		background-color: var(--model-bg-color);
-		backdrop-filter: blur(15px);
-	}
-
-	.modal-container.mod-dim .prompt::before,
-	.modal.float-search-modal::before {
-		content: "";
-		position: absolute;
-		top: 0;
-		left: 0;
-		right: 0;
-		bottom: 0;
-		background-color: inherit;
-		backdrop-filter: blur(15px);
-		z-index: -1;
-	}
-
-	.float-search-modal .float-search-modal-search-ctn .search-row,
-	.global-search-input-container,
-	.search-input-container input {
-		background-color: transparent !important;
-		border-radius: 14px;
-	}
-
-	.suggestion-container.mod-search-suggestion::before {	
-		content: "";
-		position: absolute;
-		top: 0;
-		left: 0;
-		width: 100%;
-		height: 100%;
-		background-color: var(--app-model-bg-color) !important;
-		backdrop-filter: blur(5px);
-		z-index: -1;
-	}
-
-	.suggestion-container.mod-search-suggestion {
-		background-color: var(--suggestion-bg-color) !important;
-		backdrop-filter: blur(5px) !important;
-	}
-
-	.suggestion-container.mod-search-suggestion .suggestion {
-		background-color: var(--suggestion-bg-color) !important;
-		backdrop-filter: blur(5px) !important;
-	}
-
+body:not(.is-mobile)	.modal-container.mod-dim .prompt {
+	backdrop-filter: blur(15px);
+	background-color: var(--model-bg-color);
 }
+
+body:not(.is-mobile)	.modal-container.mod-dim .prompt .prompt-input-container {
+	background-color: transparent;
+}
+
+body:not(.is-mobile)	input.prompt-input {
+	background-color: transparent !important;
+}
+
+body:not(.is-mobile)	.modal.float-search-modal {
+	background-color: var(--model-bg-color);
+	backdrop-filter: blur(15px);
+}
+
+body:not(.is-mobile)	.modal-container.mod-dim .prompt::before,
+body:not(.is-mobile)	.modal.float-search-modal::before {
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-color: inherit;
+	backdrop-filter: blur(15px);
+	z-index: -1;
+}
+
+body:not(.is-mobile)	.float-search-modal .float-search-modal-search-ctn .search-row,
+body:not(.is-mobile)	.global-search-input-container,
+body:not(.is-mobile)	.search-input-container input {
+	background-color: transparent !important;
+	border-radius: 14px;
+}
+
+body:not(.is-mobile)	.suggestion-container.mod-search-suggestion::before {	
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: var(--app-model-bg-color) !important;
+	backdrop-filter: blur(5px);
+	z-index: -1;
+}
+
+body:not(.is-mobile)	.suggestion-container.mod-search-suggestion {
+	background-color: var(--suggestion-bg-color) !important;
+	backdrop-filter: blur(5px) !important;
+}
+
+body:not(.is-mobile)	.suggestion-container.mod-search-suggestion .suggestion {
+	background-color: var(--suggestion-bg-color) !important;
+	backdrop-filter: blur(5px) !important;
+}
+
+
 
 .suggestion-item {
 	padding-top: 10px;
@@ -1983,15 +1982,12 @@ body:not(.is-mobile):not(.composer--DisableNavHeaderAutoHide) .mod-sidedock .wor
 }
 
 /* 适配手机端，以13Pro Max分辨率为限制 */
-@media screen and (orientation:portrait) and (max-device-width:400px) and (max-device-height:1000px) {
-	.float-search-modal .modal-close-button {
-		margin-top: 8px;
-	}
+.is-mobile	.float-search-modal .modal-close-button {
+	margin-top: 8px;
+}
 
-	.float-search-modal .float-search-modal-search-ctn .search-row {
-		margin-left: 0px;
-	}
-
+.is-mobile	.float-search-modal .float-search-modal-search-ctn .search-row {
+	margin-left: 0px;
 }
 
 
