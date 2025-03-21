@@ -1805,31 +1805,30 @@ body:not(.is-mobile)	.suggestion-container.mod-search-suggestion .suggestion {
 
 
 
-
 /* 
  * 调整 cMenu Toolbar Editor 样式 
  */
-#cMenuToolbarModalBar.cMenuToolbarFlex :is(.cMenuToolbarCommandItem, button[class^=cMenuToolbarCommandsubItem]) {
+ #editingToolbarModalBar.editingToolbarFlex :is(.editingToolbarCommandItem, button[class^=editingToolbarCommandsubItem]) {
 	/* margin: 5px !important; */
 	background-color: transparent;
 }
 
-#cMenuToolbarModalBar.cMenuToolbarGlassAesthetic,
-#cMenuToolbarModalBar.cMenuToolbarGlassAesthetic~#cMenuToolbarPopoverBar {
+#editingToolbarModalBar.editingToolbarDefaultAesthetic,
+#editingToolbarModalBar.editingToolbarDefaultAesthetic~#editingToolbarPopoverBar {
 	backdrop-filter: blur(10px);
 	background-color: #171717de;
 }
 
-:is(#cMenuToolbarModalBar, #cMenuToolbarPopoverBar) button[class^=cMenuToolbarCommandsubItem]>.subitem button.menu-item {
+:is(#editingToolbarModalBar, #editingToolbarPopoverBar) button[class^=editingToolbarCommandsubItem]>.subitem button.menu-item {
 	padding: 10px 5px !important;
 }
 
-#cMenuToolbarModalBar.top :is(.cMenuToolbarCommandItem, button[class^=cMenuToolbarCommandsubItem]):not(.cMenuToolbar-Divider-Line) {
+#editingToolbarModalBar.top :is(.editingToolbarCommandItem, button[class^=editingToolbarCommandsubItem]):not(.editingToolbar-Divider-Line) {
 	padding: 8px;
 	border-radius: 6px;
 }
 
-#cMenuToolbarModalBar.top {
+#editingToolbarModalBar.top {
 	border-bottom: solid 1px var(--background-modifier-border);
 	top: 0px !important;
 	backdrop-filter: none;
@@ -1838,32 +1837,32 @@ body:not(.is-mobile)	.suggestion-container.mod-search-suggestion .suggestion {
 	border-radius: 0 !important;
 }
 
-#cMenuToolbarModalBar.cMenuToolbarDefaultAesthetic.top {
+#editingToolbarModalBar.editingToolbarDefaultAesthetic.top {
 	backdrop-filter: unset;
 }
 
-#cMenuToolbarModalBar.top button.cMenuToolbar-Divider-Line {
+#editingToolbarModalBar.top button.editingToolbar-Divider-Line {
 	background-color: transparent !important;
 }
 
-#cMenuToolbarModalBar.cMenuToolbarDefaultAesthetic {
+#editingToolbarModalBar.editingToolbarDefaultAesthetic {
 	border-radius: 20px;
 	backdrop-filter: blur(15px);
 	background-color: var(--app-model-bg-color);
-	box-shadow: var(--input-shadow);
+	/* box-shadow: var(--input-shadow); */
 }
 
-#cMenuToolbarModalBar .cMenuToolbarCommandItem {
+#editingToolbarModalBar .editingToolbarCommandItem {
 	backdrop-filter: unset;
 	padding: 7px;
 }
 
-#cMenuToolbarModalBar.cMenuToolbarGlassAesthetic,
-#cMenuToolbarModalBar.cMenuToolbarGlassAesthetic~#cMenuToolbarPopoverBar {
+#editingToolbarModalBar.editingToolbarDefaultAesthetic,
+#editingToolbarModalBar.editingToolbarDefaultAesthetic~#editingToolbarPopoverBar {
 	backdrop-filter: blur(15px);
 }
 
-:is(#cMenuToolbarModalBar, #cMenuToolbarPopoverBar) button.cMenuToolbar-Divider-Line {
+:is(#editingToolbarModalBar, #editingToolbarPopoverBar) button.editingToolbar-Divider-Line {
 	min-width: unset;
 	flex-shrink: 0;
 	display: inline-flex;
@@ -1874,20 +1873,21 @@ body:not(.is-mobile)	.suggestion-container.mod-search-suggestion .suggestion {
 	min-width: 0.5px !important;
 }
 
-#cMenuToolbarModalBar .subitem {
+#editingToolbarModalBar .subitem {
 	border-radius: 18px !important;
 	backdrop-filter: blur(15px) !important;
 	margin-top: 10px;
 }
 
-#cMenuToolbarModalBar .subitem .menu-item {
+#editingToolbarModalBar .subitem .menu-item {
 	padding: 17px 20px !important;
 }
 
-.theme-dark :is(#cMenuToolbarModalBar, #cMenuToolbarPopoverBar) button.cMenuToolbar-Divider-Line
+.theme-dark :is(#editingToolbarModalBar, #editingToolbarPopoverBar) button.editingToolbar-Divider-Line
 {
 	background-color: transparent !important;
 }
+
 
 
 /* dataview */
