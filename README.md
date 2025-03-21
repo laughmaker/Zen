@@ -4,7 +4,7 @@
 
 [Screenshots](#Screenshots)
 
-# `<a id="Chinese">`中文 `</a>`
+# <a id="Chinese"> 中文 </a>
 
 Zen 是一个专注于写作而生的现代化主题。去除了影响写作和阅读的冗余元素，大量的运用了高斯模糊效果，具有现代化的简约风格。同时针对中文用户做了专门的优化。
 
@@ -76,7 +76,7 @@ If you like my theme, you can buy me a cup of coffee.
 2. 找到 Windows: 窗体背景图片 设置项，从网上找到一张图片，替换到里面的单引号部分
    ![](./screenshots/stylesettings.png)
 
-# `<a id="English">`English `</a>`
+# <a id="English">English </a>
 
 Zen is a modern theme designed specifically for writing. It removes redundant elements that can affect writing and reading, extensively uses Gaussian blur effects, and features a modern minimalist style. It has also been specifically optimized for Chinese users.
 
@@ -124,7 +124,7 @@ If you need to change the background image, follow these steps:
 2. Find the "Window: Form background picture" setting item. Find a picture from the Internet and replace the single quotation mark part.
    ![](./screenshots/stylesettings.png)
 
-# `<a id="Screenshots">`Screenshots `</a>`
+# <a id="Screenshots"> Screenshots </a>
 
 ## Mac
 
