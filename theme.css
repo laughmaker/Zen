@@ -222,7 +222,7 @@ body.is-mobile {
 	--app-model-bg-color: rgba(28, 28, 28, 0.8);
 	--editor-bg-color: rgba(28, 28, 28, .65);
 	--suggestion-bg-color: rgba(28, 28, 28, 0.1);
-	--code-background: rgba(0, 0, 0, 0.2);
+	--code-background: rgba(245, 245, 245, 0.15);
 	--background-modifier-form-field: rgba(245, 245, 245, 0.04);
 	--win-blur: 20px;
 	--win-window-brightness: 0.3;
@@ -260,7 +260,7 @@ body.is-mobile {
 	--editor-bg-color: rgba(255, 255, 255, 0.5);
 	--suggestion-bg-color: rgba(248, 248, 248, 0.1);
 	--divider-color: rgba(0, 0, 0, 0.01);
-	--code-background: rgba(200, 200, 200, 0.2);
+  --code-background: rgba(28, 28, 28, 0.1);
 	--background-modifier-form-field: rgba(230, 230, 230, 0.5);
 	--win-blur: 40px;
 	--win-window-brightness: 0.6;
