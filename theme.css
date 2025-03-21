@@ -427,6 +427,15 @@ body.is-mobile .nav-file-title {
 	text-decoration-thickness: 0.5px;
 }
 
+/* 兼容iconic */
+.nav-file.iconic-item .iconic-icon {
+	transform: translateX(30px);
+}
+
+.nav-file.iconic-item:has(.iconic-icon) .tree-item-inner.nav-file-title-content::before {
+	padding-right: 20px;
+}
+
 /* 设置目录标题前缀•◦∘ */
 .tree-item-inner.nav-file-title-content::before {
 	content: "•";
