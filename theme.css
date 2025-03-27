@@ -1003,8 +1003,7 @@ body.is-mobile .tree-item-self {
 */
 .markdown-rendered ol {
 	padding: 0;
-	margin: 0 0 0 -5px !important;
-	/* background-color: rgba(0, 255, 255, 0.219); */
+	margin: 0 0 0 3px !important;
 }
 
 .markdown-rendered ul {
@@ -1013,7 +1012,7 @@ body.is-mobile .tree-item-self {
 }
 
 .markdown-rendered.show-indentation-guide ol::before {
-	margin-left: 7px;
+	margin-left: -10px;
 }
 
 .markdown-rendered.show-indentation-guide ul::before {
