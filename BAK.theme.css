@@ -229,7 +229,7 @@ body.is-mobile {
 	--win-editor-bg-color: rgba(18, 18, 18, .65);
 	--win-window-opacity: 0.4;
 	--background-secondary-alt: rgba(18, 18, 18, 0.1);
-	--background-setting-item: rgba(245, 245, 245, 0.05);
+
 }
 
 .theme-light {
@@ -267,15 +267,6 @@ body.is-mobile {
 	--win-editor-bg-color: rgba(240, 240, 240, .65);
 	--win-window-opacity: 0.2;
 	--background-secondary-alt: rgba(240, 240, 240, 0.1);
-	--background-setting-item: rgba(28, 28, 28, 0.05);
-}
-
-.is-mobile.theme-light {
-	--interactive-normal:rgba(248, 248, 248);
-}
-
-.is-mobile.theme-dark {
-	--interactive-normal:rgba(18, 18, 18, 0.6);
 }
 
 /* 设置 mac 平台背景透明度 */
@@ -453,16 +444,6 @@ body.is-mobile .nav-file-title {
 	color: var(--nav-collapse-icon-color);
 	margin-left: -0.5px;
 }
-
-.is-mobile .tree-item-inner.nav-folder-title-content {
-	/* background-color: red; */
-	transform: translateX(-3px) !important;
-}
-
-.is-mobile .tree-item-inner.nav-file-title-content {
-	transform: translateX(-2px) !important;
-}
-
 
 .tree-item-inner.nav-folder-title-content {
 	margin-left: -3px;
@@ -2148,91 +2129,3 @@ body:not(.win-translucent-off):not(.mod-macos):not(.is-mobile) .view-header-titl
 	border-radius: 14px;
 }
 
-
-/* 调整设置页样式 */
-
-.setting-item-heading {
-	padding-left: 20px;
-}
-
-.is-phone .vertical-tab-header-group-title, .is-phone .setting-item-heading .setting-item-name {
-	font-size: var(--font-ui-small);
-	padding-left: 18px;
-}
-
-:not(.community-modal-controls) > .setting-item:not(.setting-item-heading) {
-	border-top: none;
-	padding-left: 20px;
-	padding-right: 20px;
-	background-color: var(--background-setting-item);
-}
-
-/* 第一个 .setting-item */
-.setting-item-heading + .setting-item {
-	border-top-left-radius: var(--radius-l);
-	border-top-right-radius: var(--radius-l);
-}
-
-/* heading前的一个item */
-.setting-item:has(+ .setting-item-heading),
-.setting-item:has(+ .setting-filter-container) {
-	border-bottom-left-radius: var(--radius-l);
-	border-bottom-right-radius: var(--radius-l);
-}
-
-/* 判断第一个 item */
-.setting-item:first-of-type {
-	border-top-left-radius: var(--radius-l);
-	border-top-right-radius: var(--radius-l);
-	padding-top: 10px;
-}
-
-.setting-item:last-of-type {
-	border-bottom-left-radius: var(--radius-l);
-	border-bottom-right-radius: var(--radius-l);
-}
-
-.setting-item:not(:has(~ .setting-item, ~ .setting-item-heading)):not(:has(.setting-item, .setting-item-heading)) {
-	border-bottom-left-radius: var(--radius-l);
-	border-bottom-right-radius: var(--radius-l);
-}
-
-.setting-item:not(.setting-item + .setting-item):not(.setting-item-heading + .setting-item) {
-	border-top-left-radius: var(--radius-l);
-	border-top-right-radius: var(--radius-l);
-}
-
-.setting-item:only-of-type {
-	border-bottom-left-radius: var(--radius-l);
-	border-bottom-right-radius: var(--radius-l);
-	border-top-left-radius: var(--radius-l);
-	border-top-right-radius: var(--radius-l);
-}
-
-.vertical-tab-header-group-items {
-	background-color: var(--background-setting-item);
-	border-radius: var(--radius-l);
-	margin-left: 15px;
-	margin-right: 15px;
-	overflow: hidden;
-}
-
-body:not(.is-mobile) .vertical-tab-header-group-items {
-	padding: 5px;
-	margin-left: 10px;
-	margin-right: 10px;
-}
-
-.is-phone .modal.mod-settings .vertical-tab-nav-item {
-	padding-left: max(var(--size-4-4), var(--safe-area-inset-right));
-	padding-right: max(var(--size-4-3), var(--safe-area-inset-right));
-}
-
-.vertical-tab-header-group-title {
-	padding-left: 23px;
-}
-
-.is-phone .modal.mod-settings .vertical-tab-header-group-title {
-	padding-left: 30px;
-	font-size: 0.8em;
-}
