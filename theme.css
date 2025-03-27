@@ -65,10 +65,10 @@ settings:
 		step: 1
 	-
 		id: text-justify
-		title: Close text justification.
-		title.zh: 关闭文本两端对齐
-		description: Default text is justified on both sides. If it is turned off, it is left-aligned.
-		description.zh: 默认文本两端对齐，关闭则左对齐。
+		title: Open text justification.
+		title.zh: 打开文本两端对齐
+		description: Default text is left-aligned. If it is turned off, it is justified.
+		description.zh: 默认文本左对齐，关闭则两端对齐。
 		type: class-toggle
 	-
 		id: editor-width
@@ -596,10 +596,10 @@ ol {
 	text-align: left;
 }
 
-body:not(.text-justify) .mod-cm6 .cm-editor .cm-line,
-body:not(.text-justify) p,
-body:not(.text-justify) li,
-body:not(.text-justify) ol {
+body.text-justify .mod-cm6 .cm-editor .cm-line,
+body.text-justify p,
+body.text-justify li,
+body.text-justify ol {
 	text-align: justify;
 }
 
