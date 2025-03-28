@@ -267,7 +267,7 @@ body.is-mobile {
 	--win-editor-bg-color: rgba(240, 240, 240, .65);
 	--win-window-opacity: 0.2;
 	--background-secondary-alt: rgba(240, 240, 240, 0.1);
-	--background-setting-item: rgba(28, 28, 28, 0.05);
+	--background-setting-item: rgba(28, 28, 28, 0.03);
 }
 
 .is-mobile.theme-light {
@@ -347,6 +347,14 @@ body:not(.is-mobile) .workspace-split.mod-left-split .workspace-sidedock-vault-p
 /* 隐藏文件导航栏上的新建等按钮 */
 .nav-header {
 	/* display: none; */
+}
+
+.vertical-tab-header {
+	background-color: rgb(244 244 244);
+}
+
+.is-phone .modal.mod-settings .vertical-tab-nav-item-chevron {
+	color: #a5a5a5;
 }
 
 img {
