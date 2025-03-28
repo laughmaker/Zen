@@ -2252,3 +2252,8 @@ body:not(.is-mobile) .vertical-tab-header-group-items {
 .ac-settings-heading {
 	border-bottom: none;
 }
+
+.generalSetting-container {
+	background-color: transparent !important;
+	padding: 0 !important;
+}
