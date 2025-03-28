@@ -2257,3 +2257,28 @@ body:not(.is-mobile) .vertical-tab-header-group-items {
 	background-color: transparent !important;
 	padding: 0 !important;
 }
+
+.setting-item.editing-toolbar-fix-button {
+	background-color: transparent !important;
+}
+
+.editing-toolbar-content .import-export-container,
+.editing-toolbar-content .appearanceSetting-container,
+.editing-toolbar-content .custom-paintbrush-container,
+.editing-toolbar-content .custom-toolbar-container,
+.editing-toolbar-content .commandSetting-container,
+.editing-toolbar-content .command-buttons-container
+{
+	background-color: transparent !important;
+	padding: 0 !important;
+}
+
+.command-lists-container {
+	padding: 0 !important;
+}
+
+.editingToolbarSettingsTabsContainer {
+	border-top: none;
+	border-bottom: none;
+	padding-top: 10px;
+}
