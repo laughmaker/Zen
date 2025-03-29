@@ -82,6 +82,13 @@ settings:
 		max: 2000
 		step: 10
 	-
+		id: close-left-vault-profile
+		title: Close left vault profile.
+		title.zh: 将仓库切换放置为默认底部
+		description: Switch the vault profile to the default bottom.
+		description.zh: 将仓库切换放置为默认底部。新版改为在底部，不太喜欢，这里调整为原来的左侧。
+		type: class-toggle
+	-
 		id: windows-header
 		title: Windows/Linux
 		type: heading
@@ -2281,4 +2288,47 @@ body:not(.is-mobile) .vertical-tab-header-group-items {
 	border-top: none;
 	border-bottom: none;
 	padding-top: 10px;
+}
+
+/* 将底部的设置按钮调整为左侧 */
+
+body:not(.is-mobile):not(.close-left-vault-profile) .workspace-split.mod-left-split .workspace-sidedock-vault-profile{
+	width: fit-content !important;
+	display: flex;
+	flex-direction: column;
+	gap: 6px;
+	position: absolute;
+	left: -12.5%;
+	bottom: 1%;
+}
+
+body.theme-light:not(.is-mobile):not(.close-left-vault-profile) .workspace-split.mod-left-split .workspace-sidedock-vault-profile{
+	border: 0;
+	padding: 0;
+	z-index: 99;
+}
+
+body:not(.is-mobile):not(.close-left-vault-profile) .workspace-split.mod-left-split .workspace-sidedock-vault-profile .workspace-drawer-vault-switcher{
+	z-index: 99;
+	gap: 10px;
+	padding: var(--size-4-2) var(--size-4-2);
+}
+
+body:not(.is-mobile):not(.close-left-vault-profile) .workspace-split.mod-left-split .workspace-sidedock-vault-profile .workspace-drawer-vault-switcher-icon{
+	color: var(--icon-color) !important;
+}
+
+body:not(.is-mobile):not(.close-left-vault-profile) .workspace-split.mod-left-split .workspace-sidedock-vault-profile .workspace-drawer-vault-actions {
+	display: flex;
+	flex-direction: column;
+	gap: 6px;
+	z-index: 99;
+}
+
+body:not(.is-mobile):not(.close-left-vault-profile) .workspace-split.mod-left-split .workspace-sidedock-vault-profile .workspace-drawer-vault-name{
+	display: none !important;
+}
+
+body:not(.is-mobile):not(.close-left-vault-profile) .workspace-split.mod-left-split .workspace-sidedock-vault-profile .workspace-drawer-vault-actions .clickable-icon {
+	gap: 10px;
 }
