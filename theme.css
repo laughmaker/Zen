@@ -1023,6 +1023,10 @@ body.is-mobile .tree-item-self {
 	margin: 0 0 0 3px !important;
 }
 
+.mod-windows .markdown-rendered ol {
+	margin-left: -10px;
+}
+
 .markdown-rendered ul {
 	padding: 0;
 	margin: 0 0 0 -3px !important;
@@ -1030,6 +1034,10 @@ body.is-mobile .tree-item-self {
 
 .markdown-rendered.show-indentation-guide ol::before {
 	margin-left: -10px;
+}
+
+.mod-windows .markdown-rendered.show-indentation-guide ol::before {
+	margin-left: 12px;
 }
 
 .markdown-rendered.show-indentation-guide ul::before {
