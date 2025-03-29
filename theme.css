@@ -2295,12 +2295,12 @@ body:not(.is-mobile) .vertical-tab-header-group-items {
 /* 将底部的设置按钮调整为左侧 */
 
 body:not(.is-mobile):not(.close-left-vault-profile) .workspace-split.mod-left-split .workspace-sidedock-vault-profile{
-	width: fit-content !important;
+	width: var(--ribbon-width) !important;
 	display: flex;
 	flex-direction: column;
 	gap: 6px;
 	position: absolute;
-	left: -37px;
+	left: -44px;
 	bottom: 1%;
 }
 
