@@ -237,6 +237,7 @@ body.is-mobile {
 	--win-window-opacity: 0.4;
 	--background-secondary-alt: rgba(18, 18, 18, 0.1);
 	--background-setting-item: rgba(245, 245, 245, 0.05);
+	--background-setting: rgba(28, 28, 28);
 }
 
 .theme-light {
@@ -275,6 +276,7 @@ body.is-mobile {
 	--win-window-opacity: 0.2;
 	--background-secondary-alt: rgba(240, 240, 240, 0.1);
 	--background-setting-item: rgba(28, 28, 28, 0.03);
+	--background-setting: rgba(244, 244, 244);
 }
 
 .is-mobile.theme-light {
@@ -357,7 +359,7 @@ body:not(.is-mobile) .workspace-split.mod-left-split .workspace-sidedock-vault-p
 }
 
 .vertical-tab-header {
-	background-color: rgb(244 244 244);
+	background-color: var(--background-setting);
 }
 
 .is-phone .modal.mod-settings .vertical-tab-nav-item-chevron {
@@ -2298,7 +2300,7 @@ body:not(.is-mobile):not(.close-left-vault-profile) .workspace-split.mod-left-sp
 	flex-direction: column;
 	gap: 6px;
 	position: absolute;
-	left: -12.5%;
+	left: -37px;
 	bottom: 1%;
 }
 
