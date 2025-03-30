@@ -433,6 +433,11 @@ body:not(.is-grabbing):not(.is-fullscreen).is-hidden-frameless .mod-top .workspa
 	margin-bottom: 6px;
 }
 
+.side-dock-actions {
+	overflow-y: auto;
+	height: 85%;
+}
+
 /* 设置大纳样式 */
 .nav-file {
 	margin-left: -14px;
