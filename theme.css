@@ -88,7 +88,7 @@ settings:
 		description: Adjust the gap of the text paragraph.
 		description.zh: 调整文本段间距。
 		type: variable-number-slider
-		default: 3
+		default: 3.2
 		min: 1
 		max: 10
 		step: 0.1
@@ -212,7 +212,7 @@ body {
 	--win-bg-image-url: url('https://images.pexels.com/photos/66997/pexels-photo-66997.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2');
 	--input-radius: 14px;
 	--callout-content-padding: 4px;
-	--text-paragraph-gap: 3px;
+	--text-paragraph-gap: 3.2px;
 	--text-line-height: 30px;
 }
 
