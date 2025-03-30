@@ -1861,7 +1861,7 @@ body:not(.is-mobile)	.suggestion-container.mod-search-suggestion .suggestion {
  * 调整 cMenu Toolbar Editor 样式 
  */
  #editingToolbarModalBar.editingToolbarFlex :is(.editingToolbarCommandItem, button[class^=editingToolbarCommandsubItem]) {
-	/* margin: 5px !important; */
+	margin: 5px !important;
 	background-color: transparent;
 }
 
