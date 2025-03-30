@@ -1267,7 +1267,7 @@ body.is-mobile .cm-s-obsidian span.cm-inline-code {
 }
 
 .is-mobile .markdown-rendered.show-indentation-guide ol::before {
-	margin-left: -15px;
+	margin-left: -20px;
 }
 
 .is-mobile .markdown-rendered.show-indentation-guide ul::before {
