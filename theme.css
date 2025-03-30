@@ -974,6 +974,10 @@ span.cm-formatting.cm-formatting-list.cm-formatting-list-ol {
 	margin-left: -4px;
 }
 
+u {
+	text-decoration-color: var(--text-accent);
+}
+
 
 /* 调整引用的样式 */
 .HyperMD-quote {
