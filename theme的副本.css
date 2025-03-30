@@ -82,28 +82,6 @@ settings:
 		max: 2000
 		step: 10
 	-
-		id: text-paragraph-gap
-		title: The gap of the text paragraph.
-		title.zh: 文本段间距
-		description: Adjust the gap of the text paragraph.
-		description.zh: 调整文本段间距。
-		type: variable-number-slider
-		default: 3
-		min: 1
-		max: 10
-		step: 0.1
-	-
-		id: text-line-height
-		title: The height of the text line.
-		title.zh: 文本行高
-		description: Adjust the height of the text line.
-		description.zh: 调整文本行高。
-		type: variable-number-slider
-		default: 30
-		min: 20
-		max: 40
-		step: 1
-	-
 		id: close-left-vault-profile
 		title: Close left vault profile.
 		title.zh: 将仓库切换放置为默认底部
@@ -212,8 +190,6 @@ body {
 	--win-bg-image-url: url('https://images.pexels.com/photos/66997/pexels-photo-66997.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2');
 	--input-radius: 14px;
 	--callout-content-padding: 4px;
-	--text-paragraph-gap: 3px;
-	--text-line-height: 30px;
 }
 
 body.is-mobile {
@@ -631,9 +607,9 @@ body.is-mobile .nav-file-title {
 p,
 li,
 ol {
-	line-height: calc(var(--text-line-height) * 1px);
-	padding-top: calc(var(--text-paragraph-gap) * 1px);
-	padding-bottom: calc(var(--text-paragraph-gap) * 1px);
+	line-height: 1.5em;
+	padding-top: 3px;
+	padding-bottom: 3px;
 	text-align: left;
 }
 
@@ -1885,7 +1861,7 @@ body:not(.is-mobile)	.suggestion-container.mod-search-suggestion .suggestion {
  * 调整 cMenu Toolbar Editor 样式 
  */
  #editingToolbarModalBar.editingToolbarFlex :is(.editingToolbarCommandItem, button[class^=editingToolbarCommandsubItem]) {
-	/* margin: 5px !important; */
+	margin: 5px !important;
 	background-color: transparent;
 }
 
