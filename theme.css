@@ -435,7 +435,7 @@ body:not(.is-grabbing):not(.is-fullscreen).is-hidden-frameless .mod-top .workspa
 
 .side-dock-actions {
 	overflow-y: auto;
-	height: 85%;
+	max-height: 85%;
 }
 
 /* 设置大纳样式 */
