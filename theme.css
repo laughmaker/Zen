@@ -2238,6 +2238,7 @@ body:not(.win-translucent-off):not(.mod-macos):not(.is-mobile) .view-header-titl
 	border-top: none;
 	padding-left: 20px;
 	padding-right: 20px;
+	background-color: var(--background-setting-item);
 	border: solid 0.5px var(--background-modifier-border);
 }
 
