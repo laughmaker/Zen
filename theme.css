@@ -2245,10 +2245,6 @@ body:not(.win-translucent-off):not(.mod-macos):not(.is-mobile) .view-header-titl
 .setting-item-heading + .setting-item {
 	border-top-left-radius: var(--radius-l);
 	border-top-right-radius: var(--radius-l);
-	border-top-width: 0.2px;
-	border-top-style: solid;
-	border-top-color: red;
-	border-top: solid 1px red;
 }
 
 /* heading前的一个item */
