@@ -603,7 +603,7 @@ body.is-mobile .nav-file-title {
 
 /* 隐藏预览按钮 */
 .view-actions button:nth-child(2) {
-	display: none;
+	/* display: none; */
 }
 
 /* 暗色主题时的字体颜色 */
@@ -2389,4 +2389,10 @@ body:not(.is-mobile):not(.close-left-vault-profile) .workspace-split.mod-left-sp
 
 body:not(.is-mobile):not(.close-left-vault-profile) .workspace-split.mod-left-split .workspace-sidedock-vault-profile .workspace-drawer-vault-actions .clickable-icon {
 	gap: 10px;
+}
+
+
+/* comander 优化 */
+.cmdr-name-input-wrapper button {
+	margin-right: 60px;
 }
