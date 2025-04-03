@@ -1118,7 +1118,7 @@ li {
 	padding-top: 0.15em !important;
 }
 
-.markdown-rendered p {
+.markdown-rendered .el-p p {
 	margin: 0;
 	padding-bottom: 0.4em !important;
 	padding-top: 0.4em !important;
