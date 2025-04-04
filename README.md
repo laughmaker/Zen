@@ -1,4 +1,4 @@
-![](./screenshots/cover-dark-1.png)
+![](./cover.png)
 
 [中文](#Chinese) ｜ [English](#English)
 
