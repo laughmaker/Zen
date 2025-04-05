@@ -386,6 +386,14 @@ body:not(.is-mobile) .workspace-split.mod-left-split .workspace-sidedock-vault-p
 	background-color: var(--background-setting);
 }
 
+.workspace-tab-header-inner {
+	border-radius: var(--radius-xl);
+}
+
+.suggestion-item {
+	border-radius: 20px;
+}
+
 .is-phone .modal.mod-settings .vertical-tab-nav-item-chevron {
 	color: #a5a5a5;
 }
