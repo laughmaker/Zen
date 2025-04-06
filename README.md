@@ -65,6 +65,7 @@ If you like my theme, you can buy me a cup of coffee.
 9. Note Refactor
 10. Novel word count
 11. Weread
+11. Quiet Outline
 
 ## 三、Win 如何替换背景？
 
