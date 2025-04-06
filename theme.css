@@ -2404,3 +2404,66 @@ body:not(.is-mobile):not(.close-left-vault-profile) .workspace-split.mod-left-sp
 .cmdr-name-input-wrapper button {
 	margin-right: 60px;
 }
+
+
+
+/* # quite outliner优化 */
+
+
+body .quiet-outline .n-button {
+	--n-border: unset !important ;
+	--n-border-hover: 1px solid var(--text-accent) !important;;
+	--n-border-pressed: 1px solid var(--text-accent) !important;;
+	--n-border-focus: 1px solid var(--text-accent) !important;;
+}
+
+body .quiet-outline .n-tree-node-wrapper {
+	--n-node-border-radius: var(--radius-xl);
+}
+
+.quiet-outline .function-bar .n-input {
+	border-radius: 14px;
+}
+
+.is-mobile .quiet-outline .function-bar .n-input {
+	max-width: 70%;
+}
+
+.n-slider .n-slider-rail {
+	height: 2px;
+}
+
+.n-tree .n-tree-node-wrapper:not(:has(.n-tree-node-switcher--expanded)):has(.n-tree-node-switcher--hide) .n-tree-node .n-tree-node-content::before {
+	content: "•";
+	font-weight: bolder;
+	padding-right: 5px;
+	color: var(--nav-collapse-icon-color);
+}
+
+.n-tree .n-tree-node-wrapper .n-tree-node .n-tree-node-content::before {
+	margin-left: -18.5px;
+}
+
+.n-tree .n-tree-node-wrapper:not(:has(.n-tree-node-switcher--expanded)):not(:has(.n-tree-node-switcher--hide)) .n-tree-node .n-tree-node-content,
+.n-tree .n-tree-node-wrapper:has(.n-tree-node-switcher--expanded) .n-tree-node .n-tree-node-content {
+  transform: translateX(-7px);	
+}
+
+.n-tree .n-tree-node-switcher .n-tree-node-switcher__icon {
+  transition: transform 0.2s ease;
+  width: 0;
+  height: 0;
+  border-top: 5px solid transparent;
+  border-bottom: 5px solid transparent;
+  border-left: 5px solid currentColor;
+	margin-left: -2px;
+	color: var(--nav-collapse-icon-color);
+}
+
+.n-tree .n-tree-node-wrapper:not(:has(.n-tree-node-switcher--expanded)):not(:has(.n-tree-node-switcher--hide)) .n-tree-node-switcher__icon {
+	margin-top: -2px;
+}
+
+.n-tree .n-tree-node-switcher .n-tree-node-switcher__icon .xicon {
+  display: none;
+}
