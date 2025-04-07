@@ -683,7 +683,8 @@ strong,
 	margin-bottom: var(--inline-title-margin-bottom);
 }
 
-body:not(.heading-bottom-line-off) .inline-title {
+/* 修复白板双下划线 bug */
+body:not(.heading-bottom-line-off) .inline-title:not(:empty):not(:has(h1)):not(:has(h2)):not(:has(h3)):not(:has(h4)):not(:has(h5)):not(:has(h6)) {
 	border-bottom: dashed 0.5px;
 }
 
