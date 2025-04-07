@@ -130,7 +130,7 @@ settings:
 		description: Adjust the transparency of the form background on the Windows/Linux platform. Only effective for Windows/Linux. Recommended values：For dark colors：0.4. For light colors：0.2.
 		description.zh: 调整 Windows/Linux 平台的窗体背景的透明度。仅对 Windows/Linux 有效。推荐值：暗色：0.4 亮色：0.2
 		type: variable-number-slider
-		default: 0.2
+		default: 0.25
 		min: 0
 		max: 1
 		step: 0.01
@@ -141,7 +141,7 @@ settings:
 		description: Adjust the brightness of the form background on the Windows/Linux platform. Only effective for Windows/Linux. Recommended values：dark：0.3, light：0.6.
 		description.zh: 调整 Windows/Linux 平台的窗体背景的亮度。仅对 Windows/Linux 有效。推荐值：暗色：0.3 亮色：0.6
 		type: variable-number-slider
-		default: 0.4
+		default: 0.8
 		min: 0
 		max: 1
 		step: 0.01
