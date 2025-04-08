@@ -2023,7 +2023,8 @@ body:not(.is-mobile)	.suggestion-container.mod-search-suggestion .suggestion {
 
 /* Export image 样式 */
 .modal-container.mod-dim .modal:has(.export-image-preview-root) {
-	width: 60% !important;
+	min-width: 50% !important;
+	max-width: 65% !important;
 }
 
 .modal-container.mod-dim .modal:has(.export-image-preview-root) .modal-title {
@@ -2031,8 +2032,9 @@ body:not(.is-mobile)	.suggestion-container.mod-search-suggestion .suggestion {
 }
 
 .export-image-preview-left {
-	max-width: 400px;
+	max-width: 350px;
 	padding: 0 15px 0 0;
+	min-width: 320px;
 }
 
 .export-image-preview-right {
@@ -2041,8 +2043,6 @@ body:not(.is-mobile)	.suggestion-container.mod-search-suggestion .suggestion {
 	border-radius: 10px;
 }
 
-
-/* 适配手机端，以13Pro Max分辨率为限制 */
 .is-mobile .modal-container.mod-dim .modal:has(.export-image-preview-root) {
 	width: 100% !important;
 	margin-top: 50px;
@@ -2063,9 +2063,9 @@ body:not(.is-mobile)	.suggestion-container.mod-search-suggestion .suggestion {
 
 .export-image-preview-left .setting-item {
 	display: flex !important;
-	flex-direction: row !important;
+	flex-direction: column !important;
 	justify-content: space-between;
-	align-items: center !important;
+	align-items: flex-start !important;
 	padding-left: 10px !important;
 	padding-right: 10px !important;
 }
@@ -2089,7 +2089,17 @@ body:not(.is-mobile)	.suggestion-container.mod-search-suggestion .suggestion {
 	padding-bottom: 20px !important;
 }
 
+.export-image-preview-left .setting-item .setting-item-name {
+	padding-bottom: 10px;
+}
 
+.export-image-preview-left .setting-item .setting-item-description {
+	color: var(--text-muted);
+	font-size: var(--font-ui-smaller);
+	padding-top: var(--size-4-1);
+	line-height: var(--line-height-tight);
+	padding-bottom: var(--size-4-3);
+}
 
 
 /* Float Search 样式 */
