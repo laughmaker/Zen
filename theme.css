@@ -127,10 +127,10 @@ settings:
 		id: win-window-opacity
 		title: Transparency of window background
 		title.zh: 窗体背景的透明度
-		description: Adjust the transparency of the form background on the Windows/Linux platform. Only effective for Windows/Linux. Recommended values：For dark colors：0.4. For light colors：0.2.
-		description.zh: 调整 Windows/Linux 平台的窗体背景的透明度。仅对 Windows/Linux 有效。推荐值：暗色：0.4 亮色：0.2
+		description: Adjust the transparency of the form background on the Windows/Linux platform. Only effective for Windows/Linux. Recommended values：For dark colors：0.4. For light colors：0.1.
+		description.zh: 调整 Windows/Linux 平台的窗体背景的透明度。仅对 Windows/Linux 有效。推荐值：暗色：0.4 亮色：0.1
 		type: variable-number-slider
-		default: 0.25
+		default: 0.1
 		min: 0
 		max: 1
 		step: 0.01
@@ -138,8 +138,8 @@ settings:
 		id: win-window-brightness
 		title: Brightness of form background.
 		title.zh: 窗体背景的亮度
-		description: Adjust the brightness of the form background on the Windows/Linux platform. Only effective for Windows/Linux. Recommended values：dark：0.3, light：0.6.
-		description.zh: 调整 Windows/Linux 平台的窗体背景的亮度。仅对 Windows/Linux 有效。推荐值：暗色：0.3 亮色：0.6
+		description: Adjust the brightness of the form background on the Windows/Linux platform. Only effective for Windows/Linux. Recommended values：dark：0.8, light：0.6.
+		description.zh: 调整 Windows/Linux 平台的窗体背景的亮度。仅对 Windows/Linux 有效。推荐值：暗色：0.8 亮色：0.6
 		type: variable-number-slider
 		default: 0.8
 		min: 0
@@ -259,7 +259,7 @@ body.is-mobile {
 	--win-blur: 20px;
 	--win-window-brightness: 0.8;
 	--win-editor-bg-color: rgba(18, 18, 18, .65);
-	--win-window-opacity: 0.5;
+	--win-window-opacity: 0.4;
 	--background-secondary-alt: rgba(18, 18, 18, 0.1);
 	--background-setting-item: rgba(245, 245, 245, 0.05);
 	--background-setting: rgba(28, 28, 28);
@@ -297,9 +297,9 @@ body.is-mobile {
   --code-background: rgba(28, 28, 28, 0.1);
 	--background-modifier-form-field: rgba(230, 230, 230, 0.5);
 	--win-blur: 40px;
-	--win-window-brightness: 0.8;
+	--win-window-brightness: 0.6;
 	--win-editor-bg-color: rgba(240, 240, 240, .65);
-	--win-window-opacity: 0.25;
+	--win-window-opacity: 0.1;
 	--background-secondary-alt: rgba(240, 240, 240, 0.1);
 	--background-setting-item: rgba(28, 28, 28, 0.03);
 	--background-setting: rgba(244, 244, 244);
