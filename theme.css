@@ -2032,6 +2032,7 @@ body:not(.is-mobile)	.suggestion-container.mod-search-suggestion .suggestion {
 
 .export-image-preview-left {
 	max-width: 400px;
+	padding: 0 15px 0 0;
 }
 
 .export-image-preview-right {
@@ -2060,15 +2061,13 @@ body:not(.is-mobile)	.suggestion-container.mod-search-suggestion .suggestion {
 	margin: 0;
 }
 
-.export-image-preview-left {
-	padding: 0 15px 0 0;
-}
-
 .export-image-preview-left .setting-item {
 	display: flex !important;
 	flex-direction: row !important;
 	justify-content: space-between;
 	align-items: center !important;
+	padding-left: 10px !important;
+	padding-right: 10px !important;
 }
 
 .export-image-preview-left .setting-item .setting-item-info {
