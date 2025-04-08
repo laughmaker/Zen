@@ -2022,7 +2022,7 @@ body:not(.is-mobile)	.suggestion-container.mod-search-suggestion .suggestion {
 
 
 /* Export image 样式 */
-.modal-container.mod-dim .modal:has(.export-image-preview-root) {
+body:not(.is-mobile) .modal-container.mod-dim .modal:has(.export-image-preview-root) {
 	min-width: 50% !important;
 	max-width: 65% !important;
 }
@@ -2032,7 +2032,7 @@ body:not(.is-mobile)	.suggestion-container.mod-search-suggestion .suggestion {
 }
 
 .export-image-preview-left {
-	max-width: 350px;
+	max-width: 450px;
 	padding: 0 15px 0 0;
 	min-width: 320px;
 }
@@ -2081,12 +2081,13 @@ body:not(.is-mobile)	.suggestion-container.mod-search-suggestion .suggestion {
 }
 
 .export-image-preview-left .setting-item .setting-item-control input[type="number"] {
-	width: 60px !important;
 	text-align: center;
+	border: solid 0.1px var(--background-modifier-border);
 }
 
 .export-image-preview-actions {
 	padding-bottom: 20px !important;
+	margin-top: 15px;
 }
 
 .export-image-preview-left .setting-item .setting-item-name {
