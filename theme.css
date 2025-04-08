@@ -296,7 +296,7 @@ body.is-mobile {
 	--divider-color: rgba(0, 0, 0, 0.01);
   --code-background: rgba(28, 28, 28, 0.1);
 	--background-modifier-form-field: rgba(230, 230, 230, 0.5);
-	--win-blur: 40px;
+	--win-blur: 15px;
 	--win-window-brightness: 0.6;
 	--win-editor-bg-color: rgba(240, 240, 240, .65);
 	--win-window-opacity: 0.1;
