@@ -232,7 +232,7 @@ body.is-mobile {
 	--background-secondary-alt: rgb(42, 42, 42);
 	/* --ribbon-background: rgba(36, 36, 36, 1); */
 	--background-modifier-hover: hsl(var(--base-h), var(--base-s), calc(var(--base-d) + 10%));
-	--nav-item-background-active: rgba(245, 245, 245, 0.05);
+	--nav-item-background-active: rgba(245, 245, 245, 0.1);
 	--nav-item-color-active: var(--text-accent);
 	--nav-indentation-guide-color: rgba(245, 245, 245, 0.08);
 	--background-modifier-border: rgba(245, 245, 245, 0.09);
@@ -273,7 +273,7 @@ body.is-mobile {
 	--background-secondary-alt: rgb(230, 230, 230);
 	/* --ribbon-background: rgb(245, 245, 245); */
 	--background-modifier-hover: hsl(var(--base-h), var(--base-s), calc(var(--base-d) + 10%));
-	--nav-item-background-active: rgba(0, 0, 0, 0.05);
+	--nav-item-background-active: rgba(0, 0, 0, 0.1);
 	--nav-item-color-active: var(--text-accent);
 	--background-modifier-hover: rgba(28, 28, 28, 0.1);
 	--background-modifier-border: rgba(28, 28, 28, 0.09);
@@ -474,7 +474,12 @@ body.is-mobile .nav-file-title {
 .tree-item-inner-text {
 	font-size: calc(var(--window-font-size) * 1px) !important;
 	color: var(--tree-item-color);
-	/* font-family: 'number-font' !important; */
+}
+
+.tree-item-self.is-active .tree-item-inner, 
+.tree-item-self.is-active:hover .tree-item-inner.nav-file-title-content, 
+.tree-item-self.is-active .tree-item-inner.nav-file-title-content {
+	color: var(--nav-item-color-active);
 }
 
 /* 调整目录折叠按钮与标题对齐
