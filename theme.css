@@ -655,11 +655,10 @@ ol {
 	line-height: calc(var(--text-line-height) * 1px);
 	padding-top: calc(var(--text-paragraph-gap) * 1px);
 	padding-bottom: calc(var(--text-paragraph-gap) * 1px);
-	text-align: left;
 }
 
 body.text-justify .mod-cm6 .cm-editor .cm-line,
-body.text-justify p,
+body.text-justify p:not([align="right"]):not([align="left"]),
 body.text-justify li,
 body.text-justify ol {
 	text-align: justify;
