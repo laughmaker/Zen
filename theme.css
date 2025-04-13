@@ -556,10 +556,11 @@ body.is-mobile .nav-file-title {
 	font-weight: bolder;
 	padding-right: 4px;
 	color: var(--nav-collapse-icon-color);
-	font-size: 16px;
-	width: 7px;
+	font-size: 10px;
+	width: 8px;
 	text-align: center;
 	display: inline-block;
+	font-family: 'number-font' !important;
 }
 
 
@@ -1058,6 +1059,8 @@ body:not(.mod-rtl).fn-whitespace-stop-collapsing .nav-folder-title  {
 
 .tree-item-self {
 	border-radius: var(--radius-l);
+	display: flex;
+	align-items: center;
 }
 
 body.is-mobile .tree-item-self {
