@@ -99,7 +99,7 @@ settings:
 		description: Adjust the height of the text line.
 		description.zh: 调整文本行高。
 		type: variable-number-slider
-		default: 30
+		default: 32
 		min: 20
 		max: 40
 		step: 1
@@ -253,7 +253,7 @@ body {
 	--input-radius: 14px;
 	--callout-content-padding: 4px;
 	--text-paragraph-gap: 3.2px;
-	--text-line-height: 30px;
+	--text-line-height: 32px;
 	--window-brightness: 1;
 	--editor-brightness: 1;
 }
@@ -812,6 +812,12 @@ body:not(.heading-bottom-line-off) .cm-s-obsidian .HyperMD-header {
 	/* margin-bottom: 10px !important; */
 	padding-bottom: 0;
 }
+
+.markdown-source-view.mod-cm6 .cm-line:not(.HyperMD-list-line):not(.HyperMD-header):not(:has(.cm-hashtag.cm-meta)):has(.cm-list-1) {
+	transform: translateX(-7px);
+
+}
+
 /* 标题下空一行 */
 .cm-s-obsidian .cm-line.HyperMD-header + .cm-line:not(.HyperMD-header):not(:has(>br:only-child)) {
 	padding-top: var(--p-spacing);
@@ -1026,6 +1032,10 @@ body:not(.is-phone) .workspace-leaf.mod-active .tree-item-self.has-focus {
 /* 调整源码模式下，列表缩进线的对齐 */
 .markdown-source-view.mod-cm6 .cm-indent::before {
 	margin-inline-start: 5px !important;
+}
+
+.markdown-source-view.mod-cm6 .cm-line:not(.HyperMD-list-line):not(.HyperMD-header):not(:has(.cm-hashtag.cm-meta)) .cm-indent::before {
+	margin-inline-start: 12px !important;
 }
 
 /* 调整有序列表的缩进线 */
