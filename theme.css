@@ -517,8 +517,7 @@ body.is-mobile .nav-file-title {
 }
 
 .is-mobile .tree-item-inner.nav-folder-title-content {
-	/* background-color: red; */
-	transform: translateX(-3px) !important;
+	transform: translateX(-5px) !important;
 }
 
 .is-mobile .tree-item-inner.nav-file-title-content {
