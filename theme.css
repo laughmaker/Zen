@@ -153,6 +153,15 @@ settings:
 		description.zh: 设置窗体背景图片；
 		type: variable-text
 		default: url('https://images.pexels.com/photos/66997/pexels-photo-66997.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2')
+	- 
+		id: win-editor-bg-color
+		title: Adjust the color of the middle editing area.
+		title.zh: 调整中间编辑区的颜色
+		type: variable-themed-color
+		opacity: true
+		format: hex
+		default-light: "#f0f0f0a6"
+		default-dark: "#121212a6"
 	-
 		id: macos-header
 		title: MacOS
@@ -170,6 +179,15 @@ settings:
 		min: 0
 		max: 1
 		step: 0.01
+	- 
+		id: editor-bg-color
+		title: Adjust the color of the middle editing area.
+		title.zh: 调整中间编辑区的颜色
+		type: variable-themed-color
+		opacity: true
+		format: hex
+		default-light: "#ffffff80"
+		default-dark: "#1c1c1ca6"
 
 
 */
@@ -258,7 +276,7 @@ body.is-mobile {
 	--background-modifier-form-field: rgba(245, 245, 245, 0.04);
 	--win-blur: 20px;
 	--win-window-brightness: 0.8;
-	--win-editor-bg-color: rgba(18, 18, 18, .65);
+	--win-editor-bg-color: #121212a6;
 	--win-window-opacity: 0.4;
 	--background-secondary-alt: rgba(18, 18, 18, 0.1);
 	--background-setting-item: rgba(245, 245, 245, 0.05);
@@ -298,7 +316,7 @@ body.is-mobile {
 	--background-modifier-form-field: rgba(230, 230, 230, 0.5);
 	--win-blur: 15px;
 	--win-window-brightness: 0.6;
-	--win-editor-bg-color: rgba(240, 240, 240, .65);
+	--win-editor-bg-color: #f0f0f0a6;
 	--win-window-opacity: 0.1;
 	--background-secondary-alt: rgba(240, 240, 240, 0.1);
 	--background-setting-item: rgba(28, 28, 28, 0.03);
