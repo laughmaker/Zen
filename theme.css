@@ -816,7 +816,7 @@ body:not(.heading-bottom-line-off) .cm-s-obsidian .HyperMD-header {
 }
 
 .markdown-source-view.mod-cm6 .cm-line:not(.HyperMD-list-line):not(.HyperMD-header):not(:has(.cm-hashtag.cm-meta)):has(.cm-list-1) {
-	transform: translateX(-7px);
+	transform: translateX(-8px);
 
 }
 
@@ -1037,7 +1037,7 @@ body:not(.is-phone) .workspace-leaf.mod-active .tree-item-self.has-focus {
 }
 
 .markdown-source-view.mod-cm6 .cm-line:not(.HyperMD-list-line):not(.HyperMD-header):not(:has(.cm-hashtag.cm-meta)) .cm-indent::before {
-	margin-inline-start: 12px !important;
+	margin-inline-start: 13px !important;
 }
 
 /* 调整有序列表的缩进线 */
