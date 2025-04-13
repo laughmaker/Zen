@@ -305,6 +305,8 @@ body.is-mobile {
 	--background-secondary-alt: rgba(18, 18, 18, 0.1);
 	--background-setting-item: rgba(245, 245, 245, 0.05);
 	--background-setting: rgba(28, 28, 28);
+	--text-highlight-bg: var(--blockquote-border-color);
+
 }
 
 .theme-light {
@@ -345,6 +347,8 @@ body.is-mobile {
 	--background-secondary-alt: rgba(240, 240, 240, 0.1);
 	--background-setting-item: rgba(28, 28, 28, 0.03);
 	--background-setting: rgba(244, 244, 244);
+	--text-highlight-bg: var(--blockquote-border-color);
+
 }
 
 .is-mobile.theme-light {
@@ -723,8 +727,6 @@ body:not(.is-phone) .workspace-leaf.mod-active .tree-item-self.has-focus {
 
 /* 调整高亮颜色 */
 .cm-s-obsidian span.cm-highlight {
-	background-color: var(--text-accent);
-	color: white !important;
 	padding: 2px 5px;
 	border-radius: 8px;
 }
@@ -1210,8 +1212,6 @@ li {
 }
 
 .markdown-rendered mark {
-	background-color: var(--text-accent);
-	color: white !important;
 	padding: 2px 5px !important;
 	border-radius: 8px;
 }
