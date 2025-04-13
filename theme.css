@@ -111,6 +111,28 @@ settings:
 		description.zh: 将仓库切换放置为默认底部。新版改为在底部，不太喜欢，这里调整为原来的左侧。
 		type: class-toggle
 	-
+		id: window-brightness
+		title: Brightness of window.
+		title.zh: 窗体的亮度
+		description: Adjust the brightness of the entire form;
+		description.zh: 调整整个窗体的亮度；
+		type: variable-number-slider
+		default: 01
+		min: 0
+		max: 5
+		step: 0.01
+	-
+		id: editor-brightness
+		title: Brightness of editor.
+		title.zh: 窗体编辑区的亮度
+		description: Adjust the brightness of the middle editor area.
+		description.zh: 调整中间编辑器区的亮度。
+		type: variable-number-slider
+		default: 1
+		min: 0
+		max: 5
+		step: 0.01
+	-
 		id: windows-header
 		title: Windows/Linux
 		type: heading
@@ -232,6 +254,8 @@ body {
 	--callout-content-padding: 4px;
 	--text-paragraph-gap: 3.2px;
 	--text-line-height: 30px;
+	--window-brightness: 1;
+	--editor-brightness: 1;
 }
 
 body.is-mobile {
@@ -340,6 +364,14 @@ body.is-mobile {
 /*
 * --------------------------------调整全局样式------------------------------------
 */
+
+.app-container {
+	filter: brightness(var(--window-brightness));
+}
+
+.workspace-split.mod-root {
+	filter: brightness(var(--editor-brightness));
+}
 
 hr.workspace-leaf-resize-handle {
 	/* background-color: var(--scrollbar-thumb-color); */
