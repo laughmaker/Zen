@@ -264,6 +264,10 @@ body.is-mobile {
 	--safe-area-inset-bottom: env(safe-area-inset-bottom);
 }
 
+.is-mobile.theme-dark {
+	/* --background-modifier-cover: rgba(50, 46, 46, 0.281); */
+}
+
 .theme-dark {
 	--base-d: 0%;
 	/* 顶部导航栏背景色 */
@@ -547,8 +551,8 @@ body.is-mobile .nav-file-title {
  * 受 foldernote影响，需要做调整，否则对不齐
  */
 
-.fn-whitespace-stop-collapsing .collapse-icon {
-	/* padding-top: 0 !important; */
+.tree-item:not(.nav-folder) .collapse-icon {
+	padding-top: 0 !important;
 }
 
 .fn-whitespace-stop-collapsing .nav-files-container .collapse-icon {
