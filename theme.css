@@ -541,11 +541,11 @@ body.is-mobile .nav-file-title {
  */
 
 .fn-whitespace-stop-collapsing .collapse-icon {
-	padding-top: 0 !important;
+	/* padding-top: 0 !important; */
 }
 
 .fn-whitespace-stop-collapsing .nav-files-container .collapse-icon {
-	margin-top: 3.5px;
+	/* margin-top: 3.5px; */
 }
 
 .folder-note-underline .has-folder-note .nav-folder-title-content {
@@ -951,6 +951,8 @@ body:not(.alt-heading-off) .HyperMD-header-6:before {
 /* 设置左侧目录折叠箭头,往下移，与标题对齐 */
 .tree-item-self .tree-item-icon {
 	/* margin-top: -4px; */
+	display: flex;
+	align-items: center;
 }
 
 
@@ -1035,6 +1037,11 @@ body:not(.is-phone) .workspace-leaf.mod-active .tree-item-self.has-focus {
 .markdown-source-view.mod-cm6 .cm-indent::before {
 	margin-inline-start: 5px !important;
 }
+
+.markdown-source-view.mod-cm6 .HyperMD-task-line.cm-line .cm-indent::before {
+	/* margin-inline-start: 10px !important; */
+}
+
 
 .markdown-source-view.mod-cm6 .cm-line:not(.HyperMD-list-line):not(.HyperMD-header):not(:has(.cm-hashtag.cm-meta)) .cm-indent::before {
 	margin-inline-start: 13px !important;
