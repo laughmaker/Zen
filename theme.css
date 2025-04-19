@@ -269,7 +269,6 @@ body.is-mobile {
 	/* 顶部导航栏背景色 */
 	--titlebar-background: rgb(42, 42, 42);
 	/* 中间编辑器的背景色 */
-	--background-primary: rgb(28, 28, 28);
 	--background-secondary: rgb(42, 42, 42);
 	--background-secondary-alt: rgb(42, 42, 42);
 	/* --ribbon-background: rgba(36, 36, 36, 1); */
@@ -309,10 +308,18 @@ body.is-mobile {
 
 }
 
+body:not(.is-mobile) .theme-dark {
+	--background-primary: rgb(28, 28, 28);
+}
+
+
+body:not(.is-mobile) .theme-light {
+	--background-primary: rgb(248, 248, 248);
+}
+
 .theme-light {
 	--base-d: 0%;
 	--titlebar-background: rgb(248, 248, 248);
-	--background-primary: rgb(248, 248, 248);
 	--background-secondary: rgb(230, 230, 230);
 	--background-secondary-alt: rgb(230, 230, 230);
 	/* --ribbon-background: rgb(245, 245, 245); */
