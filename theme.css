@@ -262,10 +262,8 @@ body.is-mobile {
 	--window-font-size: calc(var(--window-font-size) * 0.9);
 	--input-radius: 20px;
 	--safe-area-inset-bottom: env(safe-area-inset-bottom);
-}
+	/* --background-modifier-cover: transparent; */
 
-.is-mobile.theme-dark {
-	/* --background-modifier-cover: rgba(50, 46, 46, 0.281); */
 }
 
 .theme-dark {
@@ -386,6 +384,10 @@ body:not(.is-mobile) .theme-light {
 
 .workspace-split.mod-root {
 	filter: brightness(var(--editor-brightness));
+}
+
+.is-mobile .workspace-drawer.mod-left, .is-mobile .workspace-drawer.mod-right {
+	box-shadow: 0px 0px 5px var(--hr-color);
 }
 
 hr.workspace-leaf-resize-handle {
@@ -1873,18 +1875,10 @@ body:not(.is-mobile):not(.composer--DisableNavHeaderAutoHide) .mod-sidedock .wor
 	border-bottom: 1px solid #c1c1c114 !important;
 }
 
-.is-translucent.theme-dark .menu {
-	background: rgba(30, 30, 30, 0.6);
-	backdrop-filter: blur(30px);
-	/* border: none; */
+.is-phone .menu-scroll,
+.is-phone .menu {
+	background-color:  var(--background-primary) !important;
 }
-
-.is-translucent.theme-light .menu {
-	background: rgba(240, 240, 240, 0.6);
-	backdrop-filter: blur(30px);
-	/* border: none; */
-}
-
 
 /* 适配半透明背景 */
 /* .is-focused .workspace-leaf.mod-active .view-header, */
@@ -1918,8 +1912,28 @@ body:not(.is-mobile):not(.composer--DisableNavHeaderAutoHide) .mod-sidedock .wor
 	background-color: transparent;
 }
 
+.view-content > .markdown-source-view.mod-cm6 > .cm-editor > .cm-scroller {
+	padding-right: var(--size-4-2);
+}
+
 .workspace-split.mod-root {
 	background-color: transparent;
+}
+
+.workspace:has(.mod-left[style="display:none"])::before {
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: var(--tree-item-color) !important;
+	backdrop-filter: blur(5px);
+	z-index: -1;
+}
+
+.is-mobile .workspace > .mod-root:not(:has(.mod-active)) {
+	/* opacity: 0.4; */
 }
 
 .is-translucent.theme-dark .markdown-preview-view {
