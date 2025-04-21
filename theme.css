@@ -262,8 +262,6 @@ body.is-mobile {
 	--window-font-size: calc(var(--window-font-size) * 0.9);
 	--input-radius: 20px;
 	--safe-area-inset-bottom: env(safe-area-inset-bottom);
-	/* --background-modifier-cover: transparent; */
-
 }
 
 .theme-dark {
@@ -310,15 +308,6 @@ body.is-mobile {
 
 }
 
-body:not(.is-mobile) .theme-dark {
-	--background-primary: rgb(28, 28, 28);
-}
-
-
-body:not(.is-mobile) .theme-light {
-	--background-primary: rgb(248, 248, 248);
-}
-
 .theme-light {
 	--base-d: 0%;
 	--titlebar-background: rgb(248, 248, 248);
@@ -362,10 +351,21 @@ body:not(.is-mobile) .theme-light {
 
 .is-mobile.theme-light {
 	--interactive-normal:rgba(248, 248, 248);
+	--card-border-color: rgba(28, 28, 28, 0.2);
 }
 
 .is-mobile.theme-dark {
 	--interactive-normal:rgba(18, 18, 18, 0.6);
+	/* --background-modifier-cover: rgba(45, 45, 45, 0.8); */
+	--card-border-color: rgba(100, 100, 100, 0.2);
+}
+
+body:not(.is-mobile) .theme-dark {
+	--background-primary: rgb(28, 28, 28);
+}
+
+body:not(.is-mobile) .theme-light {
+	--background-primary: rgb(248, 248, 248);
 }
 
 /* 设置 mac 平台背景透明度 */
@@ -387,7 +387,15 @@ body:not(.is-mobile) .theme-light {
 }
 
 .is-mobile .workspace-drawer.mod-left, .is-mobile .workspace-drawer.mod-right {
-	box-shadow: 0px 0px 5px var(--hr-color);
+	box-shadow: 0px 0px 3px var(--card-border-color);
+}
+
+.is-mobile .workspace-drawer.mod-right {
+	border-left: solid 1px var(--background-modifier-hover);
+}
+
+.is-mobile .workspace-drawer.mod-left {
+	border-right: solid 1px var(--background-modifier-hover);
 }
 
 hr.workspace-leaf-resize-handle {
@@ -1920,8 +1928,9 @@ body:not(.is-mobile):not(.composer--DisableNavHeaderAutoHide) .mod-sidedock .wor
 	background-color: transparent;
 }
 
-.workspace:has(.mod-left[style="display:none"])::before {
-	content: "";
+.workspace:not(:has(.mod-left[style*="display: none;"]))::before,
+.workspace:not(:has(.mod-right[style*="display: none;"]))::before {
+	/* content: "";
 	position: absolute;
 	top: 0;
 	left: 0;
@@ -1929,7 +1938,20 @@ body:not(.is-mobile):not(.composer--DisableNavHeaderAutoHide) .mod-sidedock .wor
 	height: 100%;
 	background-color: var(--tree-item-color) !important;
 	backdrop-filter: blur(5px);
-	z-index: -1;
+	z-index: -1; */
+}
+
+.workspace-drawer-backdrop {
+	/* display: block; */
+	/* position: fixed; */
+	/* z-index: var(--layer-cover); */
+	/* width: 100%;
+	height: 100%;
+	background-color: var(--background-modifier-cover);
+	top: 0;
+	left: 0;
+	opacity: 1;
+	transition: opacity ease-out 150ms; */
 }
 
 .is-mobile .workspace > .mod-root:not(:has(.mod-active)) {
