@@ -39,6 +39,53 @@ name: Zen
 id: zen
 settings:
 	-
+		id: window-header
+		title: Window Settings
+		title.zh: 窗体设置
+		description: Adjust the window settings. Affects all parts except the editor area.
+		description.zh: 调整窗体设置，影响除编辑器区外的所有部分。
+		type: heading
+		level: 1
+		collapsed: true
+	-
+		id: window-brightness
+		title: Brightness of window.
+		title.zh: 窗体的亮度
+		description: Adjust the brightness of the entire form。
+		description.zh: 调整整个窗体的亮度。
+		type: variable-number-slider
+		default: 01
+		min: 0
+		max: 5
+		step: 0.01
+	-
+		id: window-font-size
+		title: Adjust the font of the Window.
+		title.zh: 调整窗体的字体
+		description: Adjust the font size of some parts, including the document directory on the left, the document title on the top, the outline directory on the right, the tag list, and so on.
+		description.zh: 调节部分字体大小，包含左侧文档目录、顶部文档标题、右侧大纲目录、标签列表等等。
+		type: variable-number-slider
+		default: 15
+		min: 8
+		max: 30
+		step: 1
+	-
+		id: close-left-vault-profile
+		title: Close left vault profile.
+		title.zh: 将仓库切换放置为默认底部
+		description: Switch the vault profile to the default bottom.
+		description.zh: 将仓库切换放置为默认底部。新版改为在底部，不太喜欢，这里调整为原来的左侧。
+		type: class-toggle
+	-
+		id: editor-header
+		title: Editor Settings
+		title.zh: 编辑器设置
+		description: Adjust the editor settings. Affects only the editor area.
+		description.zh: 调整编辑器设置，影响编辑器区。
+		type: heading
+		level: 1
+		collapsed: true
+	-
 		id: alt-heading-off
 		title: Hide the Heading prompt in the editor.
 		title.zh: 隐藏编辑器中标题提示
@@ -53,22 +100,11 @@ settings:
 		description.zh: 隐藏各级标题前面的 h1...h2...等小标题下的线虚
 		type: class-toggle
 	-
-		id: window-font-size
-		title: Adjust the font of the Window.
-		title.zh: 调整窗体的字体
-		description: Adjust the font size of some parts, including the document directory on the left, the document title on the top, the outline directory on the right, the tag list, and so on.
-		description.zh: 调节部分字体大小，包含左侧文档目录、顶部文档标题、右侧大纲目录、标签列表等等。
-		type: variable-number-slider
-		default: 15
-		min: 8
-		max: 30
-		step: 1
-	-
 		id: text-justify
 		title: Open text justification.
 		title.zh: 打开文本两端对齐
-		description: Default text is left-aligned. If it is turned off, it is justified.
-		description.zh: 默认文本左对齐，关闭则两端对齐。
+		description: Default text is left-aligned. If it is turned on, it is justified.
+		description.zh: 默认文本左对齐，打开则两端对齐。
 		type: class-toggle
 	-
 		id: editor-width
@@ -104,24 +140,6 @@ settings:
 		max: 40
 		step: 1
 	-
-		id: close-left-vault-profile
-		title: Close left vault profile.
-		title.zh: 将仓库切换放置为默认底部
-		description: Switch the vault profile to the default bottom.
-		description.zh: 将仓库切换放置为默认底部。新版改为在底部，不太喜欢，这里调整为原来的左侧。
-		type: class-toggle
-	-
-		id: window-brightness
-		title: Brightness of window.
-		title.zh: 窗体的亮度
-		description: Adjust the brightness of the entire form;
-		description.zh: 调整整个窗体的亮度；
-		type: variable-number-slider
-		default: 01
-		min: 0
-		max: 5
-		step: 0.01
-	-
 		id: editor-brightness
 		title: Brightness of editor.
 		title.zh: 窗体编辑区的亮度
@@ -135,6 +153,8 @@ settings:
 	-
 		id: windows-header
 		title: Windows/Linux
+		description: Only valid for Windows/Linux.
+		description.zh: 仅对Windows/Linux 有效。
 		type: heading
 		level: 1
 		collapsed: true
@@ -186,7 +206,9 @@ settings:
 		default-dark: "#121212a6"
 	-
 		id: macos-header
-		title: MacOS
+		title: macOS
+		description: Only valid for macOS.
+		description.zh: macOS 有效。
 		type: heading
 		level: 1
 		collapsed: true
