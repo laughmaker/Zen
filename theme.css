@@ -401,12 +401,30 @@ body:not(.is-mobile) .theme-light {
 	border-top: solid 0.1px var(--card-border-color) !important;
 }
 
+.theme-dark.is-mobile .prompt,
+.theme-dark.is-mobile .prompt input.prompt-input {
+	background-color: var(--background-primary);
+}
+
 .is-mobile .workspace-drawer.mod-right {
 	border-left: solid 1px var(--background-modifier-hover);
 }
 
 .is-mobile .workspace-drawer.mod-left {
 	border-right: solid 1px var(--background-modifier-hover);
+}
+
+.is-mobile .mod-confirmation .modal:not(.mod-lg) {
+	background-color: var(--background-primary)!important;
+}
+
+button:not(.clickable-icon) {
+	border: solid 0.1px var(--card-border-color);
+	box-shadow: 1px 1px 2px var(--background-secondary);
+}
+
+.is-phone .setting-item-control select {
+	background-color: var(--background-modifier-border);
 }
 
 hr.workspace-leaf-resize-handle {
@@ -1943,11 +1961,20 @@ body:not(.is-mobile):not(.composer--DisableNavHeaderAutoHide) .mod-sidedock .wor
 .is-mobile .modal-container .modal-bg,
 .is-mobile .suggestion-bg,
 .is-mobile .workspace-drawer-backdrop {
-	background: linear-gradient(to bottom, #00000000, var(--app-model-bg-color),#00000000);
+	background: linear-gradient(to bottom, #00000000, var(--app-model-bg-color) 15%, #00000000 110%);
 }
 
-.mobile-tab-switcher, .mobile-tab-switcher-scroll, .mobile-tab-switcher-menubar {
-	background: linear-gradient(to bottom, var(--background-primary), var(--background-secondary), var(--background-primary));
+.mobile-tab-switcher {
+	background: linear-gradient(to bottom, var(--background-primary), var(--background-secondary) 10%, var(--background-primary) 100%);
+}
+
+.mobile-tab-switcher-scroll, .mobile-tab-switcher-menubar
+{
+	background-color: transparent !important;
+}
+
+.mobile-tab-wrapper .mobile-tab-preview {
+	box-shadow: 4px 4px 6px var(--card-border-color);
 }
 
 .is-translucent.theme-dark .markdown-preview-view {
