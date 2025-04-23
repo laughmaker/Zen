@@ -386,18 +386,19 @@ body:not(.is-mobile) .theme-light {
 	filter: brightness(var(--editor-brightness));
 }
 
-.is-mobile .workspace .workspace-drawer.mod-left, .is-mobile .workspace .workspace-drawer.mod-right {
-	box-shadow: 0px 0px 5px var(--card-border-color);
-	/* background-color: var(--background-setting) !important; */
+.is-mobile .workspace .workspace-drawer.mod-left {
+	box-shadow: 4px 0px 5px var(--card-border-color);
 }
 
-.is-mobile .workspace .workspace-drawer.mod-left .workspace-drawer-inner, 
-.is-mobile .workspace .workspace-drawer.mod-right .workspace-drawer-inner,
-.is-mobile .workspace .workspace-drawer.mod-left .workspace-drawer-inner .workspace-drawer-tab-container,
-.is-mobile .workspace .workspace-drawer.mod-right .workspace-drawer-inner .workspace-drawer-tab-container,
-.is-mobile .workspace .workspace-drawer.mod-left .workspace-drawer-inner .workspace-drawer-tab-container .workspace-drawer-active-tab-container,
-.is-mobile .workspace .workspace-drawer.mod-right .workspace-drawer-inner .workspace-drawer-tab-container .workspace-drawer-active-tab-container {
-	/* background-color: var(--background-setting) !important; */
+.is-mobile .workspace .workspace-drawer.mod-right {
+	box-shadow: -4px 0px 5px var(--card-border-color);
+}
+
+.is-mobile .float-search-modal-container.modal-container.mod-dim .modal,
+.is-mobile .menu,
+.is-phone .prompt {
+	box-shadow: 0px -4px 5px var(--card-border-color) !important;
+	border-top: solid 0.1px var(--card-border-color) !important;
 }
 
 .is-mobile .workspace-drawer.mod-right {
@@ -1938,8 +1939,15 @@ body:not(.is-mobile):not(.composer--DisableNavHeaderAutoHide) .mod-sidedock .wor
 	background-color: transparent;
 }
 
-.workspace-drawer-backdrop {
-	background: linear-gradient(to bottom, #00000000, var(--app-model-bg-color) ,#00000000);
+.is-mobile .modal-container, 
+.is-mobile .modal-container .modal-bg,
+.is-mobile .suggestion-bg,
+.is-mobile .workspace-drawer-backdrop {
+	background: linear-gradient(to bottom, #00000000, var(--app-model-bg-color),#00000000);
+}
+
+.mobile-tab-switcher, .mobile-tab-switcher-scroll, .mobile-tab-switcher-menubar {
+	background: linear-gradient(to bottom, var(--background-primary), var(--background-secondary), var(--background-primary));
 }
 
 .is-translucent.theme-dark .markdown-preview-view {
