@@ -425,6 +425,7 @@ button:not(.clickable-icon) {
 
 .is-phone .setting-item-control select {
 	background-color: var(--background-modifier-border);
+	box-shadow: 0px 0px 2px var(--background-secondary);
 }
 
 hr.workspace-leaf-resize-handle {
