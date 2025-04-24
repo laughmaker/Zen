@@ -297,7 +297,7 @@ body.is-mobile {
 	--background-modifier-hover: hsl(var(--base-h), var(--base-s), calc(var(--base-d) + 10%));
 	--nav-item-background-active: rgba(245, 245, 245, 0.1);
 	--nav-item-color-active: var(--text-accent);
-	--nav-indentation-guide-color: rgba(245, 245, 245, 0.08);
+	--nav-indentation-guide-color: rgba(245, 245, 245, 0.1);
 	--background-modifier-border: rgba(245, 245, 245, 0.09);
 	--background-modifier-hover: rgba(245, 245, 245, 0.1);
 	--floating-toc-background-color: transparent;
@@ -1382,20 +1382,13 @@ body.is-mobile .cm-s-obsidian span.cm-inline-code {
 }
 
 
-/* 适配手机端，以13Pro Max分辨率为限制 */
-
 .is-mobile .workspace-drawer .nav-buttons-container {
 	--icon-size: var(--icon-m);
 }
 
 /* 移动端底部tab样式 */
-.is-mobile.theme-light .mobile-navbar {
-	border-top: rgba(0, 0, 0, 0.05) solid 0.8px;
-	background-color: transparent;
-}
-
-.is-mobile.theme-dark .mobile-navbar {
-	border-top: rgba(255, 255, 255, 0.08) solid 0.5px;
+.is-mobile .mobile-navbar {
+	border-top: var(--nav-indentation-guide-color) solid 1px;
 	background-color: transparent;
 }
 
@@ -1412,16 +1405,9 @@ body.is-mobile .cm-s-obsidian span.cm-inline-code {
 /* 顶部导航栏样式 */
 .is-mobile .view-header {
 	height: 40px !important;
-	/* display: flex !important; */
 	align-items: center !important;
 	justify-content: center !important;
-	border-bottom: rgba(0, 0, 0, 0.05) solid 0.8px;
-	/* -webkit-backdrop-filter: blur(8px); */
-	/* backdrop-filter: blur(8px); */
-}
-
-.is-mobile.theme-dark .view-header {
-	border-bottom: rgba(255, 255, 255, 0.08) solid 0.5px;
+	border-bottom: var(--nav-indentation-guide-color) solid 1px;
 } 
 
 .is-mobile .mobile-toolbar {
