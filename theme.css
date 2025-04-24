@@ -378,7 +378,7 @@ body.is-mobile {
 
 .is-mobile.theme-dark {
 	--interactive-normal:rgba(18, 18, 18, 0.6);
-	/* --background-modifier-cover: rgba(45, 45, 45, 0.8); */
+	--indentation-guide-color: rgba(245, 245, 245, 0.1);
 	--card-border-color: rgba(100, 100, 100, 0.05);
 }
 
@@ -1973,7 +1973,7 @@ body:not(.is-mobile):not(.composer--DisableNavHeaderAutoHide) .mod-sidedock .wor
 }
 
 .view-content > .markdown-source-view.mod-cm6 > .cm-editor > .cm-scroller {
-	padding-right: var(--size-4-2);
+	padding-right: var(--size-4-3);
 }
 
 .workspace-split.mod-root {
