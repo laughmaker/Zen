@@ -617,6 +617,14 @@ body.is-mobile .nav-file-title {
 	padding-top: 0 !important;
 }
 
+.fn-whitespace-stop-collapsing .collapse-icon {
+	padding-top: 0px !important;
+}
+
+.novel-word-count--active .nav-files-container .nav-folder-title {
+	align-items: center;
+}
+
 .fn-whitespace-stop-collapsing .nav-files-container .collapse-icon {
 	/* margin-top: 3.5px; */
 }
