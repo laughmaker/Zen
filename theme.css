@@ -284,6 +284,7 @@ body.is-mobile {
 	--window-font-size: calc(var(--window-font-size) * 0.9);
 	--input-radius: 20px;
 	--safe-area-inset-bottom: env(safe-area-inset-bottom);
+	--mobile-sidebar-radius: 34px;
 }
 
 .theme-dark {
@@ -652,11 +653,11 @@ body.is-mobile .nav-file-title {
 }
 
 .is-mobile .tree-item-inner.nav-folder-title-content {
-	transform: translateX(-5px) !important;
+	transform: translateX(-1px) !important;
 }
 
 .is-mobile .tree-item-inner.nav-file-title-content {
-	transform: translateX(-2px) !important;
+	transform: translateX(-1px) !important;
 }
 
 
