@@ -285,6 +285,7 @@ body.is-mobile {
 	--input-radius: 20px;
 	--safe-area-inset-bottom: env(safe-area-inset-bottom);
 	--mobile-sidebar-radius: 34px;
+	--mobile-sidebar-max-width: 90%;
 }
 
 .theme-dark {
