@@ -1164,11 +1164,13 @@ span.cm-formatting.cm-formatting-list.cm-formatting-list-ol {
 
 .list-bullet {
 	margin-left: 0.9px;
+	font-family: 'number-font' !important;
+	font-size: 12px;
 }
 
 /* 有序列表后面的文字左移 */
 .cm-s-obsidian .cm-formatting-list {
-	margin-right: -5.5px;
+	margin-right: -7.5px;
 }
 
 .markdown-source-view.mod-cm6 .cm-formatting-list-ol {
