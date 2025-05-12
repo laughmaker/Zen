@@ -1168,6 +1168,10 @@ span.cm-formatting.cm-formatting-list.cm-formatting-list-ol {
 	font-size: 12px;
 }
 
+.markdown-rendered .list-bullet {
+	margin-inline-start: -12px;
+}
+
 /* 有序列表后面的文字左移 */
 .cm-s-obsidian .cm-formatting-list {
 	margin-right: -7.5px;
@@ -1273,7 +1277,7 @@ ul > li::marker {
 }
 
 .is-mobile .markdown-rendered.show-indentation-guide ol::before {
-	transform: translateX(17px);
+	transform: translateX(-5px);
 }
 
 .mod-windows .markdown-rendered.show-indentation-guide ol::before {
@@ -1491,7 +1495,7 @@ body.is-mobile .cm-s-obsidian span.cm-inline-code {
 }
 
 .is-mobile .markdown-rendered.show-indentation-guide ol::before {
-	margin-left: -20px;
+	/* margin-left: -20px; */
 }
 
 .is-mobile .markdown-rendered.show-indentation-guide ul::before {
