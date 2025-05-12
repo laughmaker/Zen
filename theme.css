@@ -647,10 +647,21 @@ body.is-mobile .nav-file-title {
 /* 设置目录标题前缀•◦∘ */
 .tree-item-inner.nav-file-title-content::before {
 	content: "•";
-	font-weight: bolder;
 	padding-right: 5px;
 	color: var(--nav-collapse-icon-color);
 	margin-left: -0.5px;
+	font-family: 'number-font' !important;
+	font-size: 10px;	
+}
+
+.is-mobile .tree-item-inner.nav-file-title-content::before {
+	font-size: 10px;	
+	margin-left: -1px;
+}
+
+.is-mobile .tree-item-inner.nav-file-title-content {
+	padding-top: 1.4px;
+	padding-bottom: 1.4px;
 }
 
 .is-mobile .tree-item-inner.nav-folder-title-content {
@@ -663,8 +674,13 @@ body.is-mobile .nav-file-title {
 
 
 .tree-item-inner.nav-folder-title-content {
-	margin-left: -3px;
+	margin-left: -2px;
 }
+
+.is-mobile .tree-item-inner.nav-folder-title-content {
+	margin-left: -1px;
+}
+
 
 .tree-item-inner:has(.tag-pane-tag-parent) {
 	margin-left: -3px;
