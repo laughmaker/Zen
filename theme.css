@@ -381,7 +381,7 @@ body.is-mobile {
 .is-mobile.theme-dark {
 	--interactive-normal:rgba(18, 18, 18, 0.6);
 	--indentation-guide-color: rgba(245, 245, 245, 0.1);
-	--card-border-color: rgba(100, 100, 100, 0.05);
+	--card-border-color: rgba(80, 80, 80, 0.05);
 }
 
 body:not(.is-mobile) .theme-dark {
@@ -411,11 +411,11 @@ body:not(.is-mobile) .theme-light {
 }
 
 .is-mobile .workspace .workspace-drawer.mod-left {
-	box-shadow: 4px 0px 5px var(--card-border-color);
+	box-shadow: 2px 0px 2px var(--card-border-color);
 }
 
 .is-mobile .workspace .workspace-drawer.mod-right {
-	box-shadow: -4px 0px 5px var(--card-border-color);
+	box-shadow: -2px 0px 2px var(--card-border-color);
 }
 
 .is-mobile .float-search-modal-container.modal-container.mod-dim .modal,
@@ -431,11 +431,15 @@ body:not(.is-mobile) .theme-light {
 }
 
 .is-mobile .workspace-drawer.mod-right {
-	border-left: solid 1px var(--background-modifier-hover);
+	border-left: solid 0.5px var(--background-modifier-border);
+	border-bottom-left-radius: var(--radius-l);
+	border-top-left-radius: var(--radius-l);
 }
 
 .is-mobile .workspace-drawer.mod-left {
-	border-right: solid 1px var(--background-modifier-hover);
+	border-right: solid 0.5px var(--background-modifier-border);
+	border-bottom-right-radius: var(--radius-l);
+	border-top-right-radius: var(--radius-l);
 }
 
 .is-mobile .mod-confirmation .modal:not(.mod-lg) {
