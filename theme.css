@@ -283,7 +283,7 @@ body {
 body.is-mobile {
 	--window-font-size: calc(var(--window-font-size) * 0.9);
 	--input-radius: 20px;
-	--safe-area-inset-bottom: env(safe-area-inset-bottom);
+	/* --safe-area-inset-bottom: env(safe-area-inset-bottom); */
 	--mobile-sidebar-radius: 34px;
 	--mobile-sidebar-max-width: 90%;
 }
@@ -382,6 +382,10 @@ body.is-mobile {
 	--interactive-normal:rgba(18, 18, 18, 0.6);
 	--indentation-guide-color: rgba(245, 245, 245, 0.1);
 	--card-border-color: rgba(80, 80, 80, 0.05);
+}
+
+.mobile-navbar-actions {
+	--icon-size: 22px;
 }
 
 body:not(.is-mobile) .theme-dark {
@@ -1735,7 +1739,7 @@ tbody>tr>td,
 }
 
 .is-mobile ::-webkit-scrollbar {
-	width: 8px !important;
+	/* width: 8px !important; */
 }
 
 ::-webkit-scrollbar-thumb {
