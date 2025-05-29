@@ -54,9 +54,9 @@ settings:
 		description: Adjust the brightness of the entire form。
 		description.zh: 调整整个窗体的亮度。
 		type: variable-number-slider
-		default: 01
-		min: 0
-		max: 5
+		default: 1
+		min: 0.5
+		max: 1.5
 		step: 0.01
 	-
 		id: window-font-size
@@ -406,7 +406,7 @@ body:not(.is-mobile) .theme-light {
 * --------------------------------调整全局样式------------------------------------
 */
 
-.app-container {
+body {
 	filter: brightness(var(--window-brightness));
 }
 
