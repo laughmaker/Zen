@@ -839,6 +839,7 @@ body:not(.is-phone) .workspace-leaf.mod-active .tree-item-self.has-focus {
 	color: var(--text-accent);
 }
 
+span.is-flashing,
 strong,
 .cm-strong {
 	color: var(--text-accent) !important;
