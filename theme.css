@@ -191,10 +191,10 @@ settings:
 		id: win-bg-image-url
 		title: the background picture of the window
 		title.zh: 窗体背景图片
-		description: Set the background picture of the window.
-		description.zh: 设置窗体背景图片；
+		description: Set the form background image; fill the image URL between the quotes; leave blank for no background image by default.
+		description.zh: 设置窗体背景图片；将图片地址填入''号中间；若不填则默认无背景图片
 		type: variable-text
-		default: url('https://images.pexels.com/photos/66997/pexels-photo-66997.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2')
+		default: url('')
 	- 
 		id: win-editor-bg-color
 		title: Adjust the color of the middle editing area.
@@ -271,7 +271,7 @@ body {
 	--nav-item-children-padding-start: 1px;
 	--window-font-size: 15;
 	--mac-window-opacity: 0;
-	--win-bg-image-url: url('https://images.pexels.com/photos/66997/pexels-photo-66997.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2');
+	--win-bg-image-url: url('');
 	--input-radius: 14px;
 	--callout-content-padding: 4px;
 	--text-paragraph-gap: 3.2px;
