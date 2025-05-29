@@ -836,6 +836,7 @@ body:not(.is-phone) .workspace-leaf.mod-active .tree-item-self.has-focus {
 .cm-s-obsidian span.cm-highlight {
 	padding: 2px 5px;
 	border-radius: 8px;
+	color: var(--text-accent);
 }
 
 strong,
@@ -1334,6 +1335,7 @@ li {
 .markdown-rendered mark {
 	padding: 2px 5px !important;
 	border-radius: 8px;
+	color: var(--text-accent);
 }
 
 .markdown-rendered hr {
