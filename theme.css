@@ -278,6 +278,8 @@ body {
 	--text-line-height: 32px;
 	--window-brightness: 1;
 	--editor-brightness: 1;
+	--bases-table-header-background: var(--table-header-background);
+	--bases-table-row-height: 40px;
 }
 
 body.is-mobile {
@@ -307,7 +309,7 @@ body.is-mobile {
 	--indentation-guide-color: rgba(245, 245, 245, 0.08);
 	--block-border-color: rgba(245, 245, 245, 0.3);
 	--hr-color: rgba(245, 245, 245, 0.2);
-	--table-header-background: rgba(245, 245, 245, 0.2);
+	--table-header-background: rgba(245, 245, 245, 0.1);
 	--indentation-guide-color-active: var(--indentation-guide-color);
 	--scrollbar-thumb-color: rgba(255, 255, 255, 0.2);
 	--workspace-background-translucent: hsla(0, 0%, 0%, 0.2);
@@ -370,6 +372,7 @@ body.is-mobile {
 	--background-setting-item: rgba(28, 28, 28, 0.03);
 	--background-setting: rgba(244, 244, 244);
 	--text-highlight-bg: var(--blockquote-border-color);
+	--table-header-background: rgba(28, 28, 28, 0.1);
 
 }
 
@@ -2677,4 +2680,13 @@ body .quiet-outline .n-tree-node-wrapper {
 
 .n-tree .n-tree-node-switcher .n-tree-node-switcher__icon .xicon {
   display: none;
+}
+
+/* bases */
+.bases-table-header {
+	padding-left: 5px;
+}
+
+.bases-tbody .bases-td .bases-table-cell {
+	padding: 15px;
 }
