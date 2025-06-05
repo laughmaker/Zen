@@ -468,8 +468,9 @@ hr.workspace-leaf-resize-handle {
 }
 
 /* 堆叠模式时，隐藏顶部栏 */
-.mod-stacked .workspace-tab-header-container {
-	display: none;
+.is-translucent:not(.is-fullscreen) .mod-root .mod-top.mod-stacked .workspace-tab-header-container {
+	/* display: none; */
+	background-color: var(--background-primary) !important;
 }
 
 .workspace .mod-root .workspace-tabs.mod-stacked .workspace-tab-container {
