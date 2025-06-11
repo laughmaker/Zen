@@ -54,7 +54,7 @@ settings:
 		description: Adjust the brightness of the entire form。
 		description.zh: 调整整个窗体的亮度。
 		type: variable-number-slider
-		default: 1
+		default: 0.96
 		min: 0.5
 		max: 1.5
 		step: 0.01
@@ -276,7 +276,7 @@ body {
 	--callout-content-padding: 4px;
 	--text-paragraph-gap: 3.2px;
 	--text-line-height: 32px;
-	--window-brightness: 1;
+	--window-brightness: 0.96;
 	--editor-brightness: 1;
 	--bases-table-header-background: var(--table-header-background);
 	--bases-table-row-height: 40px;
@@ -312,14 +312,14 @@ body.is-mobile {
 	--table-header-background: rgba(245, 245, 245, 0.1);
 	--indentation-guide-color-active: var(--indentation-guide-color);
 	--scrollbar-thumb-color: rgba(255, 255, 255, 0.2);
-	--workspace-background-translucent: hsla(0, 0%, 0%, 0.2);
-	--text-color: rgb(220, 220, 220);
+	--workspace-background-translucent: hsla(0, 0%, 0%, 0.3);
+	--text-color: rgb(250, 250, 250);
 	--tree-item-color: rgba(210, 210, 210, 0.8);
 	--active-border-color: rgba(0, 157, 255, 0.8);
 	--statusbar-bg-color: rgba(28, 28, 28, 0.7);
 	--model-bg-color: rgba(28, 28, 28, 0.5);
 	--app-model-bg-color: rgba(28, 28, 28, 0.8);
-	--editor-bg-color: rgba(28, 28, 28, .65);
+	--editor-bg-color: rgba(28, 28, 28, 0);
 	--suggestion-bg-color: rgba(28, 28, 28, 0.1);
 	--code-background: rgba(245, 245, 245, 0.15);
 	--background-modifier-form-field: rgba(245, 245, 245, 0.04);
@@ -352,14 +352,14 @@ body.is-mobile {
 	--floating-toc-background-color: transparent;
 	--blockquote-border-color: rgba(28, 28, 28, 0.2);
 	--scrollbar-thumb-color: rgba(0, 0, 0, 0.2);
-	--workspace-background-translucent: hsla(0, 0%, 100%, 0.2);
-	--text-color: rgb(10, 10, 10);
+	--workspace-background-translucent: hsla(0, 0%, 100%, 0.05);
+	--text-color: rgb(0, 0, 0);
 	--tree-item-color: rgb(20, 20, 20, 0.8);
 	--active-border-color: rgb(0, 121, 172);
 	--statusbar-bg-color: rgba(248, 248, 248, 0.7);
 	--model-bg-color: rgba(248, 248, 248, 0.5);
 	--app-model-bg-color: rgba(248, 248, 248, 0.8);
-	--editor-bg-color: rgba(255, 255, 255, 0.5);
+	--editor-bg-color: rgba(255, 255, 255, 0);
 	--suggestion-bg-color: rgba(248, 248, 248, 0.1);
 	--divider-color: rgba(0, 0, 0, 0.01);
   --code-background: rgba(28, 28, 28, 0.1);
@@ -403,6 +403,67 @@ body:not(.is-mobile) .theme-light {
 .is-translucent:not(.is-fullscreen) .titlebar,
 .is-translucent:not(.is-fullscreen) .app-container {
 	background-color: rgb(from var(--workspace-background-translucent) r g b / calc(var(--mac-window-opacity))) !important;
+}
+
+.status-bar,
+.workspace-tab-container {
+	border-radius: var(--radius-xl);
+	background: rgba(255, 255, 255, 0.1);
+	backdrop-filter: blur(15px) saturate(180%);
+	-webkit-backdrop-filter: blur(15px) saturate(180%);
+	border: 1px solid rgba(255, 255, 255, 0.1);
+	box-shadow: 0 0 8px rgba(0, 0, 0, 0.15);
+	color: #fff;
+	margin: 0 10px 10px 5px;
+}
+
+/* body:not(.is-grabbing) .nav-file-title.is-active:hover,  */
+/* body:not(.is-grabbing) .nav-folder-title.is-active:hover,  */
+.nav-file-title.is-active, 
+/* .nav-file-title:hover,  */
+.nav-folder-title.is-active {
+	border-radius: var(--radius-xl);
+	background: rgba(255, 255, 255, 0.15);
+	backdrop-filter: blur(15px) saturate(180%);
+	-webkit-backdrop-filter: blur(15px) saturate(180%);
+	border: 1px solid rgba(255, 255, 255, 0.1);
+	box-shadow: 0 0px 5px rgba(0, 0, 0, 0.1);
+}
+
+.workspace-tab-header-container {
+	border: none;
+	border-top: none !important;
+	align-items: center;
+	display: flex;
+	justify-content: center;
+
+}
+
+.workspace-tab-header-spacer {
+	display: none;
+}
+
+.workspace-tabs.mod-top .workspace-tab-header-container {
+	align-items: center;
+	display: flex;
+	justify-content: center;
+}
+
+.workspace-tabs.mod-top.mod-top-left-space .workspace-tab-header-container .workspace-tab-header-container-inner,
+.workspace-tabs.mod-top.mod-top-right-space .workspace-tab-header-container .workspace-tab-header-container-inner {
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.workspace-tabs.mod-top.mod-top-right-space .workspace-tab-header-container .workspace-tab-header-spacer
+.workspace-tabs.mod-top.mod-top-left-space .workspace-tab-header-container .workspace-tab-header-spacer {
+	/* display: none; */
+}
+
+hr.workspace-leaf-resize-handle {
+	opacity: 0 !important;
 }
 
 /*
@@ -470,12 +531,18 @@ hr.workspace-leaf-resize-handle {
 /* 堆叠模式时，隐藏顶部栏 */
 .is-translucent:not(.is-fullscreen) .mod-root .mod-top.mod-stacked .workspace-tab-header-container {
 	/* display: none; */
-	background-color: var(--background-primary) !important;
+	/* background-color: var(--background-primary) !important; */
+	background-color: transparent !important;
 }
 
 .workspace .mod-root .workspace-tabs.mod-stacked .workspace-tab-container {
 	/* backdrop-filter: blur(25px); */
-	background-color: var(--background-primary) !important;
+	/* background-color: var(--editor-bg-color) !important; */
+
+	background: rgba(255, 255, 255, 0.2);
+	backdrop-filter: blur(15px) saturate(180%);
+	-webkit-backdrop-filter: blur(15px) saturate(180%);
+
 }
 
 /* .mod-stacked .workspace-tab-container .workspace-leaf.mod-active,
@@ -740,17 +807,18 @@ body.is-mobile .nav-file-title {
 
 /* 底部状态栏样式 */
 .status-bar {
+	color: var(--text-color);
 	padding: 5px 8px;
-	border-radius: 18px;
-	border-top: 1px solid var(--background-modifier-border);
-	border-left: 1px solid var(--background-modifier-border);
+	/* border-radius: 18px; */
+	/* border-top: 1px solid var(--background-modifier-border); */
+	/* border-left: 1px solid var(--background-modifier-border); */
 	gap: 15px;
-	backdrop-filter: blur(20px);
-	background-color: var(--statusbar-bg-color) !important;
+	/* backdrop-filter: blur(20px); */
+	/* background-color: var(--statusbar-bg-color) !important; */
 }
 
 .status-bar::before {
-	content: '';
+	/* content: '';
 	z-index: -1;
 	filter: blur(20px);
 	background-color: var(--app-model-bg-color) !important;
@@ -758,7 +826,7 @@ body.is-mobile .nav-file-title {
 	top: 0;
 	left: 0;
 	right: 0;
-	bottom: 0;
+	bottom: 0; */
 	/* backdrop-filter: blur(10px); */
 }
 
@@ -1989,8 +2057,10 @@ body:not(.is-mobile):not(.composer--DisableNavHeaderAutoHide) .mod-sidedock .wor
 }
 
 .is-translucent .workspace .mod-root .workspace-tabs.mod-stacked .workspace-tab-container .workspace-leaf {
-	backdrop-filter: blur(20px) !important;
-	background-color: var(--editor-bg-color) !important;
+	/* backdrop-filter: blur(20px) !important; */
+	/* background-color: var(--editor-bg-color) !important;
+	backdrop-filter: blur(15px) saturate(180%);
+	-webkit-backdrop-filter: blur(15px) saturate(180%); */
 }
 
 .is-translucent .workspace-split.mod-root .workspace-tabs .view-content {
@@ -2634,6 +2704,10 @@ body .quiet-outline .n-button {
 
 body .quiet-outline .n-tree-node-wrapper {
 	--n-node-border-radius: var(--radius-xl);
+}
+
+.quiet-outline .n-tree-node-content__text p {
+	line-height: unset;
 }
 
 .quiet-outline .function-bar .n-input {
