@@ -169,10 +169,10 @@ settings:
 		id: win-window-opacity
 		title: Transparency of window background
 		title.zh: 窗体背景的透明度
-		description: Adjust the transparency of the form background on the Windows/Linux platform. Only effective for Windows/Linux. Recommended values：For dark colors：0.4. For light colors：0.1.
-		description.zh: 调整 Windows/Linux 平台的窗体背景的透明度。仅对 Windows/Linux 有效。推荐值：暗色：0.4 亮色：0.1
+		description: Adjust the transparency of the form background on the Windows/Linux platform. Only effective for Windows/Linux. Recommended values：For dark colors：0.2. For light colors：0.15.
+		description.zh: 调整 Windows/Linux 平台的窗体背景的透明度。仅对 Windows/Linux 有效。推荐值：暗色：0.2 亮色：0.15
 		type: variable-number-slider
-		default: 0.1
+		default: 0.15
 		min: 0
 		max: 1
 		step: 0.01
@@ -180,10 +180,10 @@ settings:
 		id: win-window-brightness
 		title: Brightness of form background.
 		title.zh: 窗体背景的亮度
-		description: Adjust the brightness of the form background on the Windows/Linux platform. Only effective for Windows/Linux. Recommended values：dark：0.8, light：0.6.
-		description.zh: 调整 Windows/Linux 平台的窗体背景的亮度。仅对 Windows/Linux 有效。推荐值：暗色：0.8 亮色：0.6
+		description: Adjust the brightness of the form background on the Windows/Linux platform. Only effective for Windows/Linux. Recommended values：0.9.
+		description.zh: 调整 Windows/Linux 平台的窗体背景的亮度。仅对 Windows/Linux 有效。推荐值：0.9
 		type: variable-number-slider
-		default: 0.8
+		default: 0.9
 		min: 0
 		max: 1
 		step: 0.01
@@ -324,14 +324,22 @@ body.is-mobile {
 	--code-background: rgba(245, 245, 245, 0.15);
 	--background-modifier-form-field: rgba(245, 245, 245, 0.04);
 	--win-blur: 20px;
-	--win-window-brightness: 0.8;
+	--win-window-brightness: 0.9;
 	--win-editor-bg-color: #121212a6;
-	--win-window-opacity: 0.4;
+	--win-window-opacity: 0.2;
 	--background-secondary-alt: rgba(18, 18, 18, 0.1);
 	--background-setting-item: rgba(245, 245, 245, 0.05);
 	--background-setting: rgba(28, 28, 28);
 	--text-highlight-bg: var(--blockquote-border-color);
+	--list-marker-color: var(--nav-indentation-guide-color);
 
+}
+
+body:not(.mod-macos).theme-dark {
+	--indentation-guide-color: rgba(245, 245, 245, 0.1);
+	--nav-indentation-guide-color: rgba(245, 245, 245, 0.1);
+	--list-marker-color: rgba(245, 245, 245, 0.25);
+	--nav-collapse-icon-color: rgba(245, 245, 245, 0.25);
 }
 
 .theme-light {
@@ -365,9 +373,9 @@ body.is-mobile {
   --code-background: rgba(28, 28, 28, 0.1);
 	--background-modifier-form-field: rgba(230, 230, 230, 0.5);
 	--win-blur: 15px;
-	--win-window-brightness: 0.6;
+	--win-window-brightness: 0.9;
 	--win-editor-bg-color: #f0f0f0a6;
-	--win-window-opacity: 0.1;
+	--win-window-opacity: 0.15;
 	--background-secondary-alt: rgba(240, 240, 240, 0.1);
 	--background-setting-item: rgba(28, 28, 28, 0.03);
 	--background-setting: rgba(244, 244, 244);
@@ -412,7 +420,7 @@ body:not(.is-mobile) .theme-light {
 	backdrop-filter: blur(15px) saturate(180%);
 	-webkit-backdrop-filter: blur(15px) saturate(180%);
 	border: 1px solid rgba(255, 255, 255, 0.1);
-	box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
+	box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
 	color: #fff;
 	margin: 0 10px 10px 5px;
 }
@@ -2467,17 +2475,47 @@ g.markmap-node[data-depth='0'] .markmap-foreign {
 }
 
 /* Windows | linux style */
-body:not(.win-translucent-off):not(.mod-macos):not(.is-mobile) .app-container::before {
+
+body::before {
 	content: '';
+	z-index: -1;
+	filter: blur(var(--win-blur)) brightness(var(--win-window-brightness)) opacity(var(--win-window-opacity));
+	background: var(--win-bg-image-url) repeat;
+	background-size: cover;
 	position: absolute;
 	top: 0;
 	left: 0;
 	right: 0;
-	bottom: 0;
-	background: var(--win-bg-image-url) repeat;
-	background-size: cover;
-	filter: blur(var(--win-blur)) brightness(var(--win-window-brightness)) opacity(var(--win-window-opacity));
-	z-index: -1;
+	bottom: 0; 
+}
+
+body:not(.win-translucent-off):not(.mod-macos):not(.is-mobile) .app-container .horizontal-main-container,
+body:not(.win-translucent-off):not(.mod-macos):not(.is-mobile) .app-container {
+	backdrop-filter: blur(50px) saturate(180%);
+	/* -webkit-backdrop-filter: blur(15px) saturate(180%); */
+	/* backdrop-filter: blur(15px) saturate(180%) brightness(var(--win-window-brightness)) opacity(var(--win-window-opacity)); */
+
+	/* backdrop-filter: blur(var(--win-blur)) brightness(var(--win-window-brightness)) opacity(var(--win-window-opacity)); */
+}
+
+body:not(.win-translucent-off):not(.mod-macos):not(.is-mobile) .workspace-split.mod-vertical.mod-root,
+/* body:not(.win-translucent-off):not(.mod-macos):not(.is-mobile)  .workspace-ribbon.mod-left:before,  */
+/* body:not(.win-translucent-off):not(.mod-macos):not(.is-mobile)  .workspace-ribbon.mod-left,  */
+/* body:not(.win-translucent-off):not(.mod-macos):not(.is-mobile)  .workspace-tabs .workspace-leaf,  */
+body:not(.win-translucent-off):not(.mod-macos):not(.is-mobile)  .workspace-leaf .view-content, 
+body:not(.win-translucent-off):not(.mod-macos):not(.is-mobile)  .workspace-split.mod-right-split .workspace-tabs, 
+body:not(.win-translucent-off):not(.mod-macos):not(.is-mobile)  .workspace-tab-container
+/* body:not(.win-translucent-off):not(.mod-macos):not(.is-mobile)  .workspace-tab-header-container,  */
+/* body:not(.win-translucent-off):not(.mod-macos):not(.is-mobile)  .workspace-sidedock-vault-profile,  */
+/* body:not(.win-translucent-off):not(.mod-macos):not(.is-mobile)  .workspace-split */
+{
+	background-color: transparent !important;
+}
+
+body:not(.win-translucent-off):not(.mod-macos):not(.is-mobile)  .workspace-tab-container {
+	background: rgba(255, 255, 255, 0.1) !important;
+	/* backdrop-filter: blur(15px) saturate(180%); */
+	/* -webkit-backdrop-filter: blur(15px) saturate(180%); */
 }
 
 .workspace-ribbon.mod-left:before {
@@ -2485,11 +2523,11 @@ body:not(.win-translucent-off):not(.mod-macos):not(.is-mobile) .app-container::b
 }
 
 body:not(.win-translucent-off):not(.mod-macos):not(.is-mobile) .workspace-split.mod-vertical.mod-root {
-	background: var(--win-editor-bg-color) !important;
+	/* background: var(--win-editor-bg-color) !important; */
 }
 
 body:not(.win-translucent-off):not(.mod-macos):not(.is-mobile) .workspace-ribbon.mod-left:before {
-	background-color: transparent;
+	background-color: transparent !important;
 }
 
 body:not(.win-translucent-off):not(.mod-macos):not(.is-mobile) .workspace,
@@ -2513,6 +2551,11 @@ body:not(.win-translucent-off):not(.mod-macos):not(.is-mobile) .workspace-split.
 body:not(.win-translucent-off):not(.mod-macos):not(.is-mobile) .view-header-title-container:after {
 	background: transparent !important;
 }
+
+body:not(.win-translucent-off):not(.mod-macos):not(.is-mobile) .workspace-sidedock-vault-profile {
+	background-color: transparent !important;
+}
+
 
 
 /* web viewer */
@@ -2780,4 +2823,10 @@ body:not(.is-translucent) .workspace-tab-header-container,
 body:not(.is-translucent) .workspace-sidedock-vault-profile,
 body:not(.is-translucent) .workspace-split {
 	background-color: var(--background-primary) !important;
+}
+
+body:not(.mod-macos):not(.is-mobile) .sidebar-toggle-button.mod-right {
+	position: absolute;
+	right: 0;
+	margin-right: 20px;
 }
