@@ -2060,7 +2060,7 @@ body:not(.is-mobile):not(.composer--DisableNavHeaderAutoHide) .mod-sidedock .wor
 
 .is-translucent .workspace .mod-root .workspace-tabs.mod-stacked .workspace-tab-container .workspace-tab-header,
 .is-translucent .workspace .mod-root .workspace-tabs.mod-stacked .view-header,
-/* .is-translucent .markdown-source-view.cm-s-obsidian.mod-cm6.node-insert-event.is-readable-line-width.is-live-preview.is-folding, */
+.is-translucent .workspace-tabs.mod-stacked .markdown-source-view.cm-s-obsidian.mod-cm6.node-insert-event.is-readable-line-width.is-live-preview.is-folding,
 .is-translucent .workspace .mod-root .workspace-tabs.mod-stacked .workspace-tab-container .workspace-leaf {
 	background-color: var(--model-bg-color) !important;
 	backdrop-filter: blur(25px) saturate(180%);
