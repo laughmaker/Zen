@@ -313,7 +313,7 @@ body.is-mobile {
 	--indentation-guide-color-active: var(--indentation-guide-color);
 	--scrollbar-thumb-color: rgba(255, 255, 255, 0.2);
 	--workspace-background-translucent: hsla(0, 0%, 0%, 0.3);
-	--text-color: rgb(250, 250, 250);
+	--text-color: rgb(240, 240, 240);
 	--tree-item-color: rgba(210, 210, 210, 0.8);
 	--active-border-color: rgba(0, 157, 255, 0.8);
 	--statusbar-bg-color: rgba(28, 28, 28, 0.7);
@@ -353,7 +353,7 @@ body.is-mobile {
 	--blockquote-border-color: rgba(28, 28, 28, 0.2);
 	--scrollbar-thumb-color: rgba(0, 0, 0, 0.2);
 	--workspace-background-translucent: hsla(0, 0%, 100%, 0.05);
-	--text-color: rgb(0, 0, 0);
+	--text-color: rgb(8, 8, 8);
 	--tree-item-color: rgb(20, 20, 20, 0.8);
 	--active-border-color: rgb(0, 121, 172);
 	--statusbar-bg-color: rgba(248, 248, 248, 0.7);
@@ -412,7 +412,7 @@ body:not(.is-mobile) .theme-light {
 	backdrop-filter: blur(15px) saturate(180%);
 	-webkit-backdrop-filter: blur(15px) saturate(180%);
 	border: 1px solid rgba(255, 255, 255, 0.1);
-	box-shadow: 0 0 8px rgba(0, 0, 0, 0.15);
+	box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
 	color: #fff;
 	margin: 0 10px 10px 5px;
 }
