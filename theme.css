@@ -2044,7 +2044,7 @@ body:not(.is-mobile):not(.composer--DisableNavHeaderAutoHide) .mod-sidedock .wor
 /* 适配半透明背景 */
 /* .is-focused .workspace-leaf.mod-active .view-header, */
 .is-translucent .view-header {
-	background-color: var(--editor-bg-color) !important;
+	background-color: transparent !important;
 }
 
 .is-translucent .workspace .mod-root .workspace-tabs.mod-stacked .view-header {
@@ -2060,7 +2060,7 @@ body:not(.is-mobile):not(.composer--DisableNavHeaderAutoHide) .mod-sidedock .wor
 
 .is-translucent .workspace .mod-root .workspace-tabs.mod-stacked .workspace-tab-container .workspace-tab-header,
 .is-translucent .workspace .mod-root .workspace-tabs.mod-stacked .view-header,
-.is-translucent .markdown-source-view.cm-s-obsidian.mod-cm6.node-insert-event.is-readable-line-width.is-live-preview.is-folding,
+/* .is-translucent .markdown-source-view.cm-s-obsidian.mod-cm6.node-insert-event.is-readable-line-width.is-live-preview.is-folding, */
 .is-translucent .workspace .mod-root .workspace-tabs.mod-stacked .workspace-tab-container .workspace-leaf {
 	background-color: var(--model-bg-color) !important;
 	backdrop-filter: blur(25px) saturate(180%);
@@ -2497,7 +2497,7 @@ body:not(.win-translucent-off):not(.mod-macos):not(.is-mobile) .workspace-split.
 body:not(.win-translucent-off):not(.mod-macos):not(.is-mobile) .workspace-leaf,
 body:not(.win-translucent-off):not(.mod-macos):not(.is-mobile) .workspace-ribbon,
 body:not(.win-translucent-off):not(.mod-macos):not(.is-mobile) .sidebar-toggle-button.mod-left,
-body:not(.win-translucent-off):not(.mod-macos):not(.is-mobile) .workspace-split.mod-left-split .workspace-sidedock-vault-profile,
+body:not(.win-translucent-off):not(.mod-macos):not(.is-mobile) .workspace-split.mod-left-split .profileworkspace-sidedock-vault-,
 body:not(.win-translucent-off):not(.mod-macos):not(.is-mobile) .mod-root .mod-top .workspace-tab-header-container,
 body:not(.win-translucent-off):not(.mod-macos):not(.is-mobile) .titlebar-button-container.mod-right,
 body:not(.win-translucent-off):not(.mod-macos):not(.is-mobile) .workspace-tab-header-container {
@@ -2768,4 +2768,16 @@ body .quiet-outline .n-tree-node-wrapper {
 
 .bases-tbody .bases-td .bases-table-cell {
 	padding: 15px;
+}
+
+body:not(.is-translucent) .workspace-ribbon.mod-left:before,
+body:not(.is-translucent) .workspace-ribbon.mod-left,
+body:not(.is-translucent) .workspace-tabs .workspace-leaf,
+body:not(.is-translucent) .workspace-leaf .view-content,
+body:not(.is-translucent) .workspace-split.mod-right-split .workspace-tabs,
+body:not(.is-translucent) .workspace-tab-container,
+body:not(.is-translucent) .workspace-tab-header-container,
+body:not(.is-translucent) .workspace-sidedock-vault-profile,
+body:not(.is-translucent) .workspace-split {
+	background-color: var(--background-primary) !important;
 }
