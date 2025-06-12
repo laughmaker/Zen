@@ -280,6 +280,7 @@ body {
 	--editor-brightness: 1;
 	--bases-table-header-background: var(--table-header-background);
 	--bases-table-row-height: 40px;
+	--italic-color: var(--text-accent);
 }
 
 body.is-mobile {
