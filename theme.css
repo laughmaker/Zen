@@ -914,6 +914,7 @@ body:not(.is-phone) .workspace-leaf.mod-active .tree-item-self.has-focus {
 }
 
 /* 调整高亮颜色 */
+span.is-flashing,
 .markdown-rendered mark,
 .cm-s-obsidian span.cm-highlight {
 	padding: 3px 6px;
@@ -922,7 +923,6 @@ body:not(.is-phone) .workspace-leaf.mod-active .tree-item-self.has-focus {
 	background-color: rgb(from var(--text-accent) r g b / 0.4) !important;
 }
 
-span.is-flashing,
 strong,
 .cm-strong {
 	color: var(--text-accent) !important;
