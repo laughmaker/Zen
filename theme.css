@@ -414,8 +414,8 @@ body:not(.is-mobile) .theme-light {
 	background-color: rgb(from var(--workspace-background-translucent) r g b / calc(var(--mac-window-opacity))) !important;
 }
 
-.status-bar,
-.workspace-tab-container {
+body:not(.is-mobile) .status-bar,
+body:not(.is-mobile) .workspace-tab-container {
 	border-radius: var(--radius-xl);
 	background: rgba(255, 255, 255, 0.1);
 	backdrop-filter: blur(15px) saturate(180%);
@@ -439,39 +439,33 @@ body:not(.is-mobile) .theme-light {
 	box-shadow: 0 0px 5px rgba(0, 0, 0, 0.1);
 }
 
-.workspace-tab-header-container {
+body:not(.is-mobile) .workspace-tab-header-container {
 	border: none;
 	border-top: none !important;
 	align-items: center;
 	display: flex;
 	justify-content: center;
-
 }
 
-.workspace-tab-header-spacer {
+body:not(.is-mobile) .workspace-tab-header-spacer {
 	display: none;
 }
 
-.workspace-tabs.mod-top .workspace-tab-header-container {
+body:not(.is-mobile) .workspace-tabs.mod-top .workspace-tab-header-container {
 	align-items: center;
 	display: flex;
 	justify-content: center;
 }
 
-.workspace-tabs.mod-top.mod-top-left-space .workspace-tab-header-container .workspace-tab-header-container-inner,
-.workspace-tabs.mod-top.mod-top-right-space .workspace-tab-header-container .workspace-tab-header-container-inner {
+body:not(.is-mobile) .workspace-tabs.mod-top.mod-top-left-space .workspace-tab-header-container .workspace-tab-header-container-inner,
+body:not(.is-mobile) .workspace-tabs.mod-top.mod-top-right-space .workspace-tab-header-container .workspace-tab-header-container-inner {
 	width: 100%;
 	display: flex;
 	align-items: center;
 	justify-content: center;
 }
 
-.workspace-tabs.mod-top.mod-top-right-space .workspace-tab-header-container .workspace-tab-header-spacer
-.workspace-tabs.mod-top.mod-top-left-space .workspace-tab-header-container .workspace-tab-header-spacer {
-	/* display: none; */
-}
-
-hr.workspace-leaf-resize-handle {
+body:not(.is-mobile) hr.workspace-leaf-resize-handle {
 	opacity: 0 !important;
 }
 
@@ -2867,16 +2861,6 @@ body:not(.mod-macos):not(.is-mobile) .sidebar-toggle-button.mod-right {
   background: rgba(0, 0, 0, 0.1); /* 半透明白背景 */
   backdrop-filter: blur(30px) saturate(80%);
 }
-
-.modal-content.vertical-tabs-container * {
-  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2); /* 轻微阴影增强对比 */
-  -webkit-font-smoothing: antialiased;
-}
-
-
-
-
-
 
 .modal-content,
 .modal-content .vertical-tab-header,
