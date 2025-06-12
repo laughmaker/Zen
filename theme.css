@@ -2826,10 +2826,20 @@ body:not(.is-translucent) .workspace-split {
 	background-color: var(--background-primary) !important;
 }
 
-body:not(.mod-macos):not(.is-mobile) .sidebar-toggle-button.mod-right {
-	position: absolute;
-	right: 0;
-	margin-right: 20px;
+body:not(.is-mobile) .mod-root .workspace-tab-header-container-inner {
+	--tab-max-width: 240px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 100%;
+}
+
+.workspace .mod-root .workspace-tab-header-inner::after {
+	display: none;
+}
+
+.mod-root .workspace-tab-header-inner {
+	/* width: fit-content; */
 }
 
 /* 设置页玻璃效果 */
