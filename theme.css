@@ -413,7 +413,6 @@ body:not(.is-mobile) .theme-light {
 	background-color: rgb(from var(--workspace-background-translucent) r g b / calc(var(--mac-window-opacity))) !important;
 }
 
-.modal-container.mod-dim .modal,
 .status-bar,
 .workspace-tab-container {
 	border-radius: var(--radius-xl);
@@ -2582,7 +2581,7 @@ body:not(.win-translucent-off):not(.mod-macos):not(.is-mobile) .workspace-sidedo
 	padding-right: 20px;
 	background-color: var(--background-setting-item);
 	border: 0.1px solid var(--background-modifier-border);
-	box-shadow: 0 0 1px rgba(0, 0, 0, 0.1);
+	/* box-shadow: 0 0 1px rgba(0, 0, 0, 0.1); */
 
 }
 
@@ -2590,8 +2589,8 @@ body:not(.win-translucent-off):not(.mod-macos):not(.is-mobile) .workspace-sidedo
 .setting-item-heading + .setting-item {
 	border-top-left-radius: var(--radius-l);
 	border-top-right-radius: var(--radius-l);
-	box-shadow: 0 -2px 8px rgba(0, 0, 0, 0.1);
-	border: 1px solid rgba(255, 255, 255, 0.1);
+	/* box-shadow: 0 -2px 8px rgba(0, 0, 0, 0.1); */
+	/* border: 1px solid rgba(255, 255, 255, 0.1); */
 }
 
 /* heading前的一个item */
@@ -2599,8 +2598,8 @@ body:not(.win-translucent-off):not(.mod-macos):not(.is-mobile) .workspace-sidedo
 .setting-item:has(+ .setting-filter-container) {
 	border-bottom-left-radius: var(--radius-l);
 	border-bottom-right-radius: var(--radius-l);
-	box-shadow: -2px 0 8px rgba(0, 0, 0, 0.1);
-	border: 1px solid rgba(255, 255, 255, 0.1);
+	/* box-shadow: -2px 0 8px rgba(0, 0, 0, 0.1); */
+	/* border: 1px solid rgba(255, 255, 255, 0.1); */
 
 }
 
@@ -2609,7 +2608,7 @@ body:not(.win-translucent-off):not(.mod-macos):not(.is-mobile) .workspace-sidedo
 	border-top-left-radius: var(--radius-l);
 	border-top-right-radius: var(--radius-l);
 	padding-top: 10px;
-	border: 1px solid rgba(255, 255, 255, 0.1);
+	/* border: 1px solid rgba(255, 255, 255, 0.1); */
 
 }
 
@@ -2840,4 +2839,51 @@ body:not(.mod-macos):not(.is-mobile) .sidebar-toggle-button.mod-right {
 	position: absolute;
 	right: 0;
 	margin-right: 20px;
+}
+
+/* 设置页玻璃效果 */
+
+/* .modal.mod-settings.mod-sidebar-layout {
+	border-radius: var(--radius-xl);
+	border: 1px solid rgba(255, 255, 255, 0.1);
+	box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+
+	background: rgba(255, 255, 255, 0.1);
+	backdrop-filter: blur(15px) saturate(180%);
+	-webkit-backdrop-filter: blur(15px) saturate(180%);
+
+} */
+
+/* .modal-container::before {
+	position: absolute;
+	z-index: -1;
+	content: '';
+  border: 1px solid rgba(255, 255, 255, 0.2);
+	filter: blur(50px) saturate(180%);
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+} */
+
+.modal-bg {
+  background: rgba(0, 0, 0, 0.1); /* 半透明白背景 */
+  backdrop-filter: blur(30px) saturate(80%);
+}
+
+.modal-content.vertical-tabs-container * {
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2); /* 轻微阴影增强对比 */
+  -webkit-font-smoothing: antialiased;
+}
+
+
+
+
+
+
+.modal-content,
+.modal-content .vertical-tab-header,
+.modal-content .vertical-tab-content-container,
+.modal-content .vertical-tab-content-container .vertical-tab-content {
+	background-color: transparent;
 }
