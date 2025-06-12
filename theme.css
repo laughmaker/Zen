@@ -914,10 +914,12 @@ body:not(.is-phone) .workspace-leaf.mod-active .tree-item-self.has-focus {
 }
 
 /* 调整高亮颜色 */
+.markdown-rendered mark,
 .cm-s-obsidian span.cm-highlight {
-	padding: 2px 5px;
-	border-radius: 8px;
-	color: var(--text-accent);
+	padding: 3px 6px;
+	border-radius: 13px;
+	color: var(--text-normal);
+	background-color: rgb(from var(--text-accent) r g b / 0.4) !important;
 }
 
 span.is-flashing,
@@ -1412,12 +1414,6 @@ li {
 	margin: 0;
 	padding-bottom: 0.4em !important;
 	padding-top: 0.4em !important;
-}
-
-.markdown-rendered mark {
-	padding: 2px 5px !important;
-	border-radius: 8px;
-	color: var(--text-accent);
 }
 
 .markdown-rendered hr {
