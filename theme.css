@@ -2123,13 +2123,14 @@ body:not(.is-mobile).theme-dark	.modal-container.mod-dim .prompt {
 	box-shadow: 0 0px 3px rgba(255, 255, 255, 0.2);
 }
 
+.setting-item-control select,
 body:not(.is-mobile)	.global-search-input-container,
 body:not(.is-mobile)	.search-input-container input,
 button:not(.clickable-icon),
 body:not(.is-mobile) input.prompt-input,
 body:not(.is-mobile)	.suggestion-item.is-selected {
-	border: 1px solid rgba(255, 255, 255, 0.25);
-	box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+	border: 1px solid rgba(255, 255, 255, 0.1);
+	box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
 	background-color: rgba(255, 255, 255, 0.15);
 	border-radius: var(--radius-xl);
 }
@@ -2830,4 +2831,11 @@ body:not(.is-mobile) .mod-root .workspace-tab-header-container-inner {
 .modal-content .vertical-tab-content-container,
 .modal-content .vertical-tab-content-container .vertical-tab-content {
 	background-color: transparent;
+}
+
+.community-item,
+.modal.mod-sidebar-layout .modal-content,
+.modal-sidebar {
+	/* background-color: var(--model-bg-color);
+	backdrop-filter: blur(37px) saturate(0.5); */
 }
