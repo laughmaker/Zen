@@ -2161,12 +2161,13 @@ body:not(.is-mobile) input.prompt-input {
 	padding: var(--size-4-1) var(--size-4-5);
 }
 
+body:not(.is-mobile)	.fs-leaf-view .workspace-split,
 body:not(.is-mobile)	input.prompt-input,
 body:not(.is-mobile)	.search-input-container input,
 body:not(.is-mobile)	.float-search-modal .float-search-modal-search-ctn .search-row,
 .modal,
 body:not(.is-mobile)	.modal-container.mod-dim .prompt .prompt-input-container {
-	background-color: transparent;
+	background-color: transparent !important;
 }
 
 body:not(.is-mobile) .suggestion-item.is-selected {
