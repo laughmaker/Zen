@@ -2863,6 +2863,10 @@ body:not(.is-mobile) .mod-root .workspace-tab-header-container-inner {
 	backdrop-filter: blur(37px) saturate(0.5); */
 }
 
+.community-modal-details {
+	background-color: var(--background-setting);
+}
+
 .mod-right-split .workspace-tab-header:hover,
 .mod-left-split .workspace-tab-header.has-active-menu, 
 .mod-right-split .workspace-tab-header.has-active-menu, 
