@@ -318,7 +318,7 @@ body.is-mobile {
 	--tree-item-color: rgba(210, 210, 210, 0.8);
 	--active-border-color: rgba(0, 157, 255, 0.8);
 	--statusbar-bg-color: rgba(28, 28, 28, 0.7);
-	--model-bg-color: rgba(28, 28, 28, 0.5);
+	--model-bg-color: rgba(28, 28, 28, 0.1);
 	--app-model-bg-color: rgba(28, 28, 28, 0.8);
 	--editor-bg-color: rgba(28, 28, 28, 0);
 	--suggestion-bg-color: rgba(28, 28, 28, 0.1);
@@ -366,7 +366,7 @@ body:not(.mod-macos).theme-dark {
 	--tree-item-color: rgb(20, 20, 20, 0.8);
 	--active-border-color: rgb(0, 121, 172);
 	--statusbar-bg-color: rgba(248, 248, 248, 0.7);
-	--model-bg-color: rgba(248, 248, 248, 0.5);
+	--model-bg-color: rgba(248, 248, 248, 0.1);
 	--app-model-bg-color: rgba(248, 248, 248, 0.8);
 	--editor-bg-color: rgba(255, 255, 255, 0);
 	--suggestion-bg-color: rgba(248, 248, 248, 0.1);
@@ -378,7 +378,7 @@ body:not(.mod-macos).theme-dark {
 	--win-editor-bg-color: #f0f0f0a6;
 	--win-window-opacity: 0.15;
 	--background-secondary-alt: rgba(240, 240, 240, 0.1);
-	--background-setting-item: rgba(255, 255, 255, 0.01);
+	--background-setting-item: rgba(255, 255, 255, 0.3);
 	--background-setting: rgba(255, 255, 255);
 	--text-highlight-bg: var(--blockquote-border-color);
 	--table-header-background: rgba(28, 28, 28, 0.1);
@@ -412,6 +412,11 @@ body:not(.is-mobile) .theme-light {
 .is-translucent:not(.is-fullscreen) .titlebar,
 .is-translucent:not(.is-fullscreen) .app-container {
 	background-color: rgb(from var(--workspace-background-translucent) r g b / calc(var(--mac-window-opacity))) !important;
+}
+
+/* 当有弹窗弹出时，模糊背景 */
+body:has(.modal-container) .app-container {
+  filter: blur(8px);
 }
 
 body:not(.is-mobile) .status-bar,
@@ -522,6 +527,10 @@ button:not(.clickable-icon) {
 	box-shadow: 1px 1px 2px var(--background-secondary);
 }
 
+button.mod-cta {
+	--text-color: var(--text-color);
+}
+
 .is-phone .setting-item-control select {
 	background-color: var(--background-modifier-border);
 	box-shadow: 0px 0px 2px var(--background-secondary);
@@ -539,13 +548,9 @@ hr.workspace-leaf-resize-handle {
 }
 
 .workspace .mod-root .workspace-tabs.mod-stacked .workspace-tab-container {
-	/* backdrop-filter: blur(25px); */
-	/* background-color: var(--editor-bg-color) !important; */
-
 	background: rgba(255, 255, 255, 0.2);
 	backdrop-filter: blur(15px) saturate(180%);
 	-webkit-backdrop-filter: blur(15px) saturate(180%);
-
 }
 
 /* .mod-stacked .workspace-tab-container .workspace-leaf.mod-active,
@@ -2096,67 +2101,58 @@ body:not(.is-mobile):not(.composer--DisableNavHeaderAutoHide) .mod-sidedock .wor
 /* 
  * 适配PC端样式 
  */
+body:not(.is-mobile)	.suggestion-container,
+body:not(.is-mobile)	.suggestion-container.mod-search-suggestion .suggestion,
+body:not(.is-mobile)	.suggestion-container.mod-search-suggestion,
+body:not(.is-mobile)	.modal.float-search-modal,
 body:not(.is-mobile)	.modal-container.mod-dim .prompt {
-	backdrop-filter: blur(15px);
-	background-color: var(--model-bg-color);
+	backdrop-filter: blur(12px);
+	background-color: rgba(255, 255, 255, 0.15);
+	border: 1px solid rgba(255, 255, 255, 0.25);
+	box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2), inset 0 1px 2px rgba(255, 255, 255, 0.6);
 }
 
+body:not(.is-mobile).theme-dark	.suggestion-container,
+body:not(.is-mobile).theme-dark	.suggestion-container.mod-search-suggestion .suggestion,
+body:not(.is-mobile).theme-dark	.suggestion-container.mod-search-suggestion,
+body:not(.is-mobile).theme-dark	.modal.float-search-modal,
+body:not(.is-mobile).theme-dark	.modal-container.mod-dim .prompt {
+	backdrop-filter: blur(12px);
+	background-color: rgba(0, 0, 0, 0.2);
+	border: 1px solid rgba(255, 255, 255, 0.1);
+	box-shadow: 0 0px 3px rgba(255, 255, 255, 0.2);
+}
+
+body:not(.is-mobile)	.global-search-input-container,
+body:not(.is-mobile)	.search-input-container input,
+button:not(.clickable-icon),
+body:not(.is-mobile) input.prompt-input,
+body:not(.is-mobile)	.suggestion-item.is-selected {
+	border: 1px solid rgba(255, 255, 255, 0.25);
+	box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+	background-color: rgba(255, 255, 255, 0.15);
+	border-radius: var(--radius-xl);
+}
+
+body:not(.is-mobile) input.prompt-input {
+	border-radius: 25px;
+}
+
+body:not(.is-mobile)	input.prompt-input,
+body:not(.is-mobile)	.search-input-container input,
+body:not(.is-mobile)	.float-search-modal .float-search-modal-search-ctn .search-row,
+.modal,
 body:not(.is-mobile)	.modal-container.mod-dim .prompt .prompt-input-container {
 	background-color: transparent;
 }
 
-body:not(.is-mobile)	input.prompt-input {
-	background-color: transparent !important;
+body:not(.is-mobile) .suggestion-item.is-selected {
+	border-radius: 20px;
 }
 
-body:not(.is-mobile)	.modal.float-search-modal {
-	background-color: var(--model-bg-color);
-	backdrop-filter: blur(15px);
+body:not(.is-mobile)	.prompt-input-container {
+	padding: 5px;
 }
-
-body:not(.is-mobile)	.modal-container.mod-dim .prompt::before,
-body:not(.is-mobile)	.modal.float-search-modal::before {
-	content: "";
-	position: absolute;
-	top: 0;
-	left: 0;
-	right: 0;
-	bottom: 0;
-	background-color: inherit;
-	backdrop-filter: blur(15px);
-	z-index: -1;
-}
-
-body:not(.is-mobile)	.float-search-modal .float-search-modal-search-ctn .search-row,
-body:not(.is-mobile)	.global-search-input-container,
-body:not(.is-mobile)	.search-input-container input {
-	background-color: transparent !important;
-	border-radius: 14px;
-}
-
-body:not(.is-mobile)	.suggestion-container.mod-search-suggestion::before {	
-	content: "";
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
-	background-color: var(--app-model-bg-color) !important;
-	backdrop-filter: blur(5px);
-	z-index: -1;
-}
-
-body:not(.is-mobile)	.suggestion-container.mod-search-suggestion {
-	background-color: var(--suggestion-bg-color) !important;
-	backdrop-filter: blur(5px) !important;
-}
-
-body:not(.is-mobile)	.suggestion-container.mod-search-suggestion .suggestion {
-	background-color: var(--suggestion-bg-color) !important;
-	backdrop-filter: blur(5px) !important;
-}
-
-
 
 .suggestion-item {
 	padding-top: 10px;
@@ -2455,7 +2451,7 @@ g.markmap-node[data-depth='0'] .markmap-foreign {
 
 /* Windows | linux style */
 
-body::before {
+body:not(.win-translucent-off):not(.mod-macos):not(.is-mobile)::before {
 	content: '';
 	z-index: -1;
 	filter: blur(var(--win-blur)) brightness(var(--win-window-brightness)) opacity(var(--win-window-opacity));
@@ -2560,8 +2556,7 @@ body:not(.win-translucent-off):not(.mod-macos):not(.is-mobile) .workspace-sidedo
 	padding-right: 20px;
 	background-color: var(--background-setting-item);
 	border: 0.1px solid var(--background-modifier-border);
-	/* box-shadow: 0 0 1px rgba(0, 0, 0, 0.1); */
-
+	backdrop-filter: blur(15px);
 }
 
 /* 第一个 .setting-item */
@@ -2621,6 +2616,7 @@ body:not(.win-translucent-off):not(.mod-macos):not(.is-mobile) .workspace-sidedo
 	overflow: hidden;
 	border: 1px solid rgba(255, 255, 255, 0.1);
 	box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+	backdrop-filter: blur(15px);
 }
 
 body:not(.is-mobile) .vertical-tab-header-group-items {
@@ -2826,40 +2822,9 @@ body:not(.is-mobile) .mod-root .workspace-tab-header-container-inner {
 	display: none;
 }
 
-.mod-root .workspace-tab-header-inner {
-	/* width: fit-content; */
-}
-
 /* 设置页玻璃效果 */
 
-/* .modal.mod-settings.mod-sidebar-layout {
-	border-radius: var(--radius-xl);
-	border: 1px solid rgba(255, 255, 255, 0.1);
-	box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
-
-	background: rgba(255, 255, 255, 0.1);
-	backdrop-filter: blur(15px) saturate(180%);
-	-webkit-backdrop-filter: blur(15px) saturate(180%);
-
-} */
-
-/* .modal-container::before {
-	position: absolute;
-	z-index: -1;
-	content: '';
-  border: 1px solid rgba(255, 255, 255, 0.2);
-	filter: blur(50px) saturate(180%);
-	top: 0;
-	right: 0;
-	bottom: 0;
-	left: 0;
-} */
-
-.modal-bg {
-  background: rgba(0, 0, 0, 0.1); /* 半透明白背景 */
-  backdrop-filter: blur(30px) saturate(80%);
-}
-
+.modal.mod-settings .vertical-tab-header,
 .modal-content,
 .modal-content .vertical-tab-header,
 .modal-content .vertical-tab-content-container,
