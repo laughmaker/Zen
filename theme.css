@@ -606,6 +606,7 @@ body:not(.is-mobile) .workspace-split.mod-left-split .workspace-sidedock-vault-p
 
 .workspace-tab-header-inner {
 	border-radius: var(--radius-xl);
+	padding: 4px 8px;
 }
 
 .suggestion-item {
@@ -2850,4 +2851,15 @@ body:not(.is-mobile) .mod-root .workspace-tab-header-container-inner {
 .modal-sidebar {
 	/* background-color: var(--model-bg-color);
 	backdrop-filter: blur(37px) saturate(0.5); */
+}
+
+.mod-right-split .workspace-tab-header:hover,
+.mod-left-split .workspace-tab-header.has-active-menu, 
+.mod-right-split .workspace-tab-header.has-active-menu, 
+.mod-left-split .workspace-tab-header.is-active, 
+.mod-right-split .workspace-tab-header.is-active {
+	border: none;
+	box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.1);
+	background-color: rgba(255, 255, 255, 0.15);
+	border-radius: 25px;
 }
