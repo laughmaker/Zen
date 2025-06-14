@@ -448,9 +448,9 @@ body:not(.is-mobile) .workspace-tab-container {
 }
 
 .tree-item.nav-file:hover {
-	border-radius: var(--radius-xl);
+	/* border-radius: var(--radius-xl); */
 	/* background: rgba(250, 5, 5, 0.1); */
-	backdrop-filter: blur(15px) saturate(180%);
+	/* backdrop-filter: blur(15px) saturate(180%); */
 }
 
 body:not(.is-mobile) .workspace-tab-header-container {
