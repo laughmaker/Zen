@@ -2129,10 +2129,21 @@ body:not(.is-mobile)	.search-input-container input,
 button:not(.clickable-icon),
 body:not(.is-mobile) input.prompt-input,
 body:not(.is-mobile)	.suggestion-item.is-selected {
-	border: 1px solid rgba(255, 255, 255, 0.1);
-	box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+	border: 1px solid rgb(0 0 0 / 10%);
+	box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.1);
 	background-color: rgba(255, 255, 255, 0.15);
 	border-radius: var(--radius-xl);
+}
+
+body.theme-dark .setting-item-control select,
+body:not(.is-mobile).theme-dark	.global-search-input-container,
+body:not(.is-mobile).theme-dark	.search-input-container input,
+body.theme-dark button:not(.clickable-icon),
+body:not(.is-mobile).theme-dark input.prompt-input,
+body:not(.is-mobile).theme-dark	.suggestion-item.is-selected {
+	border: 1px solid rgba(255, 255, 255, 0.15);
+	box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
+	background-color: rgb(255 255 255 / 5%);
 }
 
 body:not(.is-mobile) input.prompt-input {
