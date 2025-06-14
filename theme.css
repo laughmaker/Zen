@@ -2148,6 +2148,7 @@ body:not(.is-mobile).theme-dark	.suggestion-item.is-selected {
 
 body:not(.is-mobile) input.prompt-input {
 	border-radius: 25px;
+	padding: var(--size-4-1) var(--size-4-5);
 }
 
 body:not(.is-mobile)	input.prompt-input,
