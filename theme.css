@@ -421,7 +421,7 @@ body:not(.is-mobile) .workspace-tab-container {
 	backdrop-filter: blur(15px) saturate(180%);
 	-webkit-backdrop-filter: blur(15px) saturate(180%);
 	border: 1px solid rgba(255, 255, 255, 0.1);
-	box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+	box-shadow: 0 0 8px rgba(0, 0, 0, 0.1), inset 0 1px 1px rgba(255, 255, 255, 0.05);
 	/* color: #fff; */
 	margin: 0 10px 10px 5px;
 }
@@ -812,25 +812,7 @@ body.is-mobile .nav-file-title {
 .status-bar {
 	color: var(--text-color);
 	padding: 5px 8px;
-	/* border-radius: 18px; */
-	/* border-top: 1px solid var(--background-modifier-border); */
-	/* border-left: 1px solid var(--background-modifier-border); */
 	gap: 15px;
-	/* backdrop-filter: blur(20px); */
-	/* background-color: var(--statusbar-bg-color) !important; */
-}
-
-.status-bar::before {
-	/* content: '';
-	z-index: -1;
-	filter: blur(20px);
-	background-color: var(--app-model-bg-color) !important;
-	position: absolute;
-	top: 0;
-	left: 0;
-	right: 0;
-	bottom: 0; */
-	/* backdrop-filter: blur(10px); */
 }
 
 .popover {
@@ -1993,9 +1975,8 @@ body:not(.is-mobile):not(.composer--DisableNavHeaderAutoHide) .mod-sidedock .wor
 }
 
 .is-translucent.theme-light .status-bar {
-	background-color: rgba(245, 245, 245, 0.8);
-	-webkit-backdrop-filter: blur(100px);
-	backdrop-filter: blur(100px);
+	background-color: rgba(245, 245, 245, 0.1);
+	backdrop-filter: blur(50px) saturate(80%);
 }
 
 .is-translucent.theme-dark .status-bar {
