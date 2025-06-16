@@ -420,7 +420,7 @@ body:not(.is-mobile) .theme-light {
 
 /* 当有弹窗弹出时，模糊背景 */
 body:has(.modal-container) .app-container {
-  filter: blur(8px);
+  filter: blur(12px);
 }
 
 body:not(.is-mobile) .status-bar,
@@ -435,8 +435,8 @@ body:not(.is-mobile) .workspace-tab-container {
 	margin: 0 10px 10px 5px;
 }
 
-/* body:not(.is-grabbing) .nav-file-title.is-active:hover,  */
-/* body:not(.is-grabbing) .nav-folder-title.is-active:hover,  */
+.tree-item-self.nav-folder-title.is-clickable.mod-collapsible:hover,
+.tree-item-self.nav-file-title.tappable.is-clickable:hover,
 .nav-file-title.is-active, 
 .nav-folder-title.is-active {
 	border-radius: var(--radius-xl);
@@ -445,12 +445,6 @@ body:not(.is-mobile) .workspace-tab-container {
 	-webkit-backdrop-filter: blur(15px) saturate(180%);
 	border: 1px solid rgba(255, 255, 255, 0.1);
 	box-shadow: 0 0px 5px rgba(0, 0, 0, 0.1);
-}
-
-.tree-item.nav-file:hover {
-	/* border-radius: var(--radius-xl); */
-	/* background: rgba(250, 5, 5, 0.1); */
-	/* backdrop-filter: blur(15px) saturate(180%); */
 }
 
 body:not(.is-mobile) .workspace-tab-header-container {
