@@ -426,7 +426,7 @@ body:has(.modal-container) .app-container {
 body:not(.is-mobile) .status-bar,
 body:not(.is-mobile) .workspace-tab-container {
 	border-radius: var(--radius-xl);
-	background: rgba(255, 255, 255, 0.1);
+	background: rgba(255, 255, 255, 0.15);
 	backdrop-filter: blur(15px) saturate(180%);
 	-webkit-backdrop-filter: blur(15px) saturate(180%);
 	border: 1px solid rgba(255, 255, 255, 0.1);
@@ -435,12 +435,13 @@ body:not(.is-mobile) .workspace-tab-container {
 	margin: 0 10px 10px 5px;
 }
 
+.modal-container.mod-dim .modal,
 .tree-item-self.nav-folder-title.is-clickable.mod-collapsible:hover,
 .tree-item-self.nav-file-title.tappable.is-clickable:hover,
 .nav-file-title.is-active, 
 .nav-folder-title.is-active {
 	border-radius: var(--radius-xl);
-	background: rgba(255, 255, 255, 0.15);
+	background: linear-gradient(135deg, rgba(255, 255, 255, 0.15), rgb(from var(--text-accent) r g b / 0.1));
 	backdrop-filter: blur(15px) saturate(180%);
 	-webkit-backdrop-filter: blur(15px) saturate(180%);
 	border: 1px solid rgba(255, 255, 255, 0.1);
@@ -2871,3 +2872,10 @@ body:not(.is-mobile) .mod-root .workspace-tab-header-container-inner {
 	background-color: rgba(255, 255, 255, 0.15);
 	border-radius: 25px;
 }
+
+/* .tooltip.mod-right {
+	background-color: rgba(255, 255, 255, 0.15);
+	border: 1px solid rgba(255, 255, 255, 0.1);
+	backdrop-filter: blur(15px);
+	box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.1);
+} */
