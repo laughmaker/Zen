@@ -2879,3 +2879,7 @@ body:not(.is-mobile) .mod-root .workspace-tab-header-container-inner {
 	backdrop-filter: blur(15px);
 	box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.1);
 } */
+
+.n-tree-node.located p {
+	--61117f8c-locatedColor: var(--text-accent);
+}
