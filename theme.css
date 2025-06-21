@@ -337,7 +337,7 @@ body.is-translucent {
 	--background-setting: rgba(28, 28, 28);
 	--text-highlight-bg: var(--blockquote-border-color);
 	--list-marker-color: var(--nav-indentation-guide-color);
-
+	--glass-bg-color: rgba(0, 0, 0, 0.15);
 }
 
 body:not(.mod-macos).theme-dark {
@@ -386,7 +386,7 @@ body:not(.mod-macos).theme-dark {
 	--background-setting: rgba(255, 255, 255);
 	--text-highlight-bg: var(--blockquote-border-color);
 	--table-header-background: rgba(28, 28, 28, 0.1);
-
+	--glass-bg-color: rgba(255, 255, 255, 0.15);
 }
 
 .is-mobile.theme-light {
@@ -423,19 +423,18 @@ body:has(.modal-container) .app-container {
   filter: blur(12px);
 }
 
+.modal-container.mod-dim .modal,
 body:not(.is-mobile) .status-bar,
 body:not(.is-mobile) .workspace-tab-container {
 	border-radius: var(--radius-xl);
-	background: rgba(255, 255, 255, 0.15);
+	background: var(--glass-bg-color);
 	backdrop-filter: blur(15px) saturate(180%);
 	-webkit-backdrop-filter: blur(15px) saturate(180%);
 	border: 1px solid rgba(255, 255, 255, 0.1);
 	box-shadow: 0 0 8px rgba(0, 0, 0, 0.1), inset 0 1px 1px rgba(255, 255, 255, 0.05);
-	/* color: #fff; */
 	margin: 0 10px 10px 5px;
 }
 
-.modal-container.mod-dim .modal,
 .tree-item-self.nav-folder-title.is-clickable.mod-collapsible:hover,
 .tree-item-self.nav-file-title.tappable.is-clickable:hover,
 .nav-file-title.is-active, 
