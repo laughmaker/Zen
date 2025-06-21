@@ -1464,7 +1464,7 @@ body:not(.heading-bottom-line-off) .markdown-rendered h6 {
 
 /* 左侧目录去除左边的空白 */
 body:is(.show-ribbon):not(.is-mobile) .nav-files-container {
-	padding-left: 1px;
+	/* padding-left: 1px; */
 }
 
 
