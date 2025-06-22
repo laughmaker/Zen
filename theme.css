@@ -420,7 +420,7 @@ body:not(.is-mobile) .theme-light {
 
 /* 当有弹窗弹出时，模糊背景 */
 body:has(.modal-container) .app-container {
-  filter: blur(12px);
+    filter: blur(30px) saturate(1.5);
 }
 
 .modal-container.mod-dim .modal,
