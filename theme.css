@@ -423,7 +423,7 @@ body:has(.modal-container) .app-container {
     filter: blur(30px) saturate(1.5);
 }
 
-.modal-container.mod-dim .modal,
+body:not(.is-mobile) .modal-container.mod-dim .modal,
 body:not(.is-mobile) .status-bar,
 body:not(.is-mobile) .workspace-tab-container {
 	border-radius: var(--radius-xl);
@@ -1485,8 +1485,34 @@ body.is-mobile .cm-s-obsidian span.cm-inline-code {
 
 /* 移动端底部tab样式 */
 .is-mobile .mobile-navbar {
-	border-top: var(--nav-indentation-guide-color) solid 1px;
+	padding: 0;
 	background-color: transparent;
+}
+
+.is-mobile .mobile-navbar .mobile-navbar-actions {
+	position: absolute;
+	width: 96%;
+	bottom: var(--safe-area-inset-bottom);
+	left: 2%;
+	border-radius: 36px;
+	background: var(--glass-bg-color);
+	backdrop-filter: blur(15px) saturate(180%);
+	-webkit-backdrop-filter: blur(15px) saturate(180%);
+	border: 1px solid rgba(255, 255, 255, 0.1);
+	box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.1), inset 1px 1px 4px rgba(255, 255, 255, 0.1);
+	padding: 8px 0;
+}
+
+.is-mobile .mobile-navbar .mobile-navbar-actions::before {
+    content: '';
+    z-index: -1;
+    filter: blur(10px) saturate(1.5) opacity(1);
+	background: var(--glass-bg-color);
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
 }
 
 .is-mobile .workspace-leaf-resize-handle {
