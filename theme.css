@@ -1484,6 +1484,7 @@ body.is-mobile .cm-s-obsidian span.cm-inline-code {
 }
 
 /* 移动端底部tab样式 */
+.is-mobile .view-header,
 .is-mobile .mobile-navbar {
 	padding: 0;
 	background-color: transparent;
@@ -1501,6 +1502,24 @@ body.is-mobile .cm-s-obsidian span.cm-inline-code {
 	border: 1px solid rgba(255, 255, 255, 0.1);
 	box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.1), inset 1px 1px 4px rgba(255, 255, 255, 0.1);
 	padding: 8px 0;
+}
+
+.is-mobile .workspace > .mod-root {
+	padding-top: 0;
+}
+
+.is-mobile .view-header {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	height: calc(var(--safe-area-inset-top) + 40px);
+	padding-top: var(--safe-area-inset-top);
+	background: var(--glass-bg-color);
+	backdrop-filter: blur(15px) saturate(180%);
+	-webkit-backdrop-filter: blur(15px) saturate(180%);
+	border: 1px solid rgba(255, 255, 255, 0.1);
+	/* box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.05), inset 1px 1px 4px rgba(255, 255, 255, 0.1); */
 }
 
 .is-mobile .mobile-navbar .mobile-navbar-actions::before {
@@ -1527,7 +1546,7 @@ body.is-mobile .cm-s-obsidian span.cm-inline-code {
 
 /* 顶部导航栏样式 */
 .is-mobile .view-header {
-	height: 40px !important;
+	/* height: 40px !important; */
 	align-items: center !important;
 	justify-content: center !important;
 	border-bottom: var(--nav-indentation-guide-color) solid 1px;
