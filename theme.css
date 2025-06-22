@@ -488,6 +488,25 @@ body {
 .workspace-split.mod-root {
 	filter: brightness(var(--editor-brightness));
 }
+.is-mobile .workspace .workspace-drawer {
+	background: var(--glass-bg-color);
+	backdrop-filter: blur(15px) saturate(180%);
+	-webkit-backdrop-filter: blur(15px) saturate(180%);
+	border: 1px solid rgba(255, 255, 255, 0.1);
+	box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.1), inset 1px 1px 4px rgba(255, 255, 255, 0.1);
+}
+
+.is-mobile .workspace .workspace-drawer::before {
+	content: '';
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	height: 100%;
+	background: var(--glass-bg-color);
+	backdrop-filter: blur(15px) saturate(180%);
+	-webkit-backdrop-filter: blur(15px) saturate(180%);
+	z-index: -1;
+}
 
 .is-mobile .workspace .workspace-drawer.mod-left {
 	box-shadow: 2px 0px 2px var(--card-border-color);
@@ -1508,6 +1527,11 @@ body.is-mobile .cm-s-obsidian span.cm-inline-code {
 	padding-top: 0;
 }
 
+/* .is-mobile .inline-title, */
+.markdown-source-view.mod-cm6.is-readable-line-width .cm-sizer {
+	padding-top: calc(var(--safe-area-inset-top) + 40px);
+}
+
 .is-mobile .view-header {
 	position: absolute;
 	top: 0;
@@ -1523,15 +1547,15 @@ body.is-mobile .cm-s-obsidian span.cm-inline-code {
 }
 
 .is-mobile .mobile-navbar .mobile-navbar-actions::before {
-    content: '';
-    z-index: -1;
-    filter: blur(10px) saturate(1.5) opacity(1);
+	content: '';
+	z-index: -1;
+	filter: blur(10px) saturate(1.5) opacity(1);
 	background: var(--glass-bg-color);
-    position: absolute;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
+	position: absolute;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
 }
 
 .is-mobile .workspace-leaf-resize-handle {
@@ -1665,19 +1689,21 @@ body.is-mobile .cm-s-obsidian span.cm-inline-code {
 /* 优化侧边栏样式，半透明 */
 .is-mobile .workspace-drawer.mod-left,
 .is-mobile .workspace-drawer.mod-right {
-	background-color: var(--background-primary) !important;
-	/* backdrop-filter: blur(10px); */
+	background-color: transparent !important;
 }
 
+.workspace-drawer-active-tab-content .view-content,
 .is-mobile .workspace-drawer-inner,
 .is-mobile .workspace-drawer-tab-container,
+.is-mobile .workspace-drawer-active-tab-content,
+.is-mobile .workspace-leaf-content,
 .is-mobile .workspace-drawer-active-tab-container {
-	background-color: var(--background-primary) !important;
+	background-color: transparent !important;
 }
 
 .is-mobile .workspace-drawer .nav-header {
 	border-top: none;
-	height: 80px;
+	/* height: 80px; */
 }
 
 .is-mobile .workspace-drawer-header-info {
@@ -2126,6 +2152,7 @@ body:not(.is-mobile):not(.composer--DisableNavHeaderAutoHide) .mod-sidedock .wor
 .is-mobile .suggestion-bg,
 .is-mobile .workspace-drawer-backdrop {
 	background: linear-gradient(to bottom, #00000000, var(--app-model-bg-color) 15%, #00000000 110%);
+	/* filter: blur(15px) saturate(1.8) opacity(1); */
 }
 
 .mobile-tab-switcher {
