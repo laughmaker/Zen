@@ -338,6 +338,7 @@ body.is-translucent {
 	--text-highlight-bg: var(--blockquote-border-color);
 	--list-marker-color: var(--nav-indentation-guide-color);
 	--glass-bg-color: rgba(0, 0, 0, 0.15);
+	--text-shadow-color: white;
 }
 
 body:not(.mod-macos).theme-dark {
@@ -387,6 +388,7 @@ body:not(.mod-macos).theme-dark {
 	--text-highlight-bg: var(--blockquote-border-color);
 	--table-header-background: rgba(28, 28, 28, 0.1);
 	--glass-bg-color: rgba(255, 255, 255, 0.15);
+	--text-shadow-color: black;
 }
 
 .is-mobile.theme-light {
@@ -521,6 +523,7 @@ body {
 .is-phone .prompt {
 	box-shadow: 0px -4px 5px var(--card-border-color) !important;
 	border-top: solid 0.1px var(--card-border-color) !important;
+	text-shadow: 0px 0px 0.5px var(--text-shadow-color);
 }
 
 .theme-dark.is-mobile .prompt,
@@ -1696,6 +1699,10 @@ body.is-mobile .cm-s-obsidian span.cm-inline-code {
 /* 优化侧边栏样式，半透明 */
 .is-mobile .workspace-drawer.mod-left,
 .is-mobile .workspace-drawer.mod-right {
+	background-color: transparent !important;
+}
+
+.workspace-drawer-active-tab-content .view-content * {
 	background-color: transparent !important;
 }
 
