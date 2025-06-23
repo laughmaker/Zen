@@ -525,7 +525,7 @@ body {
 
 .theme-dark.is-mobile .prompt,
 .theme-dark.is-mobile .prompt input.prompt-input {
-	background-color: var(--background-primary);
+	background-color: transparent;
 }
 
 .is-mobile .workspace-drawer.mod-right {
@@ -1558,6 +1558,13 @@ body.is-mobile .cm-s-obsidian span.cm-inline-code {
 	right: 0;
 }
 
+.is-mobile .float-search-modal-container.modal-container.mod-dim .modal, .is-mobile .menu, .is-phone .prompt {
+	background: var(--glass-bg-color);
+	backdrop-filter: blur(15px) saturate(180%);
+	-webkit-backdrop-filter: blur(15px) saturate(180%);
+	border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
 .is-mobile .workspace-leaf-resize-handle {
 	border: transparent;
 }
@@ -2098,7 +2105,7 @@ body:not(.is-mobile):not(.composer--DisableNavHeaderAutoHide) .mod-sidedock .wor
 
 .is-phone .menu-scroll,
 .is-phone .menu {
-	background-color:  var(--background-primary) !important;
+	background-color:  transparent !important;
 }
 
 /* 适配半透明背景 */
@@ -2147,16 +2154,25 @@ body:not(.is-mobile):not(.composer--DisableNavHeaderAutoHide) .mod-sidedock .wor
 	background-color: transparent;
 }
 
+.is-phone .modal.mod-settings .modal-header {
+	background-color: var(--background-primary);
+}
+
 .is-mobile .modal-container, 
 .is-mobile .modal-container .modal-bg,
 .is-mobile .suggestion-bg,
 .is-mobile .workspace-drawer-backdrop {
-	background: linear-gradient(to bottom, #00000000, var(--app-model-bg-color) 15%, #00000000 110%);
+	background-color: transparent;
+	/* background: linear-gradient(to bottom, #00000000, var(--app-model-bg-color) 15%, #00000000 110%); */
 	/* filter: blur(15px) saturate(1.8) opacity(1); */
 }
 
 .mobile-tab-switcher {
-	background: linear-gradient(to bottom, var(--background-primary), var(--background-secondary) 10%, var(--background-primary) 100%);
+	background: var(--glass-bg-color);	
+	backdrop-filter: blur(15px) saturate(180%);
+	-webkit-backdrop-filter: blur(15px) saturate(180%);
+	border: 1px solid rgba(255, 255, 255, 0.1);
+	box-shadow: 0 0 8px rgba(0, 0, 0, 0.1), inset 0 1px 1px rgba(255, 255, 255, 0.05);	/* background: linear-gradient(to bottom, var(--background-primary), var(--background-secondary) 10%, var(--background-primary) 100%); */
 }
 
 .mobile-tab-switcher-scroll, .mobile-tab-switcher-menubar
