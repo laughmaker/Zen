@@ -1706,6 +1706,10 @@ body.is-mobile .cm-s-obsidian span.cm-inline-code {
 	background-color: transparent !important;
 }
 
+.is-mobile .node-insert-event {
+	background-color: var(--app-model-bg-color) !important;
+}
+
 .workspace-drawer-active-tab-content .view-content,
 .is-mobile .workspace-drawer-inner,
 .is-mobile .workspace-drawer-tab-container,
