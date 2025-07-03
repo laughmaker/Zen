@@ -1536,6 +1536,8 @@ body.is-mobile .cm-s-obsidian span.cm-inline-code {
 }
 
 .is-mobile .view-header {
+	padding-left: var(--size-4-4) !important;
+	padding-right: var(--size-4-4) !important;
 	position: absolute;
 	top: 0;
 	left: 0;
@@ -1545,7 +1547,7 @@ body.is-mobile .cm-s-obsidian span.cm-inline-code {
 	background: var(--glass-bg-color);
 	backdrop-filter: blur(15px) saturate(180%);
 	-webkit-backdrop-filter: blur(15px) saturate(180%);
-	border: 1px solid rgba(255, 255, 255, 0.1);
+	/* border: 1px solid rgba(255, 255, 255, 0.1); */
 	/* box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.05), inset 1px 1px 4px rgba(255, 255, 255, 0.1); */
 }
 
