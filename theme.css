@@ -2175,7 +2175,7 @@ body:not(.is-mobile):not(.composer--DisableNavHeaderAutoHide) .mod-sidedock .wor
 .is-mobile .modal-container .modal-bg,
 .is-mobile .suggestion-bg,
 .is-mobile .workspace-drawer-backdrop {
-	background-color: transparent;
+	/* background-color: transparent; */
 	/* background: linear-gradient(to bottom, #00000000, var(--app-model-bg-color) 15%, #00000000 110%); */
 	/* filter: blur(15px) saturate(1.8) opacity(1); */
 }
