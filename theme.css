@@ -425,9 +425,9 @@ body:has(.modal-container) .app-container {
     filter: blur(30px) saturate(1.5);
 }
 
+/* body:not(.is-mobile) .workspace-tab-container, */
 body:not(.is-mobile) .modal-container.mod-dim .modal,
-body:not(.is-mobile) .status-bar,
-body:not(.is-mobile) .workspace-tab-container {
+body:not(.is-mobile) .status-bar {
 	border-radius: var(--radius-xl);
 	background: var(--glass-bg-color);
 	backdrop-filter: blur(15px) saturate(180%);
@@ -435,6 +435,39 @@ body:not(.is-mobile) .workspace-tab-container {
 	border: 1px solid rgba(255, 255, 255, 0.1);
 	box-shadow: 0 0 8px rgba(0, 0, 0, 0.1), inset 0 1px 1px rgba(255, 255, 255, 0.05);
 	margin: 0 10px 10px 5px;
+}
+
+.workspace-ribbon.mod-left {
+	border-radius: 28px;
+	/* background-color: rgba(0, 0, 0, 0.1) !important; */
+	backdrop-filter: blur(15px) saturate(180%);
+	-webkit-backdrop-filter: blur(15px) saturate(180%);
+	border: 1px solid rgba(255, 255, 255, 0.1);
+	box-shadow: 0 0 8px rgba(0, 0, 0, 0.1), inset 0 1px 1px rgba(255, 255, 255, 0.05);
+	margin: 35px 0px 5px 15px;
+	height: 96%;
+}
+
+.is-translucent:not(.is-fullscreen) .app-container .workspace-split.mod-left-split {
+	border-radius: var(--radius-xl);
+	background-color: rgba(0, 0, 0, 0.1) !important;
+	backdrop-filter: blur(15px) saturate(180%);
+	-webkit-backdrop-filter: blur(15px) saturate(180%);
+	border: 1px solid rgba(255, 255, 255, 0.1);
+	box-shadow: 0 0 8px rgba(0, 0, 0, 0.1), inset 0 1px 1px rgba(255, 255, 255, 0.05);
+	margin: 10px 10px 10px 10px;
+	height: 98.3%;
+}
+
+.is-translucent:not(.is-fullscreen) .app-container .workspace-split.mod-right-split {
+	border-radius: var(--radius-xl);
+	background-color: rgba(0, 0, 0, 0.2) !important;
+	backdrop-filter: blur(15px) saturate(180%);
+	-webkit-backdrop-filter: blur(15px) saturate(180%);
+	border: 1px solid rgba(255, 255, 255, 0.1);
+	box-shadow: 0 0 8px rgba(0, 0, 0, 0.1), inset 0 1px 1px rgba(255, 255, 255, 0.05);
+	margin: 10px 10px 10px 25px;
+	height: 98.3%;
 }
 
 .tree-item-self.nav-folder-title.is-clickable.mod-collapsible:hover,
@@ -445,13 +478,13 @@ body:not(.is-mobile) .workspace-tab-container {
 	background: linear-gradient(135deg, rgba(255, 255, 255, 0.15), rgb(from var(--text-accent) r g b / 0.1));
 	backdrop-filter: blur(15px) saturate(180%);
 	-webkit-backdrop-filter: blur(15px) saturate(180%);
-	border: 1px solid rgba(255, 255, 255, 0.1);
+	/* border: 1px solid rgba(255, 255, 255, 0.1); */
 	box-shadow: 0 0px 5px rgba(0, 0, 0, 0.1);
 }
 
 body:not(.is-mobile) .workspace-tab-header-container {
-	border: none;
-	border-top: none !important;
+	/* border: none; */
+	/* border-top: none !important; */
 	align-items: center;
 	display: flex;
 	justify-content: center;
@@ -476,7 +509,7 @@ body:not(.is-mobile) .workspace-tabs.mod-top.mod-top-right-space .workspace-tab-
 }
 
 body:not(.is-mobile) hr.workspace-leaf-resize-handle {
-	opacity: 0 !important;
+	/* opacity: 0 !important; */
 }
 
 /*
@@ -562,7 +595,7 @@ button.mod-cta {
 }
 
 hr.workspace-leaf-resize-handle {
-	/* background-color: var(--scrollbar-thumb-color); */
+	/* background-color: var(--divider-color); */
 }
 
 /* 堆叠模式时，隐藏顶部栏 */
@@ -2175,7 +2208,7 @@ body:not(.is-mobile):not(.composer--DisableNavHeaderAutoHide) .mod-sidedock .wor
 .is-mobile .modal-container .modal-bg,
 .is-mobile .suggestion-bg,
 .is-mobile .workspace-drawer-backdrop {
-	/* background-color: transparent; */
+	background-color: transparent;
 	/* background: linear-gradient(to bottom, #00000000, var(--app-model-bg-color) 15%, #00000000 110%); */
 	/* filter: blur(15px) saturate(1.8) opacity(1); */
 }
@@ -2800,7 +2833,7 @@ body:not(.is-mobile):not(.close-left-vault-profile) .workspace-split.mod-left-sp
 	flex-direction: column;
 	gap: 6px;
 	position: absolute;
-	left: -44px;
+	left: -54px;
 	bottom: 1%;
 }
 
