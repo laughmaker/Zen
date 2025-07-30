@@ -337,7 +337,7 @@ body.is-translucent {
 	--background-setting: rgba(28, 28, 28);
 	--text-highlight-bg: var(--blockquote-border-color);
 	--list-marker-color: var(--nav-indentation-guide-color);
-	--glass-bg-color: rgba(0, 0, 0, 0.15);
+	--glass-bg-color: rgba(0, 0, 0, 0.8);
 	--text-shadow-color: white;
 }
 
@@ -345,7 +345,7 @@ body:not(.mod-macos).theme-dark {
 	--indentation-guide-color: rgba(245, 245, 245, 0.1);
 	--nav-indentation-guide-color: rgba(245, 245, 245, 0.1);
 	--list-marker-color: rgba(245, 245, 245, 0.25);
-	--nav-collapse-icon-color: rgba(245, 245, 245, 0.25);
+	--nav-collapse-icon-color: rgba(241, 12, 12, 0.5);
 }
 
 .theme-light {
@@ -387,7 +387,7 @@ body:not(.mod-macos).theme-dark {
 	--background-setting: rgba(255, 255, 255);
 	--text-highlight-bg: var(--blockquote-border-color);
 	--table-header-background: rgba(28, 28, 28, 0.1);
-	--glass-bg-color: rgba(255, 255, 255, 0.15);
+	--glass-bg-color: rgba(255, 255, 255, 0.8);
 	--text-shadow-color: black;
 }
 
@@ -417,7 +417,15 @@ body:not(.is-mobile) .theme-light {
 /* 设置 mac 平台背景透明度 */
 .is-translucent:not(.is-fullscreen) .titlebar,
 .is-translucent:not(.is-fullscreen) .app-container {
-	background-color: rgb(from var(--workspace-background-translucent) r g b / calc(var(--mac-window-opacity))) !important;
+	/* background-color: rgb(from var(--workspace-background-translucent) r g b / calc(var(--mac-window-opacity))) !important; */
+	background: linear-gradient(
+		to right, 
+		transparent 0%,
+		transparent 10%, 
+		var(--glass-bg-color) 50%,
+		transparent 90%,
+		transparent 100%
+	);
 }
 
 /* 当有弹窗弹出时，模糊背景 */
@@ -434,40 +442,42 @@ body:not(.is-mobile) .status-bar {
 	-webkit-backdrop-filter: blur(15px) saturate(180%);
 	border: 1px solid rgba(255, 255, 255, 0.1);
 	box-shadow: 0 0 8px rgba(0, 0, 0, 0.1), inset 0 1px 1px rgba(255, 255, 255, 0.05);
-	margin: 0 10px 10px 5px;
+	margin: 0 5px 5px 5px;
 }
 
 .workspace-ribbon.mod-left {
-	border-radius: 28px;
+	border-radius: var(--radius-xl);
 	/* background-color: rgba(0, 0, 0, 0.1) !important; */
 	backdrop-filter: blur(15px) saturate(180%);
 	-webkit-backdrop-filter: blur(15px) saturate(180%);
 	border: 1px solid rgba(255, 255, 255, 0.1);
 	box-shadow: 0 0 8px rgba(0, 0, 0, 0.1), inset 0 1px 1px rgba(255, 255, 255, 0.05);
-	margin: 35px 0px 5px 15px;
-	height: 96%;
+	margin: 30px 0px 5px 5px;
+	height: auto;
 }
 
 .is-translucent:not(.is-fullscreen) .app-container .workspace-split.mod-left-split {
 	border-radius: var(--radius-xl);
-	background-color: rgba(0, 0, 0, 0.1) !important;
+	background-color: rgba(0, 0, 0, 0.0) !important;
 	backdrop-filter: blur(15px) saturate(180%);
 	-webkit-backdrop-filter: blur(15px) saturate(180%);
 	border: 1px solid rgba(255, 255, 255, 0.1);
-	box-shadow: 0 0 8px rgba(0, 0, 0, 0.1), inset 0 1px 1px rgba(255, 255, 255, 0.05);
-	margin: 10px 10px 10px 10px;
-	height: 98.3%;
+	box-shadow: 0 0 8px rgba(0, 0, 0, 0.2), inset 0 1px 1px rgba(255, 255, 255, 0.15);
+	margin: 5px 5px 5px 5px;
+	height: auto;
+	opacity: 0.9;
 }
 
 .is-translucent:not(.is-fullscreen) .app-container .workspace-split.mod-right-split {
 	border-radius: var(--radius-xl);
-	background-color: rgba(0, 0, 0, 0.2) !important;
+	background-color: rgba(0, 0, 0, 0.0) !important;
 	backdrop-filter: blur(15px) saturate(180%);
 	-webkit-backdrop-filter: blur(15px) saturate(180%);
 	border: 1px solid rgba(255, 255, 255, 0.1);
-	box-shadow: 0 0 8px rgba(0, 0, 0, 0.1), inset 0 1px 1px rgba(255, 255, 255, 0.05);
-	margin: 10px 10px 10px 25px;
-	height: 98.3%;
+	box-shadow: 0 0 8px rgba(0, 0, 0, 0.2), inset 0 1px 1px rgba(255, 255, 255, 0.15);
+	margin: 5px 5px 5px 5px;
+	height: auto;
+	opacity: 0.9;
 }
 
 .tree-item-self.nav-folder-title.is-clickable.mod-collapsible:hover,
@@ -509,7 +519,7 @@ body:not(.is-mobile) .workspace-tabs.mod-top.mod-top-right-space .workspace-tab-
 }
 
 body:not(.is-mobile) hr.workspace-leaf-resize-handle {
-	/* opacity: 0 !important; */
+	opacity: 0 !important;
 }
 
 /*
@@ -518,6 +528,10 @@ body:not(.is-mobile) hr.workspace-leaf-resize-handle {
 
 body {
 	filter: brightness(var(--window-brightness));
+}
+
+.app-container {
+	background-color: var(--background-primary);
 }
 
 .workspace-split.mod-root {
@@ -1293,6 +1307,8 @@ span.cm-formatting.cm-formatting-list.cm-formatting-list-ol {
 .list-number {
 	text-align: right;
 	width: 100%;
+	color: var(--text-normal);
+	opacity: 0.4;
 }
 
 .list-bullet {
@@ -1300,6 +1316,12 @@ span.cm-formatting.cm-formatting-list.cm-formatting-list-ol {
 	font-family: 'number-font' !important;
 	font-size: 12px;
 }
+
+.list-bullet::after {
+	background-color: var(--text-normal);
+	opacity: 0.4;
+}
+
 
 .markdown-rendered .list-bullet {
 	margin-inline-start: -12px;
@@ -2196,8 +2218,15 @@ body:not(.is-mobile):not(.composer--DisableNavHeaderAutoHide) .mod-sidedock .wor
 	padding-right: var(--size-4-3);
 }
 
-.workspace-split.mod-root {
-	background-color: transparent;
+.is-translucent .workspace-split.mod-root {
+	/* background-color: var(--glass-bg-color) !important; */
+	background: linear-gradient(
+		to right, 
+		transparent 0%, 
+		var(--glass-bg-color) 50%, 
+		transparent 100%
+	);
+
 }
 
 .is-phone .modal.mod-settings .modal-header {
@@ -2832,9 +2861,10 @@ body:not(.is-mobile):not(.close-left-vault-profile) .workspace-split.mod-left-sp
 	display: flex;
 	flex-direction: column;
 	gap: 6px;
-	position: absolute;
-	left: -54px;
+	position: fixed;
+	left: -50px;
 	bottom: 1%;
+	z-index: 999;
 }
 
 body.theme-light:not(.is-mobile):not(.close-left-vault-profile) .workspace-split.mod-left-split .workspace-sidedock-vault-profile{
