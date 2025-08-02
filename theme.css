@@ -441,19 +441,20 @@ body:not(.is-mobile) .status-bar {
 	backdrop-filter: blur(15px) saturate(180%);
 	-webkit-backdrop-filter: blur(15px) saturate(180%);
 	border: 1px solid rgba(255, 255, 255, 0.1);
-	box-shadow: 0 0 8px rgba(0, 0, 0, 0.1), inset 0 1px 1px rgba(255, 255, 255, 0.05);
+	box-shadow: 0 0 8px rgba(0, 0, 0, 0.15), inset 0 1px 1px rgba(255, 255, 255, 0.15);
 	margin: 0 5px 5px 5px;
 }
 
 .workspace-ribbon.mod-left {
 	border-radius: var(--radius-xl);
-	/* background-color: rgba(0, 0, 0, 0.1) !important; */
+	background-color: rgba(0, 0, 0, 0.0) !important;
 	backdrop-filter: blur(15px) saturate(180%);
 	-webkit-backdrop-filter: blur(15px) saturate(180%);
 	border: 1px solid rgba(255, 255, 255, 0.1);
-	box-shadow: 0 0 8px rgba(0, 0, 0, 0.1), inset 0 1px 1px rgba(255, 255, 255, 0.05);
-	margin: 30px 0px 5px 5px;
+	box-shadow: -1px 0 8px rgba(0, 0, 0, 0.2), inset -1px 1px 1px rgba(255, 255, 255, 0.15);
+	margin: 5px 5px 5px 5px;
 	height: auto;
+	order: 1;
 }
 
 .is-translucent:not(.is-fullscreen) .app-container .workspace-split.mod-left-split {
@@ -475,7 +476,7 @@ body:not(.is-mobile) .status-bar {
 	-webkit-backdrop-filter: blur(15px) saturate(180%);
 	border: 1px solid rgba(255, 255, 255, 0.1);
 	box-shadow: 0 0 8px rgba(0, 0, 0, 0.2), inset 0 1px 1px rgba(255, 255, 255, 0.15);
-	margin: 5px 5px 5px 5px;
+	margin: 5px 0px 5px 5px;
 	height: auto;
 	opacity: 0.9;
 }
@@ -2856,7 +2857,7 @@ body:not(.is-mobile) .vertical-tab-header-group-items {
 
 /* 将底部的设置按钮调整为左侧 */
 
-body:not(.is-mobile):not(.close-left-vault-profile) .workspace-split.mod-left-split .workspace-sidedock-vault-profile{
+/* body:not(.is-mobile):not(.close-left-vault-profile) .workspace-split.mod-left-split .workspace-sidedock-vault-profile{
 	width: var(--ribbon-width) !important;
 	display: flex;
 	flex-direction: column;
@@ -2896,7 +2897,7 @@ body:not(.is-mobile):not(.close-left-vault-profile) .workspace-split.mod-left-sp
 
 body:not(.is-mobile):not(.close-left-vault-profile) .workspace-split.mod-left-split .workspace-sidedock-vault-profile .workspace-drawer-vault-actions .clickable-icon {
 	gap: 10px;
-}
+} */
 
 
 /* comander 优化 */
@@ -3045,4 +3046,10 @@ body:not(.is-mobile) .mod-root .workspace-tab-header-container-inner {
 
 .n-tree-node.located p {
 	--61117f8c-locatedColor: var(--text-accent);
+}
+
+.workspace-split.is-sidedock-collapsed ~ .workspace-split.mod-root 
+.workspace-tab-header-container 
+.sidebar-toggle-button.mod-left {
+	margin-left: 25px;
 }
