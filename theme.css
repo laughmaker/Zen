@@ -337,8 +337,11 @@ body.is-translucent {
 	--background-setting: rgba(28, 28, 28);
 	--text-highlight-bg: var(--blockquote-border-color);
 	--list-marker-color: var(--nav-indentation-guide-color);
-	--glass-bg-color: rgba(0, 0, 0, 0.8);
+	--glass-bg-color: rgba(28, 28, 28, 0.7);
 	--text-shadow-color: white;
+	--divider-color: rgba(255, 255, 255, 0.01);
+	--shadow-color: rgba(245, 245, 245, 0.08);
+
 }
 
 body:not(.mod-macos).theme-dark {
@@ -387,8 +390,10 @@ body:not(.mod-macos).theme-dark {
 	--background-setting: rgba(255, 255, 255);
 	--text-highlight-bg: var(--blockquote-border-color);
 	--table-header-background: rgba(28, 28, 28, 0.1);
-	--glass-bg-color: rgba(255, 255, 255, 0.8);
+	--glass-bg-color: rgba(248, 248, 248, 0.6);
 	--text-shadow-color: black;
+	--shadow-color: rgba(0, 0, 0, 0.06);
+
 }
 
 .is-mobile.theme-light {
@@ -417,15 +422,15 @@ body:not(.is-mobile) .theme-light {
 /* 设置 mac 平台背景透明度 */
 .is-translucent:not(.is-fullscreen) .titlebar,
 .is-translucent:not(.is-fullscreen) .app-container {
-	/* background-color: rgb(from var(--workspace-background-translucent) r g b / calc(var(--mac-window-opacity))) !important; */
-	background: linear-gradient(
+	background-color: rgb(from var(--workspace-background-translucent) r g b / calc(var(--mac-window-opacity))) !important;
+	/* background: linear-gradient(
 		to right, 
 		transparent 0%,
-		transparent 10%, 
+		rgb(from var(--workspace-background-translucent) r g b / calc(var(--mac-window-opacity))) 5%, 
 		var(--glass-bg-color) 50%,
-		transparent 90%,
+		rgb(from var(--workspace-background-translucent) r g b / calc(var(--mac-window-opacity))) 95%,
 		transparent 100%
-	);
+	); */
 }
 
 /* 当有弹窗弹出时，模糊背景 */
@@ -446,38 +451,60 @@ body:not(.is-mobile) .status-bar {
 }
 
 .workspace-ribbon.mod-left {
-	border-radius: var(--radius-xl);
+	/* border-radius: var(--radius-xl);
 	background-color: rgba(0, 0, 0, 0.0) !important;
 	backdrop-filter: blur(15px) saturate(180%);
 	-webkit-backdrop-filter: blur(15px) saturate(180%);
 	border: 1px solid rgba(255, 255, 255, 0.1);
 	box-shadow: -1px 0 8px rgba(0, 0, 0, 0.2), inset -1px 1px 1px rgba(255, 255, 255, 0.15);
 	margin: 5px 5px 5px 5px;
-	height: auto;
+	height: auto; */
 	order: 1;
 }
 
+
+.is-translucent .workspace-split.mod-root {
+	/* background-color: var(--glass-bg-color) !important; */
+	/* background: linear-gradient(
+		to right, 
+		transparent 0%, 
+		var(--glass-bg-color) 50%, 
+		transparent 100%
+	); */
+	/* margin: 5px; */
+	/* height: auto; */
+	/* border-radius: var(--radius-xl); */
+	background-color: var(--glass-bg-color) !important;	
+	backdrop-filter: blur(15px) saturate(180%);
+	/* -webkit-backdrop-filter: blur(15px) saturate(180%); */
+	/* border: 1px solid rgba(255, 255, 255, 0.1); */
+	/* box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.2), inset 0px 1px 1px rgba(255, 255, 255, 0.2); */
+
+	box-shadow: 0 15px 20px var(--shadow-color);
+  border: 0.05px solid var(--divider-color);
+}
+
 .is-translucent:not(.is-fullscreen) .app-container .workspace-split.mod-left-split {
-	border-radius: var(--radius-xl);
+	/* border-radius: var(--radius-xl);
 	background-color: rgba(0, 0, 0, 0.0) !important;
 	backdrop-filter: blur(15px) saturate(180%);
 	-webkit-backdrop-filter: blur(15px) saturate(180%);
 	border: 1px solid rgba(255, 255, 255, 0.1);
 	box-shadow: 0 0 8px rgba(0, 0, 0, 0.2), inset 0 1px 1px rgba(255, 255, 255, 0.15);
 	margin: 5px 5px 5px 5px;
-	height: auto;
+	height: auto; */
 	opacity: 0.9;
 }
 
 .is-translucent:not(.is-fullscreen) .app-container .workspace-split.mod-right-split {
-	border-radius: var(--radius-xl);
+	/* border-radius: var(--radius-xl);
 	background-color: rgba(0, 0, 0, 0.0) !important;
 	backdrop-filter: blur(15px) saturate(180%);
 	-webkit-backdrop-filter: blur(15px) saturate(180%);
 	border: 1px solid rgba(255, 255, 255, 0.1);
 	box-shadow: 0 0 8px rgba(0, 0, 0, 0.2), inset 0 1px 1px rgba(255, 255, 255, 0.15);
 	margin: 5px 0px 5px 5px;
-	height: auto;
+	height: auto; */
 	opacity: 0.9;
 }
 
@@ -2217,17 +2244,6 @@ body:not(.is-mobile):not(.composer--DisableNavHeaderAutoHide) .mod-sidedock .wor
 
 .view-content > .markdown-source-view.mod-cm6 > .cm-editor > .cm-scroller {
 	padding-right: var(--size-4-3);
-}
-
-.is-translucent .workspace-split.mod-root {
-	/* background-color: var(--glass-bg-color) !important; */
-	background: linear-gradient(
-		to right, 
-		transparent 0%, 
-		var(--glass-bg-color) 50%, 
-		transparent 100%
-	);
-
 }
 
 .is-phone .modal.mod-settings .modal-header {
