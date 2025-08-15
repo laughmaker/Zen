@@ -2873,26 +2873,24 @@ body:not(.is-mobile) .vertical-tab-header-group-items {
 
 /* 将底部的设置按钮调整为左侧 */
 
-/* body:not(.is-mobile):not(.close-left-vault-profile) .workspace-split.mod-left-split .workspace-sidedock-vault-profile{
+ body:not(.is-mobile):not(.close-left-vault-profile) .workspace-split.mod-left-split .workspace-sidedock-vault-profile{
 	width: var(--ribbon-width) !important;
 	display: flex;
 	flex-direction: column;
-	gap: 6px;
-	position: fixed;
-	left: -50px;
-	bottom: 1%;
+	gap: 15px;
 	z-index: 999;
+	transform: translate(-44px, -10px);
 }
 
-body.theme-light:not(.is-mobile):not(.close-left-vault-profile) .workspace-split.mod-left-split .workspace-sidedock-vault-profile{
+/* body.theme-light:not(.is-mobile):not(.close-left-vault-profile) .workspace-split.mod-left-split .workspace-sidedock-vault-profile{
 	border: 0;
 	padding: 0;
 	z-index: 99;
-}
+} */
 
 body:not(.is-mobile):not(.close-left-vault-profile) .workspace-split.mod-left-split .workspace-sidedock-vault-profile .workspace-drawer-vault-switcher{
 	z-index: 99;
-	gap: 10px;
+	gap: 15px;
 	padding: var(--size-4-2) var(--size-4-2);
 }
 
@@ -2903,7 +2901,7 @@ body:not(.is-mobile):not(.close-left-vault-profile) .workspace-split.mod-left-sp
 body:not(.is-mobile):not(.close-left-vault-profile) .workspace-split.mod-left-split .workspace-sidedock-vault-profile .workspace-drawer-vault-actions {
 	display: flex;
 	flex-direction: column;
-	gap: 6px;
+	gap: 16px;
 	z-index: 99;
 }
 
@@ -2912,8 +2910,8 @@ body:not(.is-mobile):not(.close-left-vault-profile) .workspace-split.mod-left-sp
 }
 
 body:not(.is-mobile):not(.close-left-vault-profile) .workspace-split.mod-left-split .workspace-sidedock-vault-profile .workspace-drawer-vault-actions .clickable-icon {
-	gap: 10px;
-} */
+	gap: 15px;
+} 
 
 
 /* comander 优化 */
