@@ -573,7 +573,7 @@ body {
 }
 .is-mobile .workspace .workspace-drawer {
 	background: var(--glass-bg-color);
-	backdrop-filter: blur(10px) saturate(180%) brightness(1.2);
+	backdrop-filter: blur(10px) saturate(180%) brightness(1.1);
 	-webkit-backdrop-filter: blur(15px) saturate(180%) brightness(1.2);
 	box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.1), inset 1px 1px 4px rgba(255, 255, 255, 0.1);
 }
@@ -2676,10 +2676,7 @@ body:not(.win-translucent-off):not(.mod-macos):not(.is-mobile)::before {
 
 body:not(.win-translucent-off):not(.mod-macos):not(.is-mobile) .app-container .horizontal-main-container,
 body:not(.win-translucent-off):not(.mod-macos):not(.is-mobile) .app-container {
-	/* backdrop-filter: blur(50px) saturate(180%); */
-	-webkit-backdrop-filter: blur(15px) saturate(180%);
-	/* backdrop-filter: blur(15px) saturate(180%) brightness(var(--win-window-brightness)) opacity(var(--win-window-opacity)); */
-	backdrop-filter: blur(var(--win-blur)) brightness(var(--win-window-brightness)) opacity(var(--win-window-opacity));
+	backdrop-filter: blur(var(--win-blur)) saturate(180%) brightness(var(--win-window-brightness)) opacity(var(--win-window-opacity));
 }
 
 body:not(.win-translucent-off):not(.mod-macos):not(.is-mobile) .workspace-split.mod-vertical.mod-root,
@@ -2697,9 +2694,9 @@ body:not(.win-translucent-off):not(.mod-macos):not(.is-mobile)  .workspace-split
 }
 
 body:not(.win-translucent-off):not(.mod-macos):not(.is-mobile)  .workspace-tab-container {
-	background: rgba(255, 255, 255, 0.1) !important;
-	backdrop-filter: blur(15px) saturate(180%);
-	-webkit-backdrop-filter: blur(15px) saturate(180%);
+	background: var(--editor-bg-color) !important;
+	/* backdrop-filter: blur(15px) saturate(180%); */
+	/* -webkit-backdrop-filter: blur(15px) saturate(180%); */
 }
 
 .workspace-ribbon.mod-left:before {
