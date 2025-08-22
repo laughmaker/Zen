@@ -560,7 +560,7 @@ body {
 }
 
 .app-container {
-	background-color: var(--background-primary);
+	/* background-color: var(--background-primary); */
 }
 
 .workspace-split.mod-root {
@@ -570,7 +570,6 @@ body {
 	background: var(--glass-bg-color);
 	backdrop-filter: blur(15px) saturate(180%);
 	-webkit-backdrop-filter: blur(15px) saturate(180%) brightness(1.2);
-	border: 1px solid rgba(255, 255, 255, 0.1);
 	box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.1), inset 1px 1px 4px rgba(255, 255, 255, 0.1);
 }
 
@@ -588,10 +587,12 @@ body {
 
 .is-mobile .workspace .workspace-drawer.mod-left {
 	box-shadow: 2px 0px 2px var(--card-border-color);
+	border-right: 1px solid var(--background-modifier-border);
 }
 
 .is-mobile .workspace .workspace-drawer.mod-right {
 	box-shadow: -2px 0px 2px var(--card-border-color);
+	border-left: 1px solid var(--background-modifier-border);
 }
 
 .is-mobile .float-search-modal-container.modal-container.mod-dim .modal,
@@ -678,7 +679,7 @@ hr.workspace-leaf-resize-handle {
 
 /* 移除左侧功能按钮区右分界线 */
 .workspace-ribbon {
-	border-right: unset;
+	border-right: 0.5px solid var(--background-modifier-border);
 }
 
 /* 移除顶部的下分界线 */
@@ -2669,31 +2670,30 @@ body:not(.win-translucent-off):not(.mod-macos):not(.is-mobile)::before {
 
 body:not(.win-translucent-off):not(.mod-macos):not(.is-mobile) .app-container .horizontal-main-container,
 body:not(.win-translucent-off):not(.mod-macos):not(.is-mobile) .app-container {
-	backdrop-filter: blur(50px) saturate(180%);
-	/* -webkit-backdrop-filter: blur(15px) saturate(180%); */
+	/* backdrop-filter: blur(50px) saturate(180%); */
+	-webkit-backdrop-filter: blur(15px) saturate(180%);
 	/* backdrop-filter: blur(15px) saturate(180%) brightness(var(--win-window-brightness)) opacity(var(--win-window-opacity)); */
-
-	/* backdrop-filter: blur(var(--win-blur)) brightness(var(--win-window-brightness)) opacity(var(--win-window-opacity)); */
+	backdrop-filter: blur(var(--win-blur)) brightness(var(--win-window-brightness)) opacity(var(--win-window-opacity));
 }
 
 body:not(.win-translucent-off):not(.mod-macos):not(.is-mobile) .workspace-split.mod-vertical.mod-root,
-/* body:not(.win-translucent-off):not(.mod-macos):not(.is-mobile)  .workspace-ribbon.mod-left:before,  */
-/* body:not(.win-translucent-off):not(.mod-macos):not(.is-mobile)  .workspace-ribbon.mod-left,  */
-/* body:not(.win-translucent-off):not(.mod-macos):not(.is-mobile)  .workspace-tabs .workspace-leaf,  */
+body:not(.win-translucent-off):not(.mod-macos):not(.is-mobile)  .workspace-ribbon.mod-left:before, 
+body:not(.win-translucent-off):not(.mod-macos):not(.is-mobile)  .workspace-ribbon.mod-left, 
+body:not(.win-translucent-off):not(.mod-macos):not(.is-mobile)  .workspace-tabs .workspace-leaf, 
 body:not(.win-translucent-off):not(.mod-macos):not(.is-mobile)  .workspace-leaf .view-content, 
 body:not(.win-translucent-off):not(.mod-macos):not(.is-mobile)  .workspace-split.mod-right-split .workspace-tabs, 
 body:not(.win-translucent-off):not(.mod-macos):not(.is-mobile)  .workspace-tab-container
-/* body:not(.win-translucent-off):not(.mod-macos):not(.is-mobile)  .workspace-tab-header-container,  */
-/* body:not(.win-translucent-off):not(.mod-macos):not(.is-mobile)  .workspace-sidedock-vault-profile,  */
-/* body:not(.win-translucent-off):not(.mod-macos):not(.is-mobile)  .workspace-split */
+body:not(.win-translucent-off):not(.mod-macos):not(.is-mobile)  .workspace-tab-header-container, 
+body:not(.win-translucent-off):not(.mod-macos):not(.is-mobile)  .workspace-sidedock-vault-profile, 
+body:not(.win-translucent-off):not(.mod-macos):not(.is-mobile)  .workspace-split
 {
 	background-color: transparent !important;
 }
 
 body:not(.win-translucent-off):not(.mod-macos):not(.is-mobile)  .workspace-tab-container {
 	background: rgba(255, 255, 255, 0.1) !important;
-	/* backdrop-filter: blur(15px) saturate(180%); */
-	/* -webkit-backdrop-filter: blur(15px) saturate(180%); */
+	backdrop-filter: blur(15px) saturate(180%);
+	-webkit-backdrop-filter: blur(15px) saturate(180%);
 }
 
 .workspace-ribbon.mod-left:before {
@@ -2701,7 +2701,7 @@ body:not(.win-translucent-off):not(.mod-macos):not(.is-mobile)  .workspace-tab-c
 }
 
 body:not(.win-translucent-off):not(.mod-macos):not(.is-mobile) .workspace-split.mod-vertical.mod-root {
-	/* background: var(--win-editor-bg-color) !important; */
+	background: var(--win-editor-bg-color) !important;
 }
 
 body:not(.win-translucent-off):not(.mod-macos):not(.is-mobile) .workspace-ribbon.mod-left:before {
