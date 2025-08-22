@@ -281,6 +281,7 @@ body {
 	--bases-table-header-background: var(--table-header-background);
 	--bases-table-row-height: 40px;
 	--italic-color: var(--text-accent);
+	--radius-xxl: 20px;
 }
 
 body.is-mobile {
@@ -307,7 +308,7 @@ body.is-translucent {
 	--nav-item-background-active: rgba(245, 245, 245, 0.1);
 	--nav-item-color-active: var(--text-accent);
 	--nav-indentation-guide-color: rgba(245, 245, 245, 0.1);
-	--background-modifier-border: rgba(245, 245, 245, 0.09);
+	--background-modifier-border: rgba(245, 245, 245, 0.15);
 	--background-modifier-hover: rgba(245, 245, 245, 0.1);
 	--floating-toc-background-color: transparent;
 	--blockquote-border-color: rgba(245, 245, 245, 0.2);
@@ -334,7 +335,7 @@ body.is-translucent {
 	--win-window-opacity: 0.2;
 	--background-secondary-alt: rgba(18, 18, 18, 0.1);
 	--background-setting-item: rgba(245, 245, 245, 0.08);
-	--background-setting: rgba(28, 28, 28);
+	--background-setting: rgba(18, 18, 18);
 	--text-highlight-bg: var(--blockquote-border-color);
 	--list-marker-color: var(--nav-indentation-guide-color);
 	--glass-bg-color: rgba(28, 28, 28, 0.7);
@@ -398,15 +399,19 @@ body:not(.mod-macos).theme-dark {
 }
 
 .is-mobile.theme-light {
-	--interactive-normal:rgba(248, 248, 248);
 	--card-border-color: rgba(28, 28, 28, 0.05);
 }
 
 .is-mobile.theme-dark {
-	--interactive-normal:rgba(18, 18, 18, 0.6);
+	--interactive-normal:rgba(38, 38, 38, 0.6);
 	--indentation-guide-color: rgba(245, 245, 245, 0.1);
-	--card-border-color: rgba(80, 80, 80, 0.05);
+	--card-border-color: rgba(80, 80, 80, 0.1);
 }
+
+.is-mobile.theme-light .menu{
+	--interactive-normal:rgba(255, 255, 255, 0.6);
+}
+
 
 .mobile-navbar-actions {
 	--icon-size: 22px;
@@ -597,9 +602,10 @@ body {
 
 .is-mobile .float-search-modal-container.modal-container.mod-dim .modal,
 .is-mobile .menu,
+.is-phone .menu,
 .is-phone .prompt {
 	box-shadow: 0px -4px 5px var(--card-border-color) !important;
-	border-top: solid 0.1px var(--card-border-color) !important;
+	border-top: solid 0.5px var(--background-modifier-border) !important;
 	text-shadow: 0px 0px 0.5px var(--text-shadow-color);
 }
 
@@ -610,14 +616,14 @@ body {
 
 .is-mobile .workspace-drawer.mod-right {
 	border-left: solid 0.5px var(--background-modifier-border);
-	border-bottom-left-radius: var(--radius-l);
-	border-top-left-radius: var(--radius-l);
+	border-bottom-left-radius: var(--radius-xxl);
+	border-top-left-radius: var(--radius-xxl);
 }
 
 .is-mobile .workspace-drawer.mod-left {
 	border-right: solid 0.5px var(--background-modifier-border);
-	border-bottom-right-radius: var(--radius-l);
-	border-top-right-radius: var(--radius-l);
+	border-bottom-right-radius: var(--radius-xxl);
+	border-top-right-radius: var(--radius-xxl);
 }
 
 .is-mobile .mod-confirmation .modal:not(.mod-lg) {
@@ -1653,7 +1659,7 @@ body.is-mobile .cm-s-obsidian span.cm-inline-code {
 }
 
 .is-mobile .float-search-modal-container.modal-container.mod-dim .modal, .is-mobile .menu, .is-phone .prompt {
-	/* background: var(--glass-bg-color); */
+	background: var(--glass-bg-color);
 	backdrop-filter: blur(15px) saturate(180%);
 	-webkit-backdrop-filter: blur(15px) saturate(180%);
 	/* border: 1px solid rgba(255, 255, 255, 0.1); */
