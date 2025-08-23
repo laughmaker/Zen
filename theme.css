@@ -2603,7 +2603,7 @@ body:not(.is-mobile) .modal-container.mod-dim .modal:has(.export-image-preview-r
 }
 
 .modal.mod-settings.mod-sidebar-layout .modal-close-button {
-	/* display: none; */
+	z-index: 999;
 }
 
 .modal-sidebar {
