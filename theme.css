@@ -1400,6 +1400,9 @@ u {
 	text-decoration-color: var(--text-accent);
 }
 
+input[type='text'] {
+	border-radius: var(--radius-xxl);
+}
 
 /* 调整引用的样式 */
 .HyperMD-quote {
@@ -3001,12 +3004,37 @@ body .quiet-outline .n-tree-node-wrapper {
 }
 
 /* bases */
-.bases-table-header {
-	padding-left: 5px;
+.bases-thead .bases-table-header {
+	background-color: transparent;
+}
+
+.bases-thead .bases-td[data-sort] .bases-table-header {
+	mask-image: none;
+}
+
+.bases-thead,
+.bases-tr {
+	background-color: transparent;
+}
+
+.bases-thead .bases-tr {
+	background-color: var(--editor-bg-color);
+	backdrop-filter: blur(15px);
+}
+
+.bases-table-header-sort {
+	background-color: transparent;
 }
 
 .bases-tbody .bases-td .bases-table-cell {
 	padding: 15px;
+}
+
+.bases-cards-item {
+	background-color: var(--model-bg-color);
+	/* border-radius: var(--radius-l); */
+	box-shadow: 1px 1px 8px var(--shadow-color);
+	backdrop-filter: blur(15px);
 }
 
 body:not(.is-translucent) .workspace-ribbon.mod-left:before,
