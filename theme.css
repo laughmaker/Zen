@@ -3044,9 +3044,17 @@ body:not(.is-translucent) .workspace-leaf .view-content,
 body:not(.is-translucent) .workspace-split.mod-right-split .workspace-tabs,
 body:not(.is-translucent) .workspace-tab-container,
 body:not(.is-translucent) .workspace-tab-header-container,
-body:not(.is-translucent) .workspace-sidedock-vault-profile,
-body:not(.is-translucent) .workspace-split {
+body:not(.is-translucent) .workspace-sidedock-vault-profile
+/* body:not(.is-translucent) .workspace-split  */
+{
 	background-color: var(--background-primary) !important;
+}
+
+body:not(.is-translucent) .workspace-tabs.mod-active.mod-top .workspace-tab-container .workspace-leaf .workspace-leaf-content .view-content,
+body:not(.is-translucent) .workspace-tabs.mod-active.mod-top .workspace-tab-container .workspace-leaf .workspace-leaf-content .view-header,
+body:not(.is-translucent) .workspace-tabs.mod-active.mod-top .workspace-tab-header-container,
+body:not(.is-translucent) .workspace-tabs.mod-active.mod-top {
+	background-color: var(--background-secondary) !important;
 }
 
 body:not(.is-mobile) .mod-root .workspace-tab-header-container-inner {
