@@ -356,7 +356,7 @@ body:not(.mod-macos).theme-dark {
 .theme-light {
 	--base-d: 0%;
 	--titlebar-background: rgb(248, 248, 248);
-	--background-secondary: rgb(230, 230, 230);
+	--background-secondary: rgb(249, 249, 249);
 	--background-secondary-alt: rgb(230, 230, 230);
 	/* --ribbon-background: rgb(245, 245, 245); */
 	--background-modifier-hover: hsl(var(--base-h), var(--base-s), calc(var(--base-d) + 10%));
