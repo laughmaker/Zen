@@ -3135,10 +3135,10 @@ body:not(.is-mobile) .mod-root .workspace-tab-header-container-inner {
 /* properties style */
 .metadata-property-value .metadata-input-text, 
 .multi-select-pill {
-	font-size: 0.9em;
+	font-size: calc(var(--window-font-size) * 0.92px) !important;
 }
 
 main.git-view .tree-item-inner.nav-folder-title-content,
 main.git-view .tree-item-inner.nav-file-title-content {
-    font-size: 1em !important;
+    font-size: calc(var(--window-font-size) * 1px) !important;
 }
