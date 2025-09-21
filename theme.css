@@ -1057,9 +1057,13 @@ hr {
 }
 
 .embed-title {
-	border-bottom: solid 0.5px var(--text-accent);
+	border-bottom: solid 0.5px var(--blockquote-border-color);
 	color: var(--text-accent);
 	font-weight: bold;
+}
+
+.markdown-source-view.mod-cm6 .internal-embed {
+	border-left: solid 0.5px var(--blockquote-border-color);
 }
 
 /* 
