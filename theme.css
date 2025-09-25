@@ -1335,8 +1335,8 @@ body:not(.is-phone) .workspace-leaf.mod-active .tree-item-self.has-focus {
 }
 
 
-.markdown-source-view.mod-cm6 .cm-line:not(.HyperMD-list-line):not(.HyperMD-header):not(:has(.cm-hashtag.cm-meta)) .cm-indent::before {
-	/* margin-inline-start: 13px !important; */
+.markdown-source-view.mod-cm6 .cm-line:not(.HyperMD-list-line):not(.HyperMD-header):not(:has(.cm-hashtag.cm-meta)):not(:has(.image-embed)) .cm-indent::before {
+	margin-inline-start: 13px !important;
 }
 
 /* 调整有序列表的缩进线 */
