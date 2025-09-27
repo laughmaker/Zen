@@ -134,10 +134,6 @@ If you need to change the background image, follow these steps:
 ![](./screenshots/cover-dark-3.png)
 ![](./screenshots/cover-light-1.png)
 
-## Win
-
-![](./screenshots/win-dark.png)
-![](./screenshots/win-light.png)
 
 ## Mobile
 
