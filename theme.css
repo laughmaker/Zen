@@ -1053,7 +1053,7 @@ hr {
 /* .markdown-source-view.mod-cm6 .cm-content>[contenteditable=false], */
 .markdown-preview-view .markdown-embed:not(.image-embed) {
 	margin-left: 3px !important;
-	padding-left: 14px;
+	/* padding-left: 14px; */
 }
 
 .embed-title {
@@ -1063,7 +1063,7 @@ hr {
 }
 
 .markdown-source-view.mod-cm6 .internal-embed {
-	border-left: solid 0.5px var(--blockquote-border-color);
+	/* border-left: solid 0.5px var(--blockquote-border-color); */
 }
 
 /* 
