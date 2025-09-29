@@ -1063,7 +1063,7 @@ hr {
 }
 
 .markdown-source-view.mod-cm6 .internal-embed {
-	/* border-left: solid 0.5px var(--blockquote-border-color); */
+	border-left: solid 0.5px var(--blockquote-border-color);
 }
 
 /* 
