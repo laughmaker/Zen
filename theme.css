@@ -124,7 +124,7 @@ settings:
 		description: Adjust the gap of the text paragraph.
 		description.zh: 调整文本段间距。
 		type: variable-number-slider
-		default: 3.2
+		default: 3.4
 		min: 1
 		max: 10
 		step: 0.1
@@ -135,7 +135,7 @@ settings:
 		description: Adjust the height of the text line.
 		description.zh: 调整文本行高。
 		type: variable-number-slider
-		default: 32
+		default: 36
 		min: 20
 		max: 40
 		step: 1
@@ -274,8 +274,8 @@ body {
 	--win-bg-image-url: url('');
 	--input-radius: 14px;
 	--callout-content-padding: 4px;
-	--text-paragraph-gap: 3.2px;
-	--text-line-height: 32px;
+	--text-paragraph-gap: 3.4px;
+	--text-line-height: 36px;
 	--window-brightness: 0.96;
 	--editor-brightness: 1;
 	--bases-table-header-background: var(--table-header-background);
@@ -1070,7 +1070,7 @@ hr {
 }
 
 .markdown-source-view.mod-cm6 .internal-embed {
-	border-left: solid 0.5px var(--blockquote-border-color);
+	/* border-left: solid 0.5px var(--blockquote-border-color); */
 }
 
 /* 
@@ -3178,7 +3178,11 @@ main.git-view .tree-item-inner.nav-file-title-content {
 }
 
 .is-tablet.theme-dark {
-	--mobile-sidebar-background: var(--background-primary);
+	--mobile-sidebar-background: rgb(32, 32, 32);
+}
+
+.is-mobile .workspace-drawer.mod-left, .is-mobile .workspace-drawer.mod-right {
+	background-color: var(--mobile-sidebar-background) !important;
 }
 
 .is-tablet .workspace .workspace-drawer.is-pinned .nav-files-container.node-insert-event,
@@ -3198,11 +3202,11 @@ main.git-view .tree-item-inner.nav-file-title-content {
 }
 
 body.is-tablet .workspace-drawer.mod-left .workspace-drawer-inner .workspace-drawer-tab-container {
-	border-left: solid 1px var(--card-border-color);
+	border-left: solid 1px var(--indentation-guide-color);
 }
 
 body.is-tablet :is(#editingToolbarModalBar, #editingToolbarPopoverBar).editingToolbarCustomAesthetic :is(.editingToolbarCommandItem, button[class^=editingToolbarCommandsubItem]):not(.editingToolbar-Divider-Line) {
-    height: var(--toolbar-icon-size);
+	height: var(--toolbar-icon-size);
 }
 
 .is-tablet .view-header {
@@ -3212,12 +3216,12 @@ body.is-tablet :is(#editingToolbarModalBar, #editingToolbarPopoverBar).editingTo
 
 .is-tablet .workspace .workspace-drawer.mod-left {
 	box-shadow: 1px 0px 1px var(--card-border-color);
-    border-right: 0.1px solid var(--background-modifier-border);
+	border-right: 0.1px solid var(--background-modifier-border);
 }
 
 .is-tablet .workspace .workspace-drawer.mod-right {
-    box-shadow: -1px 0px 1px var(--card-border-color);
-    border-left: 0.1px solid var(--background-modifier-border);
+	box-shadow: -1px 0px 1px var(--card-border-color);
+	border-left: 0.1px solid var(--background-modifier-border);
 }
 
 .is-tablet .workspace-drawer-header-name-text {
@@ -3229,9 +3233,45 @@ body.is-tablet :is(#editingToolbarModalBar, #editingToolbarPopoverBar).editingTo
 }
 
 .is-tablet .workspace-drawer-header-icon {
-    --icon-size: var(--icon-s);
+	--icon-size: var(--icon-s);
 }
 
 .is-tablet .workspace-drawer .nav-buttons-container {
-    --icon-size: var(--icon-s);
+	--icon-size: var(--icon-s);
+}
+
+.is-tablet .markdown-source-view.mod-cm6 .cm-indent::before {
+	margin-inline-start: 6.8px !important;
+}
+
+.is-tablet .list-bullet {
+	font-size: 8px;
+	margin-left: 4px;
+}
+
+.is-tablet .markdown-source-view.mod-cm6 .cm-formatting-list-ul {
+	margin-right: 6px;
+}
+
+.is-tablet span.cm-formatting.cm-formatting-list.cm-formatting-list-ol {
+	font-size: 16px;
+	padding-right: 11.4px;
+}
+
+.is-tablet .workspace-split.mod-root .workspace-tabs .view-content .markdown-source-view.mod-cm6 .cm-editor {
+	background-color: var(--background-secondary) !important;
+}
+
+.is-tablet .workspace-drawer-header {
+	padding: 0;
+	padding-left: 5px;
+}
+
+.is-tablet .nav-files-container {
+	padding: 0;
+}
+
+.is-tablet .nav-header {
+	padding-left: 0; 
+	padding-right: 0;
 }
