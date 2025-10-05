@@ -3275,3 +3275,16 @@ body.is-tablet :is(#editingToolbarModalBar, #editingToolbarPopoverBar).editingTo
 	padding-left: 0; 
 	padding-right: 0;
 }
+
+.is-tablet .workspace-tabs.mod-top {
+	padding-top: var(--safe-area-inset-top);
+}
+
+.is-tablet .mod-active .workspace-tab-header.is-active .workspace-tab-header-inner-title {
+	color: var(--text-accent) !important;
+}
+
+.is-tablet .mod-root .workspace-tab-header.is-active .workspace-tab-header-inner {
+	border-bottom: 0.1px solid var(--text-accent);
+	border-radius: 0;
+}
