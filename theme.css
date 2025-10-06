@@ -3173,55 +3173,72 @@ main.git-view .tree-item-inner.nav-file-title-content {
 }
 
 /* tablet */
+.is-tablet {
+	--metadata-input-height: 10px * 2.25;
+	--input-height: 34px;
+}
+
 .is-tablet .workspace .workspace-drawer.is-pinned {
 	border-radius: 0;
 }
 
 .is-tablet.theme-dark {
-	--mobile-sidebar-background: rgb(32, 32, 32);
+	--mobile-sidebar-background: rgb(48, 48, 48);
+	--background-secondary: rgb(35, 35, 35);
 }
 
-.is-mobile .workspace-drawer.mod-left, .is-mobile .workspace-drawer.mod-right {
+.is-tablet.theme-light {
+	--mobile-sidebar-background: rgb(248, 248, 248);
+	--background-secondary: rgb(255, 255, 255);
+}
+
+.is-tablet .workspace-drawer.mod-left, 
+.is-tablet .workspace-drawer.mod-right,
+.is-tablet .workspace-drawer.mod-right .workspace-leaf-content .view-content,
+.is-tablet .workspace .workspace-drawer .nav-files-container.node-insert-event,
+.is-tablet .workspace .workspace-drawer .view-content.node-insert-event {
 	background-color: var(--mobile-sidebar-background) !important;
+	overflow-x: hidden !important;
 }
 
-.is-tablet .workspace .workspace-drawer.is-pinned .nav-files-container.node-insert-event,
-.is-tablet .workspace .workspace-drawer.is-pinned .view-content.node-insert-event {
-	background-color: var(--mobile-sidebar-background) !important;
-	overflow-x: hidden;
+.is-tablet .view-content > .markdown-source-view.mod-cm6 > .cm-editor > .cm-scroller {
+	overflow-x: hidden !important;
 }
 
-.is-tablet .workspace .workspace-drawer.is-pinned .side-dock-settings {
+.is-tablet .workspace .workspace-drawer .side-dock-settings {
 	display: none;
 }
 
-.is-tablet .workspace .workspace-drawer.is-pinned .clickable-icon.side-dock-ribbon-action .svg-icon, 
-.is-tablet .workspace .workspace-drawer.is-pinned .mod-left-split .workspace-tab-header-inner-icon .svg-icon, 
-.is-tablet .workspace .workspace-drawer.is-pinned .mod-right-split .workspace-tab-header-inner-icon .svg-icon {
+.is-tablet .workspace .workspace-drawer .clickable-icon.side-dock-ribbon-action .svg-icon, 
+.is-tablet .workspace .workspace-drawer .mod-left-split .workspace-tab-header-inner-icon .svg-icon, 
+.is-tablet .workspace .workspace-drawer .mod-right-split .workspace-tab-header-inner-icon .svg-icon {
 	--icon-size: var(--icon-s);
 }
 
-body.is-tablet .workspace-drawer.mod-left .workspace-drawer-inner .workspace-drawer-tab-container {
+.is-tablet .workspace-drawer.mod-left .workspace-drawer-inner .workspace-drawer-tab-container {
 	border-left: solid 1px var(--indentation-guide-color);
+	/* box-shadow: 1px 0px 1px var(--card-border-color); */
 }
 
-body.is-tablet :is(#editingToolbarModalBar, #editingToolbarPopoverBar).editingToolbarCustomAesthetic :is(.editingToolbarCommandItem, button[class^=editingToolbarCommandsubItem]):not(.editingToolbar-Divider-Line) {
+.is-tablet .workspace .workspace-drawer.mod-left {
+	box-shadow: 1px 0px 1px var(--card-border-color);
+	/* border-right: 0.1px solid var(--background-modifier-border); */
+	border: 0;
+}
+
+.is-tablet .workspace .workspace-drawer.mod-right {
+	box-shadow: -1px 0px 1px var(--card-border-color);
+	/* border-left: 0.1px solid var(--background-modifier-border); */
+	border: 0;
+}
+
+.is-tablet :is(#editingToolbarModalBar, #editingToolbarPopoverBar).editingToolbarCustomAesthetic :is(.editingToolbarCommandItem, button[class^=editingToolbarCommandsubItem]):not(.editingToolbar-Divider-Line) {
 	height: var(--toolbar-icon-size);
 }
 
 .is-tablet .view-header {
 	padding-top: 0;
 	height: auto;
-}
-
-.is-tablet .workspace .workspace-drawer.mod-left {
-	box-shadow: 1px 0px 1px var(--card-border-color);
-	border-right: 0.1px solid var(--background-modifier-border);
-}
-
-.is-tablet .workspace .workspace-drawer.mod-right {
-	box-shadow: -1px 0px 1px var(--card-border-color);
-	border-left: 0.1px solid var(--background-modifier-border);
 }
 
 .is-tablet .workspace-drawer-header-name-text {
@@ -3287,4 +3304,43 @@ body.is-tablet :is(#editingToolbarModalBar, #editingToolbarPopoverBar).editingTo
 .is-tablet .mod-root .workspace-tab-header.is-active .workspace-tab-header-inner {
 	border-bottom: 0.1px solid var(--text-accent);
 	border-radius: 0;
+}
+
+.is-tablet .clickable-icon.workspace-drawer-header-icon.mod-settings {
+	position: fixed;
+	left: 3px;
+	bottom: 15px;
+	padding: 0;
+}
+
+.is-tablet .metadata-property-icon svg.svg-icon {
+	height: var(--icon-s);
+	width: var(--icon-s);
+}
+
+.is-tablet .workspace-drawer-active-tab-header {
+	padding: var(--size-2-1);
+}
+
+.is-tablet .workspace-drawer-active-tab-header .workspace-drawer-active-tab-title {
+	padding-left: 10px;
+}
+
+.is-tablet .horizontal-tab-nav-item, .vertical-tab-nav-item {
+    border-radius: var(--radius-xxl);
+}
+
+.is-tablet .mobile-toolbar {
+	/* background-color: var(--mobile-sidebar-background) !important;  */
+}
+
+ .is-tablet .mobile-toolbar-options-list {
+	padding-bottom: 5px;
+	justify-content: center;
+	background-color: var(--mobile-sidebar-background) !important; 
+	border-top: 0.1px solid var(--background-modifier-border);
+}
+
+.is-tablet .sidebar-toggle-button {
+	--icon-size: var(--icon-s) !important;
 }
