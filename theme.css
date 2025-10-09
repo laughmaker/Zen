@@ -1709,28 +1709,24 @@ body.is-mobile .cm-s-obsidian span.cm-inline-code {
 
 .is-mobile .mobile-toolbar-options-container {
 	box-shadow: none !important;
-	box-shadow: 10px 0 15px -5px rgba(0, 255, 0, 1.0);
+	/* box-shadow: 10px 0 15px -5px rgba(0, 255, 0, 1.0); */
 }
 
 .is-mobile .mobile-toolbar-floating-options {
 	background-color: transparent;
-	backdrop-filter: none;
+	/* backdrop-filter: none; */
 }
 
 .is-mobile .mobile-toolbar-option {
-	background-color: transparent;
-	backdrop-filter: none;
-	filter: none;
+	/* background-color: rgb(229, 230, 234) !important; */
+	/* backdrop-filter: none; */
+	/* filter: none; */
 }
 
-.is-mobile .mobile-toolbar {
-	/* border-top: rgba(0, 0, 0, 0.05) solid 0.8px; */
-	background-color: #E6E8EC !important;
-}
-
+.is-mobile.theme-light .mobile-toolbar-options-list,
 .is-mobile.theme-light .mobile-toolbar-options-container {
 	/* border-top: rgba(0, 0, 0, 0.05) solid 0.8px; */
-	background-color: transparent !important;
+	background-color: #E5E6EA !important;
 }
 
 .is-mobile.theme-dark .mobile-toolbar-options-container {
@@ -3184,7 +3180,7 @@ main.git-view .tree-item-inner.nav-file-title-content {
 
 .is-tablet.theme-dark {
 	--mobile-sidebar-background: rgb(48, 48, 48);
-	--background-secondary: rgb(35, 35, 35);
+	--background-secondary: rgb(40, 40, 40);
 }
 
 .is-tablet.theme-light {
@@ -3194,8 +3190,10 @@ main.git-view .tree-item-inner.nav-file-title-content {
 
 .is-tablet .workspace-drawer.mod-left, 
 .is-tablet .workspace-drawer.mod-right,
+.is-tablet .node-insert-event,
 .is-tablet .workspace-drawer.mod-right .workspace-leaf-content .view-content,
 .is-tablet .workspace .workspace-drawer .nav-files-container.node-insert-event,
+.is-tablet .workspace-drawer-tab-container .workspace-drawer-active-tab-content .workspace-leaf-content .view-content.node-insert-event,
 .is-tablet .workspace .workspace-drawer .view-content.node-insert-event {
 	background-color: var(--mobile-sidebar-background) !important;
 	overflow-x: hidden !important;
@@ -3258,12 +3256,14 @@ main.git-view .tree-item-inner.nav-file-title-content {
 }
 
 .is-tablet .markdown-source-view.mod-cm6 .cm-indent::before {
-	margin-inline-start: 6.8px !important;
+	margin-inline-start: 4px !important;
 }
 
 .is-tablet .list-bullet {
-	font-size: 8px;
-	margin-left: 4px;
+	font-size: 10px;
+	margin-left: 0px;
+	/* padding-right: 1px; */
+	transform: translateY(-2px);
 }
 
 .is-tablet .markdown-source-view.mod-cm6 .cm-formatting-list-ul {
@@ -3271,8 +3271,8 @@ main.git-view .tree-item-inner.nav-file-title-content {
 }
 
 .is-tablet span.cm-formatting.cm-formatting-list.cm-formatting-list-ol {
-	font-size: 16px;
-	padding-right: 11.4px;
+	font-size: 18px;
+	padding-right: 13px;
 }
 
 .is-tablet .workspace-split.mod-root .workspace-tabs .view-content .markdown-source-view.mod-cm6 .cm-editor {
@@ -3281,7 +3281,7 @@ main.git-view .tree-item-inner.nav-file-title-content {
 
 .is-tablet .workspace-drawer-header {
 	padding: 0;
-	padding-left: 5px;
+	padding-left: 10px;
 }
 
 .is-tablet .nav-files-container {
@@ -3302,14 +3302,14 @@ main.git-view .tree-item-inner.nav-file-title-content {
 }
 
 .is-tablet .mod-root .workspace-tab-header.is-active .workspace-tab-header-inner {
-	border-bottom: 0.1px solid var(--text-accent);
-	border-radius: 0;
+	/* border-bottom: 0.1px solid var(--text-accent);
+	border-radius: 0; */
 }
 
 .is-tablet .clickable-icon.workspace-drawer-header-icon.mod-settings {
 	position: fixed;
 	left: 3px;
-	bottom: 15px;
+	bottom: 25px;
 	padding: 0;
 }
 
