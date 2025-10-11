@@ -1061,6 +1061,7 @@ hr {
 .markdown-preview-view .markdown-embed:not(.image-embed) {
 	margin-left: 3px !important;
 	/* padding-left: 14px; */
+	border-left: solid 0.5px var(--blockquote-border-color); 
 }
 
 .embed-title {
