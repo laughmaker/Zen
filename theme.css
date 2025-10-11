@@ -3275,6 +3275,7 @@ main.git-view .tree-item-inner.nav-file-title-content {
 	padding-right: 13px;
 }
 
+.is-tablet .bases-tbody,
 .is-tablet .workspace-split.mod-root .workspace-tabs .view-content .markdown-source-view.mod-cm6 .cm-editor {
 	background-color: var(--background-secondary) !important;
 }
@@ -3343,4 +3344,12 @@ main.git-view .tree-item-inner.nav-file-title-content {
 
 .is-tablet .sidebar-toggle-button {
 	--icon-size: var(--icon-s) !important;
+}
+
+.is-mobile ::-webkit-scrollbar:horizontal {
+  height: 4px;
+}
+
+.bases-tbody {
+
 }
