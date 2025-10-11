@@ -2335,10 +2335,10 @@ body:not(.is-mobile).theme-dark	.modal-container.mod-dim .prompt {
 	box-shadow: 1px 1px 6px rgba(0, 0, 0, 0.2);
 }
 
-.setting-item-control select,
+body:not(.is-mobile)	.setting-item-control select,
 body:not(.is-mobile)	.global-search-input-container,
 body:not(.is-mobile)	.search-input-container input,
-button:not(.clickable-icon),
+body:not(.is-mobile)	button:not(.clickable-icon),
 body:not(.is-mobile) input.prompt-input,
 body:not(.is-mobile)	.suggestion-item.is-selected {
 	border: 1px solid rgb(0 0 0 / 10%);
