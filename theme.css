@@ -438,14 +438,6 @@ body:not(.is-mobile) .theme-light {
 .is-translucent:not(.is-fullscreen) .titlebar,
 .is-translucent:not(.is-fullscreen) .app-container {
 	background-color: rgb(from var(--workspace-background-translucent) r g b / calc(var(--mac-window-opacity))) !important;
-	/* background: linear-gradient(
-		to right, 
-		transparent 0%,
-		rgb(from var(--workspace-background-translucent) r g b / calc(var(--mac-window-opacity))) 5%, 
-		var(--glass-bg-color) 50%,
-		rgb(from var(--workspace-background-translucent) r g b / calc(var(--mac-window-opacity))) 95%,
-		transparent 100%
-	); */
 }
 
 /* 当有弹窗弹出时，模糊背景 */
@@ -514,6 +506,7 @@ body:not(.is-mobile) .workspace-tabs.mod-top.mod-top-right-space .workspace-tab-
 body:not(.is-mobile) hr.workspace-leaf-resize-handle {
 	opacity: 0 !important;
 }
+
 
 /*
 * --------------------------------调整全局样式------------------------------------
@@ -704,6 +697,7 @@ body.is-mobile .nav-file-title {
 .tree-item-self.is-active .tree-item-inner.nav-file-title-content {
 	color: var(--nav-item-color-active);
 }
+
 
 /* 调整目录折叠按钮与标题对齐
  * 受 foldernote影响，需要做调整，否则对不齐
@@ -1333,6 +1327,7 @@ body.is-mobile .tree-item-self {
 
 
 
+
 /*
 * --------------------------------阅读模式页面样式调整------------------------------------
 */
@@ -1429,13 +1424,10 @@ body:not(.heading-bottom-line-off) .markdown-rendered h6 {
 
 
 
+
 /* 将tab活动指示器修改为下划线*/
 .view-header-title-container:not(.mod-at-end):after {
 	background: none;
-}
-
-.is-translucent .workspace-tab-header-container {
-	/* background-color: var(--editor-bg-color) !important; */
 }
 
 .workspace-tab-header.is-active {
@@ -1465,20 +1457,12 @@ body.is-mobile .cm-s-obsidian span.cm-inline-code {
 	padding: 4px 6px !important;
 }
 
-
 .is-mobile .workspace-drawer .nav-buttons-container {
 	--icon-size: var(--icon-m);
 }
 
-
 .is-mobile .workspace>.mod-root {
 	padding-top: 0;
-}
-
-/* .is-mobile .inline-title, */
-.markdown-reading-view,
-.markdown-source-view.mod-cm6.is-readable-line-width .cm-sizer {
-	padding-top: calc(var(--safe-area-inset-top) + 40px);
 }
 
 .is-mobile .float-search-modal-container.modal-container.mod-dim .modal,
@@ -1492,6 +1476,7 @@ body.is-mobile .cm-s-obsidian span.cm-inline-code {
 .is-mobile .workspace-leaf-resize-handle {
 	border: transparent;
 }
+
 
 /* 调整目录字体 */
 .is-mobile .nav-folder-title,
@@ -1548,16 +1533,6 @@ body.is-mobile .cm-s-obsidian span.cm-inline-code {
 	background-color: transparent;
 }
 
-/* 快速切换样式优化 */
-.is-mobile .prompt-input-container {
-	/* padding: 5px 0;
-	border-bottom: solid 0.9px var(--background-modifier-border) !important; */
-}
-
-.is-mobile .omnisearch-input-container__buttons {
-	display: none;
-}
-
 .is-mobile .workspace-drawer .nav-header {
 	border-top: none;
 }
@@ -1566,8 +1541,6 @@ body.is-mobile .cm-s-obsidian span.cm-inline-code {
 	font-size: 10px;
 	margin-top: 0px !important;
 }
-
-
 
 /* 内联标签样式 */
 .CodeMirror-line span.cm-hashtag {
@@ -1594,6 +1567,7 @@ body.is-mobile .cm-s-obsidian span.cm-inline-code {
 	padding-right: 8px;
 	border-left: none;
 }
+
 
 
 /* 
@@ -1745,8 +1719,6 @@ tbody>tr>td,
 	/* 设置横向滚动条高度 */
 }
 
-
-
 /* 
 * 去除输入框选中后的阴影 
 */
@@ -1818,7 +1790,6 @@ input.document-search-input {
 }
 
 
-
 /* 隐藏tab 的控制按钮，鼠标移上去时，自动显示 */
 body:not(.is-mobile) .nav-header {
 	display: flex;
@@ -1877,7 +1848,6 @@ body:not(.is-mobile):not(.composer--DisableNavHeaderAutoHide) .mod-sidedock .wor
 	padding: var(--size-2-2) var(--size-2-3);
 }
 
-
 /*
  * --------------------------------调整开启半透明效果的样式------------------------------------
  */
@@ -1931,7 +1901,7 @@ body:not(.is-mobile):not(.composer--DisableNavHeaderAutoHide) .mod-sidedock .wor
 
 /* 适配半透明背景 */
 /* .is-focused .workspace-leaf.mod-active .view-header, */
-.is-translucent .view-header {
+:not(.is-mobile) .is-translucent .view-header {
 	background-color: transparent !important;
 }
 
@@ -2477,6 +2447,7 @@ body:not(.is-mobile) .vertical-tab-header-group-items {
 	padding-top: 10px;
 }
 
+
 /* 将底部的设置按钮调整为左侧 */
 
 body:not(.is-mobile):not(.close-left-vault-profile) .workspace-split.mod-left-split .workspace-sidedock-vault-profile {
@@ -2633,7 +2604,6 @@ body .quiet-outline .n-tree-node-wrapper {
 	backdrop-filter: blur(15px);
 }
 
-
 body:not(.is-translucent) .workspace-ribbon.mod-left:before,
 body:not(.is-translucent) .workspace-ribbon.mod-left,
 body:not(.is-translucent) .workspace-tabs .workspace-leaf,
@@ -2654,6 +2624,10 @@ body:not(.is-translucent) .workspace-split.mod-root .workspace-tabs.mod-top {
 	/* background-color: var(--background-secondary) !important; */
 }
 
+body:not(.is-translucent) .workspace-tabs.mod-top .workspace-tab-container .workspace-leaf .workspace-leaf-content .view-header {
+	background-color: transparent !important;
+}
+
 
 body:not(.is-mobile) .mod-root .workspace-tab-header-container-inner {
 	--tab-max-width: 240px;
@@ -2666,8 +2640,6 @@ body:not(.is-mobile) .mod-root .workspace-tab-header-container-inner {
 .workspace .mod-root .workspace-tab-header-inner::after {
 	display: none;
 }
-
-
 
 /* 设置页玻璃效果 */
 
@@ -2916,6 +2888,10 @@ main.git-view .tree-item-inner.nav-file-title-content {
 :not(.is-mobile) .workspace-tab-header-container .workspace-tab-header.is-active {
 	box-shadow: none;
 	background-color: transparent;
+}
+
+.is-phone .mod-root .workspace-leaf-content .view-content {
+	margin-top: 0 !important;
 }
 
 .bases-tbody {}
