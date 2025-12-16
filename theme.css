@@ -295,9 +295,9 @@ body.is-mobile {
 }
 
 body.is-tablet {
-	--mobile-sidebar-width-pinned: 340px;
+	--mobile-sidebar-width-pinned: 480px;
 	--mobile-sidebar-min-width: 260px;
-	--mobile-sidebar-max-width: 340px;
+	--mobile-sidebar-max-width: 480px;
 	--ribbon-width: 48px;
 }
 
@@ -2711,13 +2711,13 @@ main.git-view .tree-item-inner.nav-file-title-content {
 }
 
 .is-tablet.theme-dark {
-	--mobile-sidebar-background: rgb(48, 48, 48);
-	--background-secondary: rgb(40, 40, 40);
+	/* --mobile-sidebar-background: rgb(48, 48, 48);
+	--background-secondary: rgb(40, 40, 40); */
 }
 
 .is-tablet.theme-light {
-	--mobile-sidebar-background: rgb(248, 248, 248);
-	--background-secondary: rgb(255, 255, 255);
+	/* --mobile-sidebar-background: rgb(248, 248, 248);
+	--background-secondary: rgb(255, 255, 255); */
 }
 
 .is-tablet .workspace-drawer.mod-left,
@@ -2727,7 +2727,7 @@ main.git-view .tree-item-inner.nav-file-title-content {
 .is-tablet .workspace .workspace-drawer .nav-files-container.node-insert-event,
 .is-tablet .workspace-drawer-tab-container .workspace-drawer-active-tab-content .workspace-leaf-content .view-content.node-insert-event,
 .is-tablet .workspace .workspace-drawer .view-content.node-insert-event {
-	background-color: var(--mobile-sidebar-background) !important;
+	/* background-color: var(--mobile-sidebar-background) !important; */
 	overflow-x: hidden !important;
 }
 
@@ -2737,6 +2737,10 @@ main.git-view .tree-item-inner.nav-file-title-content {
 
 .is-tablet .workspace .workspace-drawer .side-dock-settings {
 	display: none;
+}
+
+.is-tablet .workspace-drawer-ribbon .side-dock-actions {
+	padding-top: var(--safe-area-inset-top);
 }
 
 .is-tablet .workspace .workspace-drawer .clickable-icon.side-dock-ribbon-action .svg-icon,
@@ -2771,8 +2775,9 @@ main.git-view .tree-item-inner.nav-file-title-content {
 	height: auto;
 }
 
+.is-tablet .workspace-drawer-tab-options .workspace-tab-header-inner-title,
 .is-tablet .workspace-drawer-header-name-text {
-	font-size: var(--font-ui-medium);
+	font-size: var(--font-ui-smaller);
 }
 
 .is-tablet .workspace-drawer-header-info {
@@ -2807,11 +2812,6 @@ main.git-view .tree-item-inner.nav-file-title-content {
 	padding-right: 13px;
 }
 
-.is-tablet .bases-tbody,
-.is-tablet .workspace-split.mod-root .workspace-tabs .view-content .markdown-source-view.mod-cm6 .cm-editor {
-	background-color: var(--background-secondary) !important;
-}
-
 .is-tablet .workspace-drawer-header {
 	padding: 0;
 	padding-left: 10px;
@@ -2836,9 +2836,12 @@ main.git-view .tree-item-inner.nav-file-title-content {
 
 .is-tablet .clickable-icon.workspace-drawer-header-icon.mod-settings {
 	position: fixed;
-	left: 3px;
+	left: -7px;
 	bottom: 25px;
 	padding: 0;
+	background: transparent !important;
+	border: none !important;
+	backdrop-filter: none !important;
 }
 
 .is-tablet .metadata-property-icon svg.svg-icon {
@@ -2871,6 +2874,9 @@ main.git-view .tree-item-inner.nav-file-title-content {
 .is-tablet .sidebar-toggle-button {
 	--icon-size: var(--icon-s) !important;
 }
+
+
+
 
 .is-mobile ::-webkit-scrollbar:horizontal {
 	height: 4px;
