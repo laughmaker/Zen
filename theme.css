@@ -334,7 +334,7 @@ body.is-translucent {
 	--statusbar-bg-color: rgba(28, 28, 28, 0.7);
 	--model-bg-color: rgba(28, 28, 28, 0.1);
 	--app-model-bg-color: rgba(28, 28, 28, 0.8);
-	--editor-bg-color: rgba(28, 28, 28, 0);
+	--editor-bg-color: #1c1c1c;
 	--suggestion-bg-color: rgba(28, 28, 28, 0.1);
 	--code-background: rgba(245, 245, 245, 0.15);
 	--background-modifier-form-field: rgba(245, 245, 245, 0.04);
@@ -441,13 +441,13 @@ body:not(.is-mobile) .theme-light {
 }
 
 /* 当有弹窗弹出时，模糊背景 */
-body:has(.modal-container):not(.is-mobile) .app-container {
+body:has(.modal-container):not(.is-phone) .app-container {
 	filter: blur(3px) saturate(1.5);
 }
 
 /* body:not(.is-mobile) .workspace-tab-container, */
-body:not(.is-mobile) .modal-container.mod-dim .modal,
-body:not(.is-mobile) .status-bar {
+body:not(.is-phone) .modal-container.mod-dim .modal,
+body:not(.is-phone) .status-bar {
 	border-radius: var(--radius-xl);
 	background: var(--glass-bg-color);
 	backdrop-filter: blur(15px) saturate(180%);
@@ -2615,15 +2615,6 @@ body:not(.is-translucent) .workspace-sidedock-vault-profile {
 	/* background-color: var(--background-primary) !important; */
 }
 
-body:not(.is-translucent) .workspace-split.mod-root.mod-vertical .workspace-tabs.mod-top .workspace-tab-container .workspace-leaf .workspace-leaf-content .view-content,
-body:not(.is-translucent) .workspace-tabs.mod-top .workspace-tab-container .workspace-leaf .workspace-leaf-content .view-header,
-body:not(.is-translucent) .workspace-split.mod-root .workspace-tabs.mod-top .workspace-tab-container .workspace-leaf,
-body:not(.is-translucent) .workspace-split.mod-root .workspace-tabs.mod-top .workspace-tab-container,
-body:not(.is-translucent) .workspace-split.mod-root .workspace-tabs.mod-top .workspace-tab-header-container,
-body:not(.is-translucent) .workspace-split.mod-root .workspace-tabs.mod-top {
-	/* background-color: var(--background-secondary) !important; */
-}
-
 body:not(.is-translucent) .workspace-tabs.mod-top .workspace-tab-container .workspace-leaf .workspace-leaf-content .view-header {
 	background-color: transparent !important;
 }
@@ -2713,6 +2704,7 @@ main.git-view .tree-item-inner.nav-file-title-content {
 .is-tablet.theme-dark {
 	/* --mobile-sidebar-background: rgb(48, 48, 48);
 	--background-secondary: rgb(40, 40, 40); */
+	/* --editor-bg-color: #1c1c1c; */
 }
 
 .is-tablet.theme-light {
@@ -2730,6 +2722,16 @@ main.git-view .tree-item-inner.nav-file-title-content {
 	/* background-color: var(--mobile-sidebar-background) !important; */
 	overflow-x: hidden !important;
 }
+
+.is-tablet .workspace-split.mod-root.mod-vertical .workspace-tabs.mod-top .workspace-tab-container .workspace-leaf .workspace-leaf-content .view-content,
+.is-tablet .workspace-tabs.mod-top .workspace-tab-container .workspace-leaf .workspace-leaf-content .view-header,
+.is-tablet .workspace-split.mod-root .workspace-tabs.mod-top .workspace-tab-container .workspace-leaf,
+.is-tablet .workspace-split.mod-root .workspace-tabs.mod-top .workspace-tab-container,
+.is-tablet .workspace-split.mod-root .workspace-tabs.mod-top .workspace-tab-header-container,
+.is-tablet .workspace-split.mod-root .workspace-tabs.mod-top {
+	background-color: var(--editor-bg-color) !important;
+}
+
 
 .is-tablet .view-content>.markdown-source-view.mod-cm6>.cm-editor>.cm-scroller {
 	overflow-x: hidden !important;
@@ -2875,7 +2877,9 @@ main.git-view .tree-item-inner.nav-file-title-content {
 	--icon-size: var(--icon-s) !important;
 }
 
-
+.is-tablet .modal.mod-settings .vertical-tab-content {
+	background-color: transparent;
+}
 
 
 .is-mobile ::-webkit-scrollbar:horizontal {
