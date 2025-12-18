@@ -2922,4 +2922,8 @@ main.git-view .tree-item-inner.nav-file-title-content {
 	background-color: var(--background-secondary);
 }
 
+.is-phone .modal .setting-item-control input {
+	margin-top: 1px;
+}
+
 .bases-tbody {}
