@@ -2711,11 +2711,15 @@ main.git-view .tree-item-inner.nav-file-title-content {
 	/* --mobile-sidebar-background: rgb(48, 48, 48);
 	--background-secondary: rgb(40, 40, 40); */
 	/* --editor-bg-color: #1c1c1c; */
+	--background-setting: rgba(34, 34, 34, 1);
+	--setting-items-background: rgba(48, 48, 48, 0.35);
 }
 
 .is-tablet.theme-light {
 	/* --mobile-sidebar-background: rgb(248, 248, 248);
 	--background-secondary: rgb(255, 255, 255); */
+	--background-setting: rgba(245, 245, 245, 1);
+
 }
 
 .is-tablet .workspace-drawer.mod-left,
@@ -2887,6 +2891,12 @@ main.git-view .tree-item-inner.nav-file-title-content {
 	background-color: transparent;
 }
 
+.is-tablet .modal.mod-sidebar-layout {
+	box-shadow: 1px 0px 1px var(--shadow-color);
+	border: 0.1px solid var(--background-modifier-border);
+
+}
+
 
 .is-mobile ::-webkit-scrollbar:horizontal {
 	height: 4px;
@@ -2910,8 +2920,8 @@ main.git-view .tree-item-inner.nav-file-title-content {
 	margin-top: 0 !important;
 }
 
-.is-mobile .community-item {
-	background-color: var(--background-primary);
+.is-mobile.theme-dark .community-item {
+	background-color: rgba(80, 80, 80, 0.2);
 }
 
 .is-phone .modal-sidebar {
