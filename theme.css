@@ -2245,7 +2245,12 @@ body:not(.is-mobile) .modal-container.mod-dim .modal:has(.export-image-preview-r
 }
 
 .modal-sidebar {
-	background-color: var(--background-primary);
+	background-color: var(--background-secondary);
+}
+
+.modal.mod-sidebar-layout {
+	border-radius: 17px;
+	margin-top: -5px;
 }
 
 
@@ -2903,6 +2908,10 @@ main.git-view .tree-item-inner.nav-file-title-content {
 
 .is-phone .mod-root .workspace-leaf-content .view-content {
 	margin-top: 0 !important;
+}
+
+.is-mobile .community-item {
+	background-color: var(--background-primary);
 }
 
 .bases-tbody {}
