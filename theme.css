@@ -2914,4 +2914,12 @@ main.git-view .tree-item-inner.nav-file-title-content {
 	background-color: var(--background-primary);
 }
 
+.is-phone .modal-sidebar {
+	background-color: var(--background-primary);
+}
+
+.is-phone .community-item {
+	background-color: var(--background-secondary);
+}
+
 .bases-tbody {}
