@@ -301,6 +301,14 @@ body.is-tablet {
 	--ribbon-width: 48px;
 }
 
+body.is-tablet.theme-dark {
+	--editor-bg-color: rgb(28, 28, 28);
+}
+
+body.is-tablet.theme-light {
+	--editor-bg-color: rgb(250, 250, 250);
+}
+
 body.is-translucent {
 	--nav-item-background-active: transparent;
 }
@@ -334,7 +342,7 @@ body.is-translucent {
 	--statusbar-bg-color: rgba(28, 28, 28, 0.7);
 	--model-bg-color: rgba(28, 28, 28, 0.1);
 	--app-model-bg-color: rgba(28, 28, 28, 0.8);
-	--editor-bg-color: #1c1c1c;
+	--editor-bg-color: rgba(28, 28, 28, 0);
 	--suggestion-bg-color: rgba(28, 28, 28, 0.1);
 	--code-background: rgba(245, 245, 245, 0.15);
 	--background-modifier-form-field: rgba(245, 245, 245, 0.04);
@@ -346,7 +354,7 @@ body.is-translucent {
 	--background-setting-item: #242424;
 	--background-setting: rgba(18, 18, 18);
 	--text-highlight-bg: var(--blockquote-border-color);
-	--list-marker-color: var(--nav-indentation-guide-color);
+	--list-marker-color: rgba(245, 245, 245, 0.6);
 	--glass-bg-color: rgba(28, 28, 28, 0.7);
 	--text-shadow-color: white;
 	--divider-color: rgba(255, 255, 255, 0.01);
@@ -1902,7 +1910,7 @@ body:not(.is-mobile):not(.composer--DisableNavHeaderAutoHide) .mod-sidedock .wor
 /* 适配半透明背景 */
 /* .is-focused .workspace-leaf.mod-active .view-header, */
 :not(.is-mobile) .is-translucent .view-header {
-	background-color: transparent !important;
+	background-color: var(--editor-bg-color) !important;
 }
 
 .is-translucent .workspace .mod-root .workspace-tabs.mod-stacked .workspace-tab-container .workspace-tab-header,
@@ -2458,7 +2466,7 @@ body:not(.is-mobile):not(.close-left-vault-profile) .workspace-split.mod-left-sp
 	z-index: 999;
 	transform: translate(-44px, -10px);
 	position: absolute;
-	left: 0;
+	left: -1px;
 	bottom: 0;
 }
 
