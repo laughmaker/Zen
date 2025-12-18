@@ -284,35 +284,6 @@ body {
 	--radius-xxl: 20px;
 }
 
-body.is-mobile {
-	--window-font-size: calc(var(--window-font-size) * 0.9);
-	--input-radius: 20px;
-	/* --safe-area-inset-bottom: env(safe-area-inset-bottom); */
-	--mobile-sidebar-radius: 34px;
-	--mobile-sidebar-max-width: 90%;
-	--setting-items-radius: 20px;
-	--input-height: 40px;
-}
-
-body.is-tablet {
-	--mobile-sidebar-width-pinned: 480px;
-	--mobile-sidebar-min-width: 260px;
-	--mobile-sidebar-max-width: 480px;
-	--ribbon-width: 48px;
-}
-
-body.is-tablet.theme-dark {
-	--editor-bg-color: rgb(28, 28, 28);
-}
-
-body.is-tablet.theme-light {
-	--editor-bg-color: rgb(250, 250, 250);
-}
-
-body.is-translucent {
-	--nav-item-background-active: transparent;
-}
-
 .theme-dark {
 	--base-d: 0%;
 	/* 顶部导航栏背景色 */
@@ -363,13 +334,6 @@ body.is-translucent {
 
 }
 
-body:not(.mod-macos).theme-dark {
-	--indentation-guide-color: rgba(245, 245, 245, 0.1);
-	--nav-indentation-guide-color: rgba(245, 245, 245, 0.1);
-	--list-marker-color: rgba(245, 245, 245, 0.25);
-	/* --nav-collapse-icon-color: rgba(241, 12, 12, 0.5); */
-}
-
 .theme-light {
 	--base-d: 0%;
 	--titlebar-background: rgb(248, 248, 248);
@@ -415,8 +379,33 @@ body:not(.mod-macos).theme-dark {
 	--side-split-bg-color: rgba(248, 248, 248, 0.3);
 }
 
+body:not(.mod-macos).theme-dark {
+	--indentation-guide-color: rgba(245, 245, 245, 0.1);
+	--nav-indentation-guide-color: rgba(245, 245, 245, 0.1);
+	--list-marker-color: rgba(245, 245, 245, 0.25);
+	/* --nav-collapse-icon-color: rgba(241, 12, 12, 0.5); */
+}
+
+.is-mobile {
+	--window-font-size: calc(var(--window-font-size) * 0.9);
+	--input-radius: 20px;
+	/* --safe-area-inset-bottom: env(safe-area-inset-bottom); */
+	--mobile-sidebar-radius: 34px;
+	--mobile-sidebar-max-width: 90%;
+	--setting-items-radius: 20px;
+	--input-height: 40px;
+}
+
+.is-tablet {
+	--mobile-sidebar-width-pinned: 480px;
+	--mobile-sidebar-min-width: 260px;
+	--mobile-sidebar-max-width: 480px;
+	--ribbon-width: 48px;
+}
+
 .is-mobile.theme-light {
 	--card-border-color: rgba(28, 28, 28, 0.05);
+	--editor-bg-color: rgb(250, 250, 250);
 }
 
 .is-mobile.theme-light .menu {
@@ -427,8 +416,12 @@ body:not(.mod-macos).theme-dark {
 	--interactive-normal: rgba(68, 68, 68, 0.6);
 	--indentation-guide-color: rgba(245, 245, 245, 0.1);
 	--card-border-color: rgba(80, 80, 80, 0.1);
+	--editor-bg-color: rgb(28, 28, 28);
 }
 
+.is-translucent {
+	--nav-item-background-active: transparent;
+}
 
 .mobile-navbar-actions {
 	--icon-size: 22px;
