@@ -2452,7 +2452,7 @@ body:not(.is-mobile):not(.close-left-vault-profile) .workspace-split.mod-left-sp
 	flex-direction: column;
 	gap: 15px;
 	z-index: 999;
-	transform: translate(-44px, -10px);
+	transform: translate(-var(--ribbon-width), -10px);
 	position: absolute;
 	left: -1px;
 	bottom: 0;
@@ -2487,10 +2487,11 @@ body:not(.is-mobile):not(.close-left-vault-profile) .workspace-split.mod-left-sp
 }
 
 body:not(.is-mobile):not(.close-left-vault-profile) .workspace-split.mod-left-split .workspace-sidedock-vault-profile .workspace-drawer-vault-actions .clickable-icon {
-	/* gap: 15px; */
 	border-radius: var(--radius-l);
 	padding: 7px;
 }
+
+
 
 
 /* comander 优化 */
@@ -2738,7 +2739,8 @@ main.git-view .tree-item-inner.nav-file-title-content {
 }
 
 .is-tablet .workspace .workspace-drawer .side-dock-settings {
-	display: none;
+	/* display: none; */
+	background-color: red;
 }
 
 .is-tablet .workspace-drawer-ribbon .side-dock-actions {
@@ -2824,8 +2826,9 @@ main.git-view .tree-item-inner.nav-file-title-content {
 }
 
 .is-tablet .clickable-icon.workspace-drawer-header-icon.mod-settings {
+	width: var(--ribbon-width) !important;
 	position: fixed;
-	left: -7px;
+	left: 0px;
 	bottom: 25px;
 	padding: 0;
 	background: transparent !important;
