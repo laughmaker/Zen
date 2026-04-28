@@ -2452,9 +2452,9 @@ body:not(.is-mobile):not(.close-left-vault-profile) .workspace-split.mod-left-sp
 	flex-direction: column;
 	gap: 15px;
 	z-index: 999;
-	transform: translate(-var(--ribbon-width), -10px);
+	/* transform: translate(0, -10px); */
 	position: absolute;
-	left: -1px;
+	left: calc(var(--ribbon-width) * -1);
 	bottom: 0;
 }
 
