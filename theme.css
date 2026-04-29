@@ -492,7 +492,7 @@ body:not(.is-mobile).theme-light {
 /* 设置 mac 平台背景透明度 */
 .is-translucent:not(.is-fullscreen) .titlebar,
 .is-translucent:not(.is-fullscreen) .app-container {
-	/* background-color: rgb(from var(--workspace-background-translucent) r g b / calc(var(--mac-window-opacity))) !important; */
+	background-color: rgb(from var(--workspace-background-translucent) r g b / calc(var(--mac-window-opacity))) !important;
 }
 
 /* 当弹窗实际进入 dim 状态时，再模糊背景，避免常驻容器误触发 */
@@ -506,15 +506,16 @@ body:not(.is-phone) .status-bar {
 	background: var(--glass-bg-color);
 	backdrop-filter: blur(15px) saturate(180%);
 	-webkit-backdrop-filter: blur(15px) saturate(180%);
-	border: 1px solid rgba(255, 255, 255, 0.1);
+	border: 0.5px solid rgba(255, 255, 255, 0.1);
 	box-shadow: 0 0 8px rgba(0, 0, 0, 0.15), inset 0 1px 1px rgba(255, 255, 255, 0.15);
 	margin: 0 5px 5px 5px;
 }
 
 
 .is-translucent .workspace-split.mod-root {
-	/* background-color: var(--glass-bg-color) !important;
-	backdrop-filter: blur(15px) saturate(180%);
+	background: linear-gradient(90deg, transparent, rgb(from var(--glass-bg-color) r g b / 0.7) 10%, rgb(from var(--glass-bg-color) r g b / 0.7)) !important;
+	/* background-color: var(--glass-bg-color) !important; */
+	/* backdrop-filter: blur(15px) saturate(180%);
 	box-shadow: 0 15px 20px var(--shadow-color);
 	border: 0.05px solid var(--divider-color); */
 }
@@ -717,8 +718,8 @@ body.mod-macos:not(.is-mobile) .workspace-ribbon.mod-left {
 	border-right: 0;
 	border-radius: var(--mac-sidebar-radius) 0 0 var(--mac-sidebar-radius);
 	box-shadow: 0 18px 40px rgba(0, 0, 0, 0.16), inset 0 1px 0 rgba(255, 255, 255, 0.08);
-	backdrop-filter: blur(24px) saturate(150%);
-	-webkit-backdrop-filter: blur(24px) saturate(150%);
+	/* backdrop-filter: blur(24px) saturate(150%);
+	-webkit-backdrop-filter: blur(24px) saturate(150%); */
 }
 
 body.mod-macos:not(.is-mobile) .workspace-ribbon.mod-left:before {
@@ -733,8 +734,8 @@ body.mod-macos:not(.is-mobile) .workspace-split.mod-left-split {
 	border-left: 0px solid var(--mac-sidebar-divider);
 	border-radius: 0 var(--mac-sidebar-radius) var(--mac-sidebar-radius) 0;
 	box-shadow: 0 18px 40px rgba(0, 0, 0, 0.16), inset 0 1px 0 rgba(255, 255, 255, 0.08);
-	backdrop-filter: blur(24px) saturate(150%);
-	-webkit-backdrop-filter: blur(24px) saturate(150%);
+	/* backdrop-filter: blur(24px) saturate(150%);
+	-webkit-backdrop-filter: blur(24px) saturate(150%); */
 }
 
 
@@ -749,7 +750,7 @@ body.mod-macos:not(.is-mobile) .workspace-split.mod-left-split::after {
 }
 
 body.mod-macos:not(.is-mobile) .workspace-split.mod-left-split .workspace-tabs .workspace-tab-container {
-	border-left: 1px solid var(--mac-sidebar-divider);
+	border-left: 1px solid var(--indentation-guide-color);
 }
 
 body.mod-macos:not(.is-mobile) .workspace-split.mod-left-split .workspace-tabs,
@@ -780,7 +781,7 @@ body.mod-macos:not(.is-mobile) .workspace-split.mod-left-split .nav-buttons-cont
 body.mod-macos:not(.is-mobile) .workspace-split.mod-left-split .tree-item-self,
 body.mod-macos:not(.is-mobile) .workspace-split.mod-left-split .nav-file-title,
 body.mod-macos:not(.is-mobile) .workspace-split.mod-left-split .nav-folder-title {
-	border-radius: 14px;
+	border-radius: var(--radius-xl);
 }
 
 body.mod-macos:not(.is-mobile) .workspace-split.mod-left-split .tree-item-self {
@@ -2868,6 +2869,7 @@ main.git-view .tree-item-inner.nav-file-title-content {
 
 .workspace-split.mod-horizontal.mod-sidedock.mod-right-split {
 	border-left: solid 1px var(--indentation-guide-color);
+	background-color: rgb(from var(--glass-bg-color) r g b / 0.7) !important;
 }
 
 .is-tablet .workspace-drawer.mod-left .workspace-drawer-inner .workspace-drawer-tab-container {
