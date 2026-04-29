@@ -1368,6 +1368,11 @@ ul>li::marker {
 	margin-left: 12px;
 }
 
+.is-tablet .markdown-rendered.show-indentation-guide ol::before {
+	margin-left: 4px;
+}
+
+
 .markdown-rendered.show-indentation-guide ul::before {
 	margin-left: 5px;
 }
