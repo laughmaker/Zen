@@ -672,6 +672,7 @@ body:not(.is-mobile) .workspace-split.mod-left-split .workspace-sidedock-vault-p
 	background-color: var(--background-setting);
 }
 
+.mod-root .workspace-tab-header-inner,
 .workspace-tab-header-inner {
 	border-radius: var(--radius-xl);
 	padding: 4px 8px;
@@ -2582,7 +2583,7 @@ body:not(.is-mobile):not(.close-left-vault-profile) .workspace-split.mod-left-sp
 	z-index: 99;
 	gap: 15px;
 	padding: var(--size-4-2) var(--size-4-2);
-	border-radius: var(--radius-l);
+	border-radius: var(--radius-xxl);
 }
 
 body:not(.is-mobile):not(.close-left-vault-profile) .workspace-split.mod-left-split .workspace-sidedock-vault-profile .workspace-drawer-vault-switcher-icon {
@@ -2601,10 +2602,14 @@ body:not(.is-mobile):not(.close-left-vault-profile) .workspace-split.mod-left-sp
 }
 
 body:not(.is-mobile):not(.close-left-vault-profile) .workspace-split.mod-left-split .workspace-sidedock-vault-profile .workspace-drawer-vault-actions .clickable-icon {
-	border-radius: var(--radius-l);
+	border-radius: var(--radius-xxl);
 	padding: 7px;
 }
 
+.clickable-icon:hover {
+	background-color: var(--background-modifier-hover) !important;
+	border-radius: var(--radius-xxl);
+}
 
 
 
@@ -3013,6 +3018,21 @@ main.git-view .tree-item-inner.nav-file-title-content {
 :not(.is-mobile) .workspace-tab-header-container .workspace-tab-header.is-active {
 	box-shadow: none;
 	background-color: transparent;
+	border-radius: var(--radius-xxl);
+}
+
+body:not(.is-mobile) .workspace-tabs.mod-top .workspace-tab-header-container .sidebar-toggle-button {
+	height: auto;
+}
+
+body:not(.is-mobile) .workspace-tabs.mod-top .workspace-tab-header-container .sidebar-toggle-button .clickable-icon {
+	padding: 8px 8px;
+}
+
+/* body:not(.is-mobile) .workspace-tabs.mod-top .workspace-tab-header-container .sidebar-toggle-button:hover, */
+:not(.is-mobile) .workspace-tab-header-container .workspace-tab-header.is-active:hover {
+	border-radius: var(--radius-xxl) !important;
+	background-color: var(--background-modifier-hover) !important;
 }
 
 .is-phone .mod-root .workspace-leaf-content .view-content {
