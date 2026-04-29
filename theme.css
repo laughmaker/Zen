@@ -295,10 +295,12 @@ body {
 	--editor-list-ul-translate-y: -3px;
 	--editor-task-label-margin-left: -9.5px;
 	--editor-task-label-nested-margin-left: -12px;
+	--mac-sidebar-radius: 28px;
 	--bases-table-header-background: var(--table-header-background);
 	--bases-table-row-height: 40px;
 	--italic-color: var(--text-accent);
 	--radius-xxl: 20px;
+	--mac-sidebar-radius: 11px;
 }
 
 .theme-dark {
@@ -345,6 +347,12 @@ body {
 	--divider-color: rgba(255, 255, 255, 0.01);
 	--shadow-color: rgba(245, 245, 245, 0.08);
 	--side-split-bg-color: rgba(28, 28, 28, 0.3);
+	--mac-sidebar-panel-bg: linear-gradient(180deg, rgba(72, 56, 39, 0.82), rgba(50, 39, 29, 0.92));
+	--mac-sidebar-inner-bg: rgba(255, 255, 255, 0.04);
+	--mac-sidebar-border: rgba(255, 255, 255, 0.08);
+	--mac-sidebar-divider: rgba(255, 255, 255, 0.06);
+	--mac-sidebar-active-bg: rgba(255, 255, 255, 0.08);
+	--mac-sidebar-tree-shadow: 0 14px 28px rgba(0, 0, 0, 0.22), 0 3px 10px rgba(0, 0, 0, 0.16);
 }
 
 .theme-light {
@@ -389,6 +397,12 @@ body {
 	--text-shadow-color: black;
 	--shadow-color: rgba(0, 0, 0, 0.06);
 	--side-split-bg-color: rgba(248, 248, 248, 0.3);
+	--mac-sidebar-panel-bg: linear-gradient(180deg, rgba(247, 243, 238, 0.9), rgba(239, 233, 226, 0.94));
+	--mac-sidebar-inner-bg: rgba(255, 255, 255, 0.55);
+	--mac-sidebar-border: rgba(74, 52, 34, 0.08);
+	--mac-sidebar-divider: rgba(74, 52, 34, 0.08);
+	--mac-sidebar-active-bg: rgba(0, 0, 0, 0.06);
+	--mac-sidebar-tree-shadow: 0 14px 30px rgba(74, 52, 34, 0.14), 0 2px 8px rgba(74, 52, 34, 0.08);
 }
 
 body:not(.mod-macos).theme-dark {
@@ -478,7 +492,7 @@ body:not(.is-mobile).theme-light {
 /* 设置 mac 平台背景透明度 */
 .is-translucent:not(.is-fullscreen) .titlebar,
 .is-translucent:not(.is-fullscreen) .app-container {
-	background-color: rgb(from var(--workspace-background-translucent) r g b / calc(var(--mac-window-opacity))) !important;
+	/* background-color: rgb(from var(--workspace-background-translucent) r g b / calc(var(--mac-window-opacity))) !important; */
 }
 
 /* 当弹窗实际进入 dim 状态时，再模糊背景，避免常驻容器误触发 */
@@ -499,10 +513,10 @@ body:not(.is-phone) .status-bar {
 
 
 .is-translucent .workspace-split.mod-root {
-	background-color: var(--glass-bg-color) !important;
+	/* background-color: var(--glass-bg-color) !important;
 	backdrop-filter: blur(15px) saturate(180%);
 	box-shadow: 0 15px 20px var(--shadow-color);
-	border: 0.05px solid var(--divider-color);
+	border: 0.05px solid var(--divider-color); */
 }
 
 .tree-item-self.nav-folder-title.is-clickable.mod-collapsible:hover,
@@ -690,6 +704,98 @@ body:not(.is-grabbing):not(.is-fullscreen).is-hidden-frameless .mod-top .workspa
 .side-dock-actions {
 	overflow-y: auto;
 	max-height: 85%;
+}
+
+/* macOS 26-inspired desktop sidebar */
+body.mod-macos:not(.is-mobile) .workspace-ribbon.mod-left {
+	margin: 5px 0 5px 5px;
+	height: calc(100% - 10px);
+	align-self: center;
+	padding-top: 30px;
+	/* background: var(--mac-sidebar-panel-bg); */
+	border: 1px solid var(--mac-sidebar-border);
+	border-right: 0;
+	border-radius: var(--mac-sidebar-radius) 0 0 var(--mac-sidebar-radius);
+	box-shadow: 0 18px 40px rgba(0, 0, 0, 0.16), inset 0 1px 0 rgba(255, 255, 255, 0.08);
+	backdrop-filter: blur(24px) saturate(150%);
+	-webkit-backdrop-filter: blur(24px) saturate(150%);
+}
+
+body.mod-macos:not(.is-mobile) .workspace-ribbon.mod-left:before {
+	display: none;
+}
+
+body.mod-macos:not(.is-mobile) .workspace-split.mod-left-split {
+	margin: 5px 0;
+	height: calc(100% - 10px);
+	align-self: center;
+	border: 1px solid var(--mac-sidebar-border);
+	border-left: 0px solid var(--mac-sidebar-divider);
+	border-radius: 0 var(--mac-sidebar-radius) var(--mac-sidebar-radius) 0;
+	box-shadow: 0 18px 40px rgba(0, 0, 0, 0.16), inset 0 1px 0 rgba(255, 255, 255, 0.08);
+	backdrop-filter: blur(24px) saturate(150%);
+	-webkit-backdrop-filter: blur(24px) saturate(150%);
+}
+
+
+body.mod-macos:not(.is-mobile) .workspace-split.mod-left-split::after {
+	content: "";
+	position: absolute;
+	inset: 0;
+	border-radius: inherit;
+	pointer-events: none;
+	box-shadow: 0 18px 40px rgba(0, 0, 0, 0.16);
+	clip-path: inset(-40px -40px -40px 0);
+}
+
+body.mod-macos:not(.is-mobile) .workspace-split.mod-left-split .workspace-tabs .workspace-tab-container {
+	border-left: 1px solid var(--mac-sidebar-divider);
+}
+
+body.mod-macos:not(.is-mobile) .workspace-split.mod-left-split .workspace-tabs,
+body.mod-macos:not(.is-mobile) .workspace-split.mod-left-split .workspace-leaf,
+body.mod-macos:not(.is-mobile) .workspace-split.mod-left-split .view-content,
+body.mod-macos:not(.is-mobile) .workspace-split.mod-left-split .nav-files-container {
+	background: transparent !important;
+}
+
+body.mod-macos:not(.is-mobile) .workspace-split.mod-left-split .nav-header {
+	justify-content: flex-start;
+	padding: 10px 12px 12px;
+}
+
+body.mod-macos:not(.is-mobile) .workspace-split.mod-left-split .nav-buttons-container,
+body.mod-macos:not(.is-mobile) .workspace-split.mod-left-split .nav-header .nav-action-button {
+	display: none;
+}
+
+body.mod-macos:not(.is-mobile) .workspace-split.mod-left-split .nav-buttons-container {
+	background: var(--mac-sidebar-inner-bg);
+	border: 1px solid var(--mac-sidebar-border);
+	border-radius: 18px;
+	padding: 6px 10px;
+}
+
+
+body.mod-macos:not(.is-mobile) .workspace-split.mod-left-split .tree-item-self,
+body.mod-macos:not(.is-mobile) .workspace-split.mod-left-split .nav-file-title,
+body.mod-macos:not(.is-mobile) .workspace-split.mod-left-split .nav-folder-title {
+	border-radius: 14px;
+}
+
+body.mod-macos:not(.is-mobile) .workspace-split.mod-left-split .tree-item-self {
+	min-height: 32px;
+	padding-right: 10px;
+}
+
+body.mod-macos:not(.is-mobile) .workspace-split.mod-left-split .nav-file-title.is-active,
+body.mod-macos:not(.is-mobile) .workspace-split.mod-left-split .nav-folder-title.is-active,
+body.mod-macos:not(.is-mobile) .workspace-split.mod-left-split .tree-item-self.nav-folder-title.is-clickable.mod-collapsible:hover,
+body.mod-macos:not(.is-mobile) .workspace-split.mod-left-split .tree-item-self.nav-file-title.tappable.is-clickable:hover {
+	background: var(--mac-sidebar-active-bg);
+	box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.05);
+	backdrop-filter: none;
+	-webkit-backdrop-filter: none;
 }
 
 /* 设置大纳样式 */
@@ -2462,7 +2568,7 @@ body:not(.is-mobile):not(.close-left-vault-profile) .workspace-split.mod-left-sp
 	/* transform: translate(0, -10px); */
 	position: absolute;
 	left: calc(var(--ribbon-width) * -1);
-	bottom: 0;
+	bottom: 8px;
 }
 
 body.theme-light:not(.is-mobile):not(.close-left-vault-profile) .workspace-split.mod-left-split .workspace-sidedock-vault-profile {
@@ -2758,6 +2864,10 @@ main.git-view .tree-item-inner.nav-file-title-content {
 .is-tablet .workspace .workspace-drawer .mod-left-split .workspace-tab-header-inner-icon .svg-icon,
 .is-tablet .workspace .workspace-drawer .mod-right-split .workspace-tab-header-inner-icon .svg-icon {
 	--icon-size: var(--icon-s);
+}
+
+.workspace-split.mod-horizontal.mod-sidedock.mod-right-split {
+	border-left: solid 1px var(--indentation-guide-color);
 }
 
 .is-tablet .workspace-drawer.mod-left .workspace-drawer-inner .workspace-drawer-tab-container {
