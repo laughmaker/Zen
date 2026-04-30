@@ -751,8 +751,14 @@ body.mod-macos:not(.is-mobile) .workspace-split.mod-left-split::after {
 }
 
 body.mod-macos:not(.is-mobile) .workspace-split.mod-left-split .workspace-tabs .workspace-tab-container {
-	border-left: 1px solid var(--indentation-guide-color);
+	border-left: 1px solid var(--nav-indentation-guide-color);
 }
+
+body:not(.is-translucent) .workspace-split.mod-right-split .workspace-tabs .workspace-leaf-content,
+body:not(.is-translucent) .workspace-split.mod-right-split .workspace-tabs .workspace-tab-header-container {
+	background-color: var(--background-primary) !important;
+}
+
 
 body.mod-macos:not(.is-mobile) .workspace-split.mod-left-split .workspace-tabs,
 body.mod-macos:not(.is-mobile) .workspace-split.mod-left-split .workspace-leaf,
