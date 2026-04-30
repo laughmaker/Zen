@@ -439,20 +439,20 @@ body:not(.mod-macos).theme-dark {
 	--mobile-sidebar-min-width: 260px;
 	--mobile-sidebar-max-width: 480px;
 	--ribbon-width: 48px;
-	--editor-list-guide-offset: 4px;
-	--editor-list-guide-content-offset: 11px;
-	--editor-list-ol-width: 36px;
-	--editor-list-ol-font-size: 18px;
-	--editor-list-ol-padding-right: 7px;
-	--editor-list-formatting-margin-right: -6px;
-	--editor-list-ol-margin-left: -7px;
-	--editor-list-ul-width: 24px;
-	--editor-list-ul-font-size: 13px;
-	--editor-list-ul-margin-left: -10px;
-	--editor-list-ul-margin-right: 6px;
-	--editor-list-ul-translate-y: -2px;
-	--editor-task-label-margin-left: -8px;
-	--editor-task-label-nested-margin-left: -10px;
+	--editor-list-guide-offset: 0.38em;
+	--editor-list-guide-content-offset: 0.7em;
+	--editor-list-ol-width: 2.18em;
+	--editor-list-ol-font-size: 1.06em;
+	--editor-list-ol-padding-right: 0.41em;
+	--editor-list-formatting-margin-right: -0.35em;
+	--editor-list-ol-margin-left: -0.58em;
+	--editor-list-ul-width: 1.45em;
+	--editor-list-ul-font-size: 0.76em;
+	--editor-list-ul-margin-left: -0.48em;
+	--editor-list-ul-margin-right: 0.35em;
+	--editor-list-ul-translate-y: -0.12em;
+	--editor-task-label-margin-left: -0.47em;
+	--editor-task-label-nested-margin-left: -0.62em;
 }
 
 body.is-mobile.theme-light {
