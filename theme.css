@@ -302,6 +302,7 @@ body {
 	--radius-xxl: 20px;
 	--mac-sidebar-radius: 11px;
 	--prompt-input-height: 40px;
+	--metadata-label-width: 6em;
 }
 
 .theme-dark {
@@ -514,7 +515,7 @@ body:not(.is-phone) .status-bar {
 
 
 .is-translucent .workspace-split.mod-root {
-	background: linear-gradient(90deg, transparent, rgb(from var(--glass-bg-color) r g b / 0.7) 10%, rgb(from var(--glass-bg-color) r g b / 0.7)) !important;
+	background: linear-gradient(90deg, transparent, rgb(from var(--glass-bg-color) r g b / 0.7) 10%, rgb(from var(--glass-bg-color) r g b / 0.5)) !important;
 	/* background-color: var(--glass-bg-color) !important; */
 	/* backdrop-filter: blur(15px) saturate(180%);
 	box-shadow: 0 15px 20px var(--shadow-color);
@@ -2890,7 +2891,7 @@ main.git-view .tree-item-inner.nav-file-title-content {
 
 .app-container .horizontal-main-container .workspace .workspace-split.mod-horizontal.mod-sidedock.mod-right-split {
 	border-left: solid 1px var(--indentation-guide-color);
-	background-color: rgb(from var(--glass-bg-color) r g b / 0.7) !important;
+	background-color: rgb(from var(--glass-bg-color) r g b / 0.5) !important;
 }
 
 .is-tablet .workspace-drawer.mod-left .workspace-drawer-inner .workspace-drawer-tab-container {
