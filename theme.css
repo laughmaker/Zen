@@ -301,6 +301,7 @@ body {
 	--italic-color: var(--text-accent);
 	--radius-xxl: 20px;
 	--mac-sidebar-radius: 11px;
+	--prompt-input-height: 40px;
 }
 
 .theme-dark {
@@ -2691,6 +2692,14 @@ body .quiet-outline .n-tree-node-wrapper {
 
 .n-tree .n-tree-node-switcher .n-tree-node-switcher__icon .xicon {
 	display: none;
+}
+
+.n-tree .n-tree-node-switcher.n-tree-node-switcher--expanded {
+	margin-left: -0.2rem;
+}
+
+.quiet-outline .n-tree .n-tree-node-indent {
+	margin: -0.2rem;
 }
 
 /* bases */
