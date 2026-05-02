@@ -3156,3 +3156,12 @@ body:not(.is-mobile) .workspace-tabs.mod-top .workspace-tab-header-container .si
 	/* padding-top: 20px;
 	background-color: red; */
 }
+
+.omnisearch-input-field {
+	width: 100%;
+	padding: 5px;
+}
+
+.omnisearch-input-container__buttons {
+	display: none;
+}
