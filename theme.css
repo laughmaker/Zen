@@ -2153,7 +2153,7 @@ body:not(.is-mobile) .prompt-input-container {
 
 #editingToolbarModalBar.top :is(.editingToolbarCommandItem, button[class^=editingToolbarCommandsubItem]):not(.editingToolbar-Divider-Line) {
 	padding: 8px;
-	border-radius: 6px;
+	border-radius: var(--radius-xxl);
 }
 
 #editingToolbarModalBar.top {
