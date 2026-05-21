@@ -1,6 +1,6 @@
 {
 	"name": "Zen",
-	"version": "9.0.8",
+	"version": "9.0.9",
 	"scripts": {
 		"version": "node version-bump.mjs && git add manifest.json versions.json"
 	}
