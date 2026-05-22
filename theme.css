@@ -2037,12 +2037,23 @@ body:not(.is-mobile).is-translucent .view-header {
 	/* -webkit-backdrop-filter: blur(25px) saturate(180%); */
 }
 
-.is-translucent .workspace-tabs.mod-stacked.mod-top.mod-active {
+.is-translucent .workspace .mod-root .workspace-tabs.mod-stacked.mod-top {
 	background-color: var(--background-primary) !important;
+	/* margin: 5px; */
+	height: calc(100% - 20px) !important;
 	border-radius: var(--radius-xxl);
-	/* margin: 10px; */
-	/* overflow: hidden; */
+	overflow: hidden;
 }
+
+.is-translucent .workspace-split.mod-vertical.mod-root:has(.mod-stacked) {
+	padding: 5px;
+}
+
+.is-translucent .workspace .mod-root:has(.mod-stacked) .workspace-split.mod-horizontal.mod-sidedock.mod-right-split
+{
+	border-left: none;
+}
+
 
 .is-translucent .workspace-split.mod-root .workspace-tabs .view-content {
 	background-color: var(--editor-bg-color);
