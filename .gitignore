@@ -13,3 +13,8 @@ node_modules
 
 # Exclude macOS Finder (System Explorer) View States
 .DS_Store
+
+# Agent and Opencode configurations
+.agents/
+.opencode/
+opencode.jsonc
