@@ -65,7 +65,7 @@ settings:
 		description: Adjust the font size of some parts, including the document directory on the left, the document title on the top, the outline directory on the right, the tag list, and so on.
 		description.zh: 调节部分字体大小，包含左侧文档目录、顶部文档标题、右侧大纲目录、标签列表等等。
 		type: variable-number-slider
-		default: 15
+		default: 14
 		min: 8
 		max: 30
 		step: 1
@@ -124,7 +124,7 @@ settings:
 		description: Adjust the gap of the text paragraph.
 		description.zh: 调整文本段间距。
 		type: variable-number-slider
-		default: 3.4
+		default: 4.0
 		min: 1
 		max: 10
 		step: 0.1
@@ -135,7 +135,7 @@ settings:
 		description: Adjust the height of the text line.
 		description.zh: 调整文本行高。
 		type: variable-number-slider
-		default: 36
+		default: 28
 		min: 20
 		max: 40
 		step: 1
@@ -270,13 +270,13 @@ body {
 	--nav-item-children-padding-start: 1px;
 
 	/* Theme setting defaults */
-	--window-font-size: 15;
+	--window-font-size: 14;
 	--mac-window-opacity: 0;
 	--win-bg-image-url: url("");
 	--input-radius: 14px;
 	--callout-content-padding: 4px;
-	--text-paragraph-gap: 3.4px;
-	--text-line-height: 36px;
+	--text-paragraph-gap: 4.0px;
+	--text-line-height: 28px;
 	--window-brightness: 0.96;
 	--editor-brightness: 1;
 	--editor-list-guide-offset: 5px;
@@ -574,12 +574,13 @@ body:not(.show-ribbon)
 }
 
 .is-translucent .workspace-split.mod-root {
-	background: linear-gradient(
+	background: var(--glass-bg-color) !important;
+	/* background: linear-gradient(
 		90deg,
 		transparent,
 		rgb(from var(--glass-bg-color) r g b / 0.7) 20%,
 		rgb(from var(--glass-bg-color) r g b / 0.5)
-	) !important;
+	) !important; */
 }
 
 .tree-item-self.nav-folder-title.is-clickable.mod-collapsible:hover,
@@ -810,12 +811,12 @@ body:not(.is-mobile) .workspace-split.mod-left-split {
 	/*margin: 5px 0;*/
 	/*height: calc(100% - 10px);*/
 	/*align-self: center;*/
-	border-right: 1px solid var(--mac-sidebar-border);
+	border-right: 0.1px solid var(--mac-sidebar-border);
 	border-left: 0px solid var(--mac-sidebar-divider);
-	border-radius: 0 20px 20px 0;
+	/* border-radius: 0 20px 20px 0; */
 	box-shadow:
-		3px 3px 10px -10px rgba(0, 0, 0, 0.15),
-		inset 3px 0px 10px -10px rgba(255, 255, 255, 0.25);
+		1px 1px 25px -25px rgba(0, 0, 0, 0.05),
+		inset 1px 0px 25px -25px rgba(255, 255, 255, 0.15);
 }
 
 body:not(.is-mobile) .workspace-split.mod-left-split::after {
@@ -860,7 +861,7 @@ body:not(.is-mobile) .workspace-split.mod-left-split .nav-folder-title {
 }
 
 body:not(.is-mobile) .workspace-split.mod-left-split .tree-item-self {
-	min-height: 32px;
+	min-height: 25px;
 	padding-right: 10px;
 }
 
@@ -3346,7 +3347,6 @@ body:not(.is-mobile)
 .workspace-leaf-content[data-type="daily-note-calendar"] .dnc td {
 	font-size: 0.7em;
 	padding: 0 3px;
-	border-radius: var(--radius-xxl);
 	overflow: hidden;
 }
 
