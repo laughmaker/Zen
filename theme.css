@@ -1516,6 +1516,10 @@ body.is-mobile .tree-item-self {
 	border-left: solid 2px var(--text-accent) !important;
 }
 
+.workspace-ribbon.mod-primary:before {
+	border-bottom: none !important;
+}
+
 /*
 * --------------------------------阅读模式页面样式调整------------------------------------
 */
