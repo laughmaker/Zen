@@ -2,6 +2,8 @@
 
 ![Zen for Obsidian](./cover.png)
 
+<img src="./assets/logo/20260915_zen-logo-open-fold-v3.png" width="160" alt="Zen Logo">
+
 # Zen
 
 一款为专注写作与舒适阅读而设计的现代简约 Obsidian 主题。
