@@ -297,7 +297,7 @@ body {
 	--bases-table-header-background: var(--table-header-background);
 	--bases-table-row-height: 40px;
 	--italic-color: var(--text-accent);
-	--radius-xxl: 20px;
+	--radius-xxl: 30px;
 	--mac-sidebar-radius: 11px;
 	--prompt-input-height: 40px;
 	--metadata-label-width: 6em;
@@ -625,7 +625,7 @@ body:not(.is-mobile)
 	width: 100%;
 	display: flex;
 	align-items: center;
-	justify-content: center;
+	justify-content: flex-start;
 }
 
 body:not(.is-mobile) hr.workspace-leaf-resize-handle {
@@ -724,7 +724,7 @@ button:not(.clickable-icon) {
 
 /* 移除左侧功能按钮区右分界线 */
 .workspace-ribbon {
-	border-right: 0.5px solid var(--background-modifier-border);
+	/* border-right: 0.5px solid var(--background-modifier-border); */
 }
 
 /* 移除顶部的下分界线 */
@@ -2779,7 +2779,7 @@ body:not(.is-mobile):not(.close-left-vault-profile)
 	z-index: 99;
 	gap: 15px;
 	padding: var(--size-4-2) var(--size-4-2);
-	border-radius: var(--radius-xxl);
+	/* border-radius: var(--radius-xxl); */
 }
 
 body:not(.is-mobile):not(.close-left-vault-profile)
@@ -2811,13 +2811,13 @@ body:not(.is-mobile):not(.close-left-vault-profile)
 	.workspace-sidedock-vault-profile
 	.workspace-drawer-vault-actions
 	.clickable-icon {
-	border-radius: var(--radius-xxl);
+	/* border-radius: var(--radius-xxl); */
 	padding: 7px;
 }
 
 .clickable-icon:hover {
 	background-color: var(--background-modifier-hover) !important;
-	border-radius: var(--radius-xxl);
+	/* border-radius: var(--radius-xl); */
 }
 
 /* comander 优化 */
@@ -2960,7 +2960,7 @@ body:not(.is-mobile) .mod-root .workspace-tab-header-container-inner {
 	--tab-max-width: 240px;
 	display: flex;
 	align-items: center;
-	justify-content: center;
+	justify-content: flex-start;
 	width: 100%;
 }
 
@@ -3274,7 +3274,7 @@ main.git-view .tree-item-inner.nav-file-title-content {
 	.workspace-tab-header.is-active {
 	box-shadow: none;
 	background-color: transparent;
-	border-radius: var(--radius-xxl);
+	/* border-radius: var(--radius-xxl); */
 }
 
 body:not(.is-mobile)
